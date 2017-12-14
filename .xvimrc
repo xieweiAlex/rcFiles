@@ -1,0 +1,9 @@
+
+map ,r  :run<CR>
+map ,bp  :xcmenucmd Build<CR>
+map ,cp  :xcmenucmd Clean<CR>
+
+inoremap jk <esc> 
+nnoremap ,/ <esc>Y0i//<esc>pj 
+
+
