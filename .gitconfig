@@ -1,0 +1,28 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --graph --oneline
+	last = 'log -3'
+	rb = rebase
+	gp = pull --rebase github develop
+	gps = push origin develop
+	grc = rebase --continue
+	lggg = log --graph --oneline -10
+[user]
+	name = Alex Xie
+	email = xieweialex@gmail.com
+[alia]
+	gps = push origin develop
+	grc = rebase --continue
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

@@ -1,0 +1,19 @@
+
+let mapleader = ","
+inoremap jk <esc>
+
+syntax on
+
+"make the selected area commented
+vnoremap <leader>/ o<esc>i/*<esc>gv<esc>lla*/<esc>
+nnoremap <leader><leader> 0f/xxf*xx
+nnoremap <leader>; A;<esc>
+"nnoremap <leader>{ f)a { <ENTER><ENTER> }<esc>k
+nnoremap <leader>{ f)a { <ENTER> }<esc>
+nnoremap <leader>1 f(i1<esc>
+
+nnoremap j gj
+nnoremap k gk
+
+
+
