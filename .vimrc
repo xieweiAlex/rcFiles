@@ -17,13 +17,23 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Bundle 'VundleVim/Vundle.vim'
 "plugin 'SirVer/ultisnips'
 "Plugin 'othree/vim-autocomplpop'
 "
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'msanders/cocoa.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'msanders/cocoa.vim'
 Bundle 'The-NERD-tree'
+"Bundle 'kien/ctrlp.vim'
+"Obj-Syntax
+Bundle 'terhechte/syntastic'
+" Obj-Indention
+Bundle "b4winckler/vim-objc"
+" vim toglle .h .m
+Bundle 'eraserhd/vim-ios.git'
+" auto complete
+Bundle 'guns/ultisnips'
+
 
 
 " All of your Plugins must be added before the following line
@@ -37,6 +47,8 @@ filetype plugin indent on    " required
 set nu              " 显示行号  
 set go=             " 不要图形按钮   
 set guifont=Courier_New:h10:cANSI   " 设置字体  
+" set line break
+set linebreak
 
 if has("syntax")
   syntax on
@@ -87,11 +99,18 @@ nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>i ==
 " save 
 nnoremap <leader>s :w<esc>
+" save and quit
+nnoremap <leader>q :q<esc>
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
 " open previous file in buffer in a split(current no use) 
 nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
+" make absolutely j
+nnoremap j gj
+" make absolutely k
+nnoremap k gk
+
 
 "map
 noremap - dd p
@@ -161,8 +180,8 @@ function! FoldColumnToggle()
 endfunction
 
 "toggle quick fix 
-nnoremap <leader>q :call QuickfixToggle()<cr>
-let g:quickfix_is_open = 0
+"nnoremap <leader>q :call QuickfixToggle()<cr>
+"let g:quickfix_is_open = 0
 
 function! QuickfixToggle()
 	if g:quickfix_is_open
