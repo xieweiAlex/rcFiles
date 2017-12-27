@@ -33,7 +33,8 @@ Bundle "b4winckler/vim-objc"
 Bundle 'eraserhd/vim-ios.git'
 " auto complete
 Bundle 'guns/ultisnips'
-
+" Git
+Bundle 'tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
@@ -123,6 +124,10 @@ inoremap <esc> <nop>
 " command line mode c-p/c-n map
 cnoremap <C-p> <Up> 
 cnoremap <C-n> <Down>
+
+" Macro
+let @q = '0g_a jkDa  jk0j'
+
 
 "abrev
 iabbrev @@ xieweialex@gmail.com

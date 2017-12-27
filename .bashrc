@@ -23,9 +23,6 @@ alias gpullUp='git pull --rebase upstream ios-im-sdk'
 alias gpushOrin='git push origin ios-im-sdk'
 
 # Dic
-alias kim='cd ~/Develop/client-team/ios-im-sdk/'
-alias kdoc='cd ~/Develop/jpush-docs'
-alias kxiaosheng='cd ~/快盘/blog_xiaosheng/'
 alias kPython='cd ~/Develop/learnPython'
 alias kJava='cd ~/Develop/learnJava'
 alias kMaster='cd ~/Develop/im-master/client-team'
@@ -41,6 +38,7 @@ alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 
 # Action
+alias kSync='source ~/Develop/rcFiles/synchronize.sh'
 alias aSourceBash='source ~/.bashrc'
 alias ll='ls -al'
 export HISTTIMEFORMAT="%d.%m.%y %T "
