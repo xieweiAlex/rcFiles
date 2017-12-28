@@ -8,6 +8,7 @@ cp ~/.gitconfig ./
 cp ~/.bashrc ./
 cp ~/.ideavimrc ./
 cp ~/.tmux.conf ./
+cp ~/.config/karabiner ~/
 
 
 
