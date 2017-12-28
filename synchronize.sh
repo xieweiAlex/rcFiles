@@ -7,5 +7,7 @@ cp ~/Nutstore/app_config/com.googlecode.iterm2.plist ./
 cp ~/.gitconfig ./
 cp ~/.bashrc ./
 cp ~/.ideavimrc ./
+cp ~/.tmux.conf ./
+
 
 
