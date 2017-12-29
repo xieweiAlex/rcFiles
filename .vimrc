@@ -41,6 +41,9 @@ Bundle 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"Mis
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

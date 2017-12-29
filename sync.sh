@@ -28,13 +28,12 @@ function myDispatch {
 
 action=$1
 echo "."
-echo ".."
-echo "..."
-
 
 if [[ "$#" -ne 1 ]]; then
-	echo "one and only one parameter is allowed"
-	exit 1
+	echo ".."
+	echo "no parameter inputted, will be default to 'sync'"
+    action="sync"	
+	echo ""
 fi
 
 if [[ $action == 'sync' ]]; then
