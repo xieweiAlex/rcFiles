@@ -10,7 +10,7 @@ function mySync {
 	cp ~/.bashrc ./
 	cp ~/.ideavimrc ./
 	cp ~/.tmux.conf ./
-	cp -R ~/.config/karabiner ~/
+	cp -R ~/.config/karabiner ./
 	echo "successed to sync"
 }
 
