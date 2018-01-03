@@ -27,6 +27,7 @@ alias kPython='cd ~/Develop/learnPython'
 alias kJava='cd ~/Develop/learnJava'
 alias kMaster='cd ~/Develop/im-master/client-team'
 alias kWork='cd ~/Develop/Working/AirBrush_iOS/AirBrush'
+alias kRcFiles='cd ~/Develop/rcFiles'
 
 # vi
 alias vi='vim'
@@ -36,6 +37,7 @@ alias vi='vim'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
+alias tmuxrc='vim ~/.tmux.conf'
 
 # Action
 alias kSync='source ~/Develop/rcFiles/synchronize.sh'
