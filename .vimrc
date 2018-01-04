@@ -1,7 +1,6 @@
 
-set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
-filetype off " required
-
+set nocompatible  "not compatible with Vi
+filetype off " required by Vundle? 
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -48,9 +47,9 @@ let g:ycm_server_log_level = 'debug'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set lines=40 columns=155    " 设定窗口大小  
-set nu              " 显示行号  
-set go=             " 不要图形按钮   
-set guifont=Courier_New:h10:cANSI   " 设置字体  
+set nu              " show number of lines 
+set go=             " no GUI buttons 
+set guifont=Courier_New:h10:cANSI   " font whichi I don't like!! 
 " set line break
 set linebreak
 
@@ -58,9 +57,9 @@ if has("syntax")
   syntax on
 endif
 
-"syntax on           " 语法高亮  
 autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
-"autocmd InsertEnter * se cul    " 用浅色高亮当前行  
+
+
 set ruler           " 显示标尺  
 set showcmd         " 输入的命令显示出来，看的清楚些  
 set cmdheight=1     " 命令行（在状态行下）的高度，设置为1  
@@ -82,8 +81,12 @@ set pastetoggle=<F2> " F2 toggle paste mode
 "set pastetoggle=<C-e> " F2 toggle paste mode
 set cindent    " 开启cindent
 set noet     " 关闭expandtab
-set sw=4     " shiftwidth=4
-set ts=4
+set sw=2     " shiftwidth=4
+set ts=2
+
+" set system default clipboard
+set clipboard=unnamed
+
 
 
 "map leader
@@ -114,7 +117,12 @@ nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 nnoremap j gj
 " make absolutely k
 nnoremap k gk
+" Open NERDTree
+nnoremap <leader>ne :NERDTree<cr>
 
+"enter after find
+nnoremap n nzz
+nnoremap N Nzz
 
 "map
 noremap - dd p
@@ -127,6 +135,7 @@ inoremap <esc> <nop>
 " command line mode c-p/c-n map
 cnoremap <C-p> <Up> 
 cnoremap <C-n> <Down>
+
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
@@ -146,8 +155,6 @@ autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 " autocmd FileType shell nnoremap <buffer> <leader>c I#<esc>
 autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
-
-
 
 " operatior-pending map -------------------- {{{
 " operator in ()
