@@ -74,6 +74,8 @@ set background=dark "背景使用黑色
 set hlsearch
 set incsearch
 set history=200
+" Open spell check 
+set spell 
 
 " indent
 set autoindent " 开启自动缩进
