@@ -26,7 +26,7 @@ alias gpushOrin='git push origin ios-im-sdk'
 alias kPython='cd ~/Develop/learnPython'
 alias kJava='cd ~/Develop/learnJava'
 alias kMaster='cd ~/Develop/im-master/client-team'
-alias kWork='cd ~/Develop/Working/AirBrush_iOS/AirBrush'
+alias kWork='cd ~/Develop/august-ios'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 
