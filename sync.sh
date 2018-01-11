@@ -11,6 +11,7 @@ function mySync {
 	cp ~/.ideavimrc ./
 	cp ~/.tmux.conf ./
 	cp -R ~/.config/karabiner ./
+	cp -R ~/.vim/spell ./spell
 	echo "successed to sync"
 }
 
@@ -23,6 +24,7 @@ function myDispatch {
 	cp .ideavimrc ~/
 	cp .tmux.conf ~/
 	cp -R karabiner ~/.config/
+	cp -R spell ~/.vim/spell
 	echo "successed to dispatch"
 }
 
