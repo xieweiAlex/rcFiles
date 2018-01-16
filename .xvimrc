@@ -127,7 +127,7 @@ map ,w :w<CR>
 
 set ignorecase
 
-" search the string cursor points to. Very Usefull.
+" search the string cursor points to. Very Useful.
 map ,s viw:xccmd findSelectedTextInWorkspace<CR>
 
 " search document for text cursor points to.
@@ -152,7 +152,8 @@ map ,l  :xccmd openQuicklyScoped<CR>
 " insert a space
 nmap ,k i <ESC>i
 " quick command mode
-nmap ; :
+"nmap ; :
+
 " quick replace word
 nmap vp viwpyiw
 nmap 0 ^
@@ -172,8 +173,8 @@ vnoremap <CR> s
 inoremap <c-;> <ESC>A;<ESC>o
 
 " Move by line in normal mode
-" <c-e>  move up
-" <c-y>  move down
+<c-e>  move up
+<c-y>  move down
 
 
 

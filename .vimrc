@@ -119,8 +119,10 @@ nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 nnoremap j gj
 " make absolutely k
 nnoremap k gk
-" Open NERDTree
-nnoremap <leader>ne :NERDTree<cr>
+" reveal file in NERDTree panel 
+nnoremap <leader>n :NERDTreeFind<cr>
+" toggle NERDTree 
+nnoremap <leader>m :NERDTreeToggle<cr>
 
 "enter after find
 nnoremap n nzz
