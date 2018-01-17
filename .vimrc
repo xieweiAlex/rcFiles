@@ -88,7 +88,8 @@ set ts=2
 
 " set system default clipboard
 set clipboard=unnamed
-
+" Automatically change currently directory
+set autochdir
 
 
 "map leader
