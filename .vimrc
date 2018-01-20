@@ -17,7 +17,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Bundle 'VundleVim/Vundle.vim'
-"plugin 'SirVer/ultisnips'
+"plugin 'SirVer/ultisnips'  
 "Plugin 'othree/vim-autocomplpop'
 "
 Bundle 'Valloric/YouCompleteMe'
@@ -60,37 +60,85 @@ endif
 autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
 
 
-set ruler           " 显示标尺  
-set showcmd         " 输入的命令显示出来，看的清楚些  
-set cmdheight=1     " 命令行（在状态行下）的高度，设置为1  
+set ruler           " show ruler
+set showcmd         " show command
+set cmdheight=1     " command line height 
 set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
 set novisualbell    " 不要闪烁(不明白)  
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
 set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
-set foldenable      " 允许折叠  
+set foldenable      " fold enable 
 "set foldmethod=manual   " 手动折叠  
-set background=dark "背景使用黑色 
+set background=dark " black background 
 set hlsearch
 set incsearch
 set history=200
-" Open spell check 
-set spell 
+
+set spell " Open spell check 
+set spelllang=en_us         " Language will likely be English
+set showmatch "{}()[]
+set relativenumber " Automatic line numbering
+
 
 " indent
-set autoindent " 开启自动缩进
+set autoindent " auto indent 
 set pastetoggle=<F2> " F2 toggle paste mode
-"set pastetoggle=<C-e> " F2 toggle paste mode
-set cindent    " 开启cindent
-set noet     " 关闭expandtab
-set sw=2     " shiftwidth=4
+set cindent    " open cindent
+set noexpandtab " Tab is the new Tab ;)
+set tabstop=4 softtabstop=4            " 8 is too much for my eyes     
 set ts=2
 
-" set system default clipboard
-set clipboard=unnamed
 " Automatically change currently directory
 set autochdir
 
+set magic               " accept special characters on search terms
+
+set undodir=~/.vim/undos      " Where to save undos?
+set undofile            " Persistence of undos is a nice feature
+
+set exrc                       " Allow tuning with local .vimrc files
+set secure               " and do it securely
+
+set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
+set clipboard=unnamed        " Yank will go to mac's clipboard
+
+" autocmd WinLeave * set cursorline " Highlight current line
+"set cursorline
+
+"autocmd WinLeave * set cursorline " Highlight current line
+"autocmd WinEnter * set cursorline  " in current window
+"
+"autocmd InsertEnter * :setlocal nohlsearch " do not highlight while editing
+
+" colorscheme solarized        " they switch between Dark and Light
+
+color desert
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                10) Autocompletion
+"                                """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set wildmenu            " Autocompletion rulez
+set wildignore+=*.a,*.o        " Leave out files from completion
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_Store,.git,.hg,.svn
+set wildignore+=*~,*.swp,*.tmp
+set wildmode=list:longest,full
+set completeopt=menu,longest,preview
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+let g:SuperTabLongestHighlight = 1
+let g:SuperTabLongestEnhanced = 1
+"let g:SuperTabMappingForward = <Tab>
+""let g:SuperTabMappingBackward = <S-Tab>
+
+
+
+" ---------------------------------- map ----------------------------------
 
 "map leader
 let mapleader = ","
@@ -128,6 +176,8 @@ nnoremap <leader>m :NERDTreeToggle<cr>
 "enter after find
 nnoremap n nzz
 nnoremap N Nzz
+nmap <silent> * *zz
+nmap <silent> # #zz
 
 "map
 noremap - dd p
