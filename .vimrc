@@ -101,7 +101,9 @@ set exrc                       " Allow tuning with local .vimrc files
 set secure               " and do it securely
 
 set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
-set clipboard=unnamed        " Yank will go to mac's clipboard
+"set clipboard=unnamed        " Yank will go to mac's clipboard
+
+autocmd InsertEnter * :setlocal nohlsearch " do not highlight while editing
 
 color desert
 set cursorline
@@ -143,7 +145,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " quotation a word 
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-" formate code
+" Format code
 nnoremap <leader>i ==
 " save 
 nnoremap <leader>s :w<esc>
@@ -162,6 +164,9 @@ nnoremap k gk
 nnoremap <leader>n :NERDTreeFind<cr>
 " toggle NERDTree 
 nnoremap <leader>m :NERDTreeToggle<cr>
+" copy text to clipboard 
+vnoremap <leader>y :w !pbcopy
+
 
 "enter after find
 nnoremap n nzz
