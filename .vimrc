@@ -86,7 +86,7 @@ set autoindent " auto indent
 set pastetoggle=<F2> " F2 toggle paste mode
 set cindent    " open cindent
 set noexpandtab " Tab is the new Tab ;)
-set tabstop=4 softtabstop=4            " 8 is too much for my eyes     
+set tabstop=2 softtabstop=2            " 8 is too much for my eyes     
 set ts=2
 
 " Automatically change currently directory
@@ -102,16 +102,6 @@ set secure               " and do it securely
 
 set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 set clipboard=unnamed        " Yank will go to mac's clipboard
-
-" autocmd WinLeave * set cursorline " Highlight current line
-"set cursorline
-
-"autocmd WinLeave * set cursorline " Highlight current line
-"autocmd WinEnter * set cursorline  " in current window
-"
-"autocmd InsertEnter * :setlocal nohlsearch " do not highlight while editing
-
-" colorscheme solarized        " they switch between Dark and Light
 
 color desert
 set cursorline
