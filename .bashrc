@@ -29,6 +29,7 @@ alias kMaster='cd ~/Develop/im-master/client-team'
 alias kWork='cd ~/Develop/august-ios'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
+alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
 
 # vi
 alias vi='vim'
