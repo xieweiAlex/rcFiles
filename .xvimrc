@@ -6,6 +6,7 @@ map ,cp  :xcmenucmd Clean<CR>
 inoremap jk <esc> 
 nnoremap ,/ <esc>Y0i//<esc>pj 
 
+
 " XVim config.
 " Author: 邓锦龙(BronteDeng)
 " Note: This file contains base keymap and xvim cmd keymap.

@@ -34,6 +34,9 @@ Bundle 'eraserhd/vim-ios.git'
 Bundle 'guns/ultisnips'
 " Git
 Bundle 'tpope/vim-fugitive'
+" Fuzzy find
+set rtp+=/usr/local/opt/fzf
+
 
 
 " All of your Plugins must be added before the following line
@@ -102,6 +105,8 @@ set secure               " and do it securely
 
 set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 "set clipboard=unnamed        " Yank will go to mac's clipboard
+" ignore case when search
+set ignorecase
 
 autocmd InsertEnter * :setlocal nohlsearch " do not highlight while editing
 
