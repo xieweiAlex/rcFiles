@@ -12,7 +12,7 @@ function mySync {
 	cp ~/.tmux.conf ./
 	cp -R ~/.config/karabiner ./
 	cp -R ~/.vim/spell ./
-	echo "successed to sync"
+	echo "Synced, congrats"
 }
 
 function myDispatch {
@@ -25,7 +25,7 @@ function myDispatch {
 	cp .tmux.conf ~/
 	cp -R karabiner ~/.config/
 	cp -R spell ~/.vim/
-	echo "successed to dispatch"
+	echo "Dispatched, congrats!"
 }
 
 action=$1

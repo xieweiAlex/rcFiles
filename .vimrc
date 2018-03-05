@@ -104,7 +104,7 @@ set exrc                       " Allow tuning with local .vimrc files
 set secure               " and do it securely
 
 set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
-"set clipboard=unnamed        " Yank will go to mac's clipboard
+set clipboard=unnamed        " Yank will go to mac's clipboard
 " ignore case when search
 set ignorecase
 
@@ -191,6 +191,8 @@ inoremap <esc> <nop>
 cnoremap <C-p> <Up> 
 cnoremap <C-n> <Down>
 
+"Register
+"let @+=@"
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
