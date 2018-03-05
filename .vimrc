@@ -17,9 +17,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Bundle 'VundleVim/Vundle.vim'
-"plugin 'SirVer/ultisnips'  
-"Plugin 'othree/vim-autocomplpop'
-"
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'msanders/cocoa.vim'
 Bundle 'The-NERD-tree'
@@ -34,6 +31,8 @@ Bundle 'eraserhd/vim-ios.git'
 Bundle 'guns/ultisnips'
 " Git
 Bundle 'tpope/vim-fugitive'
+" Fuzzy file
+Bundle 'kien/ctrlp.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -186,6 +185,9 @@ inoremap <esc> <nop>
 cnoremap <C-p> <Up> 
 cnoremap <C-n> <Down>
 
+"Register
+"let @+=@a
+let @+=@" 
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
