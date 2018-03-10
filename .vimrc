@@ -112,6 +112,7 @@ autocmd InsertEnter * :setlocal nohlsearch " do not highlight while editing
 
 color desert
 set cursorline
+set cursorcolumn
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
 
