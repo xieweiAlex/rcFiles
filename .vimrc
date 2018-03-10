@@ -192,7 +192,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 "Register
-"let @+=@"
+let @+=@"
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
