@@ -193,6 +193,9 @@ cnoremap <C-n> <Down>
 
 "Register
 let @+=@"
+map <silent> <Leader>c :let @+ = expand("%")<cr>
+vnoremap <leader>yo "*y
+
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
