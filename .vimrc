@@ -85,12 +85,14 @@ set relativenumber " Automatic line numbering
 
 
 " indent
-set autoindent " auto indent 
 set pastetoggle=<F2> " F2 toggle paste mode
 set cindent    " open cindent
-set noexpandtab " Tab is the new Tab ;)
-set tabstop=2 softtabstop=2            " 8 is too much for my eyes     
+set noexpandtab " tab to spaces 
+set tabstop=2 
+set softtabstop=2            " 8 is too much for my eyes     
 set ts=2
+set shiftround
+set autoindent " auto indent 
 
 " Automatically change currently directory
 set autochdir
@@ -193,7 +195,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 "Register
-let @+=@"
+"let @+=@"
 map <silent> <Leader>c :let @+ = expand("%")<cr>
 vnoremap <leader>yo "*y
 
