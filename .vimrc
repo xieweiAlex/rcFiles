@@ -25,7 +25,7 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'The-NERD-tree'
 "Bundle 'kien/ctrlp.vim'
 "Obj-Syntax
-Bundle 'terhechte/syntastic'
+Bundle 'vim-syntastic/syntastic'
 " Obj-Indention
 Bundle "b4winckler/vim-objc"
 " vim toglle .h .m
@@ -69,14 +69,19 @@ set cmdheight=1     " command line height
 set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
 set novisualbell    " 不要闪烁(不明白)  
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "状态行显示的内容  
-set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
 set foldenable      " fold enable 
 "set foldmethod=manual   " 手动折叠  
 set background=dark " black background 
 set hlsearch
 set incsearch
 set history=200
+
+" status line 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
+
 
 set spell " Open spell check 
 set spelllang=en_us         " Language will likely be English
@@ -106,7 +111,7 @@ set exrc                       " Allow tuning with local .vimrc files
 set secure               " and do it securely
 
 set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
-set clipboard=unnamed        " Yank will go to mac's clipboard
+" set clipboard=unnamed        " Yank will go to mac's clipboard
 " ignore case when search
 set ignorecase
 
