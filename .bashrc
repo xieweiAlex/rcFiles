@@ -32,6 +32,7 @@ alias kWriting='cd ~/Writing'
 alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
 
 # vi
+alias vi='vim'
 #alias vi='/usr/local/Cellar/vim/8.0.1553_1'
 #alias vim='/usr/local/Cellar/vim/8.0.1553_1'
 
