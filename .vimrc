@@ -164,6 +164,7 @@ nnoremap <leader>i ==
 nnoremap <leader>s :w<esc>
 " save and quit
 nnoremap <leader>q :q<esc>
+nnoremap <leader>* lbi**<esc>ea**<esc>
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
