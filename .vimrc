@@ -25,9 +25,9 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'The-NERD-tree'
 "Bundle 'kien/ctrlp.vim'
 "Obj-Syntax
-Bundle 'vim-syntastic/syntastic'
+"Bundle 'vim-syntastic/syntastic'
 " Obj-Indention
-Bundle "b4winckler/vim-objc"
+"Bundle "b4winckler/vim-objc"
 " vim toglle .h .m
 Bundle 'eraserhd/vim-ios.git'
 " auto complete
@@ -35,9 +35,17 @@ Bundle 'guns/ultisnips'
 " Git
 Bundle 'tpope/vim-fugitive'
 " Fuzzy find
-set rtp+=/usr/local/opt/fzf
+"set rtp+=/usr/local/opt/fzf
+" Fuzzy find 
+Bundle 'ctrlpvim/ctrlp.vim'
+" Easy motion
+Bundle 'easymotion/vim-easymotion'
 
+" Path searching options 
+"Bundle 'vim-apathy'
 
+" Asynchronous Lint Engine
+Bundle 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -89,7 +97,7 @@ set showmatch "{}()[]
 set relativenumber " Automatic line numbering
 
 
-" indent
+" indentation
 set pastetoggle=<F2> " F2 toggle paste mode
 set cindent    " open cindent
 set noexpandtab " tab to spaces 
@@ -98,6 +106,10 @@ set softtabstop=2            " 8 is too much for my eyes
 set ts=2
 set shiftround
 set autoindent " auto indent 
+
+" Objective-C identation settings
+au FileType objc set softtabstop=4 tabstop=4 shiftwidth=4
+
 
 " Automatically change currently directory
 set autochdir
@@ -165,6 +177,12 @@ nnoremap <leader>s :w<esc>
 " save and quit
 nnoremap <leader>q :q<esc>
 nnoremap <leader>* lbi**<esc>ea**<esc>
+
+" Move to word
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
@@ -210,6 +228,12 @@ vnoremap <leader>yo "*y
 let @q = '0g_a jkDa  jk0j'
 
 
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+
 "abrev
 iabbrev @@ xieweialex@gmail.com
 iabbrev ccopy Copyright 2016 Alex xie, all rights reserved.
@@ -253,7 +277,7 @@ augroup END
 
 "funtion
 "toggle foldcolumn
-nnoremap <leader>f :call FoldColumnToggle()<cr>
+"nnoremap <leader>f :call FoldColumnToggle()<cr>
 
 function! FoldColumnToggle()
 	if &foldcolumn	
