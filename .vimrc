@@ -111,9 +111,8 @@ set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
 set relativenumber " Automatic line numbering
 
-
-" indentation
-set pastetoggle=<F2> " F2 toggle paste mode
+" indent
+set pastetoggle=<leader>p " toggle paste mode
 set cindent    " open cindent
 set noexpandtab " tab to spaces 
 set tabstop=2 
@@ -191,11 +190,18 @@ nnoremap <leader>i ==
 nnoremap <leader>s :w<esc>
 " save and quit
 nnoremap <leader>q :q<esc>
-nnoremap <leader>* lbi**<esc>ea**<esc>
 
-" Move to word
+" Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" Double star around current word 
+nnoremap <leader>* lbi**<esc>ea**<esc>
+" Yank current word to OS clipboard
+nnoremap <leader>y lbve"*y
+
+" Add a colon in the end of line
+nnoremap <leader>: A:<esc>
 
 
 " quotation selection sentence
