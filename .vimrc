@@ -47,6 +47,11 @@ Bundle 'easymotion/vim-easymotion'
 " Asynchronous Lint Engine
 Bundle 'w0rp/ale'
 
+" Markdown real time preview 
+Bundle 'kannokanno/previm'
+" show vim marks 
+Bundle 'kshenoy/vim-signature'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,6 +59,16 @@ filetype plugin indent on    " required
 "Mis
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
+
+" Markdown preview with browser 
+let g:previm_open_cmd = 'open -a Safari'
+let g:previm_enable_realtime = 1
+
+augroup PrevimSettings
+	autocmd!
+	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
