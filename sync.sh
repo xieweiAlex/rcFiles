@@ -10,6 +10,7 @@ function mySync {
 	cp ~/.bashrc ./
 	cp ~/.ideavimrc ./
 	cp ~/.tmux.conf ./
+	cp ~/.NERDTreeBookmarks ./
 	cp -R ~/.config/karabiner ./
 	cp -R ~/.vim/spell ./
 	echo "Synced, congrats"
@@ -23,6 +24,7 @@ function myDispatch {
 	cp .bashrc ~/
 	cp .ideavimrc ~/
 	cp .tmux.conf ~/
+	cp .NERDTreeBookmarks ~/
 	cp -R karabiner ~/.config/
 	cp -R spell ~/.vim/
 	echo "Dispatched, congrats!"
