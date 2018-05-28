@@ -22,7 +22,7 @@ alias logp='git log -p'
 alias gpullUp='git pull --rebase upstream ios-im-sdk'
 alias gpushOrin='git push origin ios-im-sdk'
 
-# Dic
+# directory
 alias kPython='cd ~/Develop/learnPython'
 alias kJava='cd ~/Develop/learnJava'
 alias kMaster='cd ~/Develop/im-master/client-team'
@@ -32,9 +32,6 @@ alias kWriting='cd ~/Writing'
 alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
 
 # vi
-alias vi='vim'
-#alias vi='/usr/local/Cellar/vim/8.0.1553_1'
-#alias vim='/usr/local/Cellar/vim/8.0.1553_1'
 alias vi='vim'
 
 # rc

@@ -147,7 +147,8 @@ color desert
 set cursorline
 set cursorcolumn
 hi CursorLine term=bold cterm=bold guibg=Grey40
-
+" enable mouse
+set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                10) Autocompletion
@@ -179,7 +180,9 @@ let maplocalleader = "\\"
 " delete a row
 nnoremap <leader>d dd
 " vertical split vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :sp $MYVIMRC<cr>
+" horizontal split vimrc
+nnoremap <leader>eev :vsplit $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " quotation a word 
@@ -226,6 +229,14 @@ nnoremap n nzz
 nnoremap N Nzz
 nmap <silent> * *zz
 nmap <silent> # #zz
+
+
+" Move split buffer
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 
 "map
 noremap - dd p
