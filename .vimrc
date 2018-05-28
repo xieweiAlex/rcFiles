@@ -45,7 +45,7 @@ Bundle 'easymotion/vim-easymotion'
 "Bundle 'vim-apathy'
 
 " Asynchronous Lint Engine
-Bundle 'w0rp/ale'
+" Bundle 'w0rp/ale'
 
 " Markdown real time preview 
 Bundle 'kannokanno/previm'
@@ -82,8 +82,6 @@ set linebreak
 if has("syntax")
   syntax on
 endif
-
-autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
 
 
 set ruler           " show ruler
@@ -141,12 +139,20 @@ set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 " ignore case when search
 set ignorecase
 
-autocmd InsertEnter * :setlocal nohlsearch " do not highlight while editing
-
 color desert
+
+" highlight line and column
 set cursorline
 set cursorcolumn
-hi CursorLine term=bold cterm=bold guibg=Grey40
+
+" high light color (not use)
+highlight CursorLine term=bold cterm=bold guibg=Grey40
+
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+autocmd InsertEnter * setlocal nocursorline
+autocmd InsertLeave * setlocal cursorline
+
 " enable mouse
 set mouse=a
 
@@ -276,8 +282,7 @@ iabbrev py_split print('--------------------------------------------------------
 "autocmd
 autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
 autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
-autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
-" autocmd FileType shell nnoremap <buffer> <leader>c I#<esc>
+autocmd FileType py nnoremap <buffer> <leader>c I#<esc>
 autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
 
