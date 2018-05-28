@@ -1,5 +1,10 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+
 function mySync {
 	echo "start to sync"
 	cp ~/.vimrc ./
@@ -14,6 +19,7 @@ function mySync {
 	cp ~/.gvimrc ./
 	cp -R ~/.config/karabiner ./
 	cp -R ~/.vim/spell ./
+	echo -e "${GREEN}Success!"
 	echo "Synced, congrats"
 }
 
@@ -29,6 +35,7 @@ function myDispatch {
 	cp .gvimrc ~/
 	cp -R karabiner ~/.config/
 	cp -R spell ~/.vim/
+	echo -e "${GREEN}Success!${NC}"
 	echo "Dispatched, congrats!"
 }
 
@@ -56,6 +63,7 @@ elif [[ $action == 'disp' || $action == 'dispatch' ]]; then
 	echo "..."
 	sourcePatch
 else 
+  echo -e "${RED}Failed!${NC}"				
 	echo "this is invalid para: $action"		
 	echo "should be \"sync\" or \"disp\""
 fi
