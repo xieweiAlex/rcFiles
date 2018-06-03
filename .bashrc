@@ -23,7 +23,7 @@ alias gpullUp='git pull --rebase upstream ios-im-sdk'
 alias gpushOrin='git push origin ios-im-sdk'
 
 # directory
-alias kPython='cd ~/Develop/learnPython'
+alias kPython='cd ~/Develop/Algorithm/Python'
 alias kJava='cd ~/Develop/learnJava'
 alias kMaster='cd ~/Develop/im-master/client-team'
 alias kWork='cd ~/Develop/august-ios'
@@ -33,6 +33,8 @@ alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/
 
 # vi
 alias vi='vim'
+# Activate vi mode with <ESC>
+set -o vi 
 
 # rc
 alias vimrc='vim ~/.vimrc'

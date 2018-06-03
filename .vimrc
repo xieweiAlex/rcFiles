@@ -75,7 +75,7 @@ augroup END
 "set lines=40 columns=155    " 设定窗口大小  
 set nu              " show number of lines 
 set go=             " no GUI buttons 
-set guifont=Courier_New:h10:cANSI   " font whichi I don't like!! 
+"set guifont=Courier_New:h10:cANSI   " font whichi I don't like!! 
 " set line break
 set linebreak
 
@@ -110,7 +110,7 @@ set showmatch "{}()[]
 set relativenumber " Automatic line numbering
 
 " indent
-set pastetoggle=<leader>p " toggle paste mode
+set pastetoggle=<leader>r " toggle paste mode
 set cindent    " open cindent
 set noexpandtab " tab to spaces 
 set tabstop=2 
@@ -121,7 +121,6 @@ set autoindent " auto indent
 
 " Objective-C identation settings
 au FileType objc set softtabstop=4 tabstop=4 shiftwidth=4
-
 
 " Automatically change currently directory
 set autochdir
@@ -251,7 +250,7 @@ vnoremap \ U
 inoremap <c-d> <esc>ddi
 inoremap <c-u> <esc>viwU
 inoremap jk <esc>
-inoremap <esc> <nop>
+"inoremap <esc> <nop>
 " command line mode c-p/c-n map
 cnoremap <C-p> <Up> 
 cnoremap <C-n> <Down>
