@@ -9,7 +9,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -233,17 +233,17 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>269 409 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>414 527 616 174 0 0 1440 877 </string>
+	<string>412 527 616 174 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>870 616 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>412 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1796 446 796 473 1440 -109 1920 1057 </string>
+	<string>2428 454 796 486 1440 -55 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 877 0 0 1440 877 </string>
+	<string>435 213 570 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 70 970 502 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1164,7 +1164,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-14T17:24:21Z</date>
+	<date>2018-06-10T01:48:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1218,7 +1218,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5.beta.2</string>
+	<string>3.2.0beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

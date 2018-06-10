@@ -75,7 +75,6 @@ augroup END
 "set lines=40 columns=155    " 设定窗口大小  
 set nu              " show number of lines 
 set go=             " no GUI buttons 
-"set guifont=Courier_New:h10:cANSI   " font whichi I don't like!! 
 " set line break
 set linebreak
 

@@ -17,6 +17,7 @@ function mySync {
 	cp ~/.tmux.conf ./
 	cp ~/.NERDTreeBookmarks ./
 	cp ~/.gvimrc ./
+	cp ~/.zshrc ./
 	cp -R ~/.config/karabiner ./
 	cp -R ~/.vim/spell ./
 	echo -e "${GREEN}Success!"
@@ -33,6 +34,7 @@ function myDispatch {
 	cp .tmux.conf ~/
 	cp .NERDTreeBookmarks ~/
 	cp .gvimrc ~/
+	cp .zshrc ~/
 	cp -R karabiner ~/.config/
 	cp -R spell ~/.vim/
 	echo -e "${GREEN}Success!${NC}"
@@ -43,6 +45,7 @@ function sourcePatch {
 	echo "start to source files"
 	source ~/.vimrc 
 	source ~/.bashrc 
+	source ~/.zshrc 
   tmux source-file ~/.tmux.conf	
 }
 
