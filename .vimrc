@@ -220,10 +220,6 @@ nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 nnoremap j gj
 " make absolutely k
 nnoremap k gk
-" reveal file in NERDTree panel 
-nnoremap <leader>n :NERDTreeFind<cr>
-" toggle NERDTree 
-nnoremap <leader>m :NERDTreeToggle<cr>
 " copy text to clipboard 
 vnoremap <leader>y :w !pbcopy
 
@@ -263,6 +259,14 @@ vnoremap <leader>yo "*y
 " Macro
 let @q = '0g_a jkDa  jk0j'
 
+" Plugin configuration
+" NERDTree
+"call nerdtree#postSourceActions()
+"
+" reveal file in NERDTree panel 
+nnoremap <leader>n :NERDTreeFind<cr>
+" toggle NERDTree 
+nnoremap <leader>m :NERDTreeToggle<cr>
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
