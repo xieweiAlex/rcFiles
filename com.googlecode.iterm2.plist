@@ -239,11 +239,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>412 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2046 450 796 486 1440 -55 1920 1057 </string>
+	<string>2046 474 796 486 1440 -55 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>435 213 570 452 0 0 1440 877 </string>
+	<string>1440 -55 1920 1057 1440 -55 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 70 970 502 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -425,7 +425,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>4.9531230171319791</real>
+			<real>12.287611040609136</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -958,7 +958,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.40913077332646713</real>
+			<real>0.13542955187976657</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1164,7 +1164,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-10T01:48:53Z</date>
+	<date>2018-06-11T03:04:12Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>

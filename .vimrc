@@ -209,7 +209,8 @@ nnoremap <leader>y lbve"*y
 
 " Add a colon in the end of line
 nnoremap <leader>: A:<esc>
-
+" no highlight search 
+nnoremap <leader><space> :nohls<CR>
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
