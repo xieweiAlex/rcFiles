@@ -108,8 +108,9 @@ set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
 set relativenumber " Automatic line numbering
 
-" indent
-set pastetoggle=<leader>r " toggle paste mode
+" toggle paste mode
+set pastetoggle=<leader>0 " toggle paste mode
+
 set cindent    " open cindent
 set noexpandtab " tab to spaces 
 set tabstop=2 
@@ -184,9 +185,9 @@ let maplocalleader = "\\"
 " delete a row
 nnoremap <leader>d dd
 " vertical split vimrc
-nnoremap <leader>ev :sp $MYVIMRC<cr>
-" horizontal split vimrc
 nnoremap <leader>eev :vsplit $MYVIMRC<cr>
+" horizontal split vimrc
+nnoremap <leader>ev :sp $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " quotation a word 
