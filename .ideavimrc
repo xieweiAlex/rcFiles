@@ -3,6 +3,7 @@ let mapleader = ","
 inoremap jk <esc>
 
 syntax on
+set surround
 
 "make the selected area commented
 vnoremap <leader>/ o<esc>i/*<esc>gv<esc>lla*/<esc>
@@ -15,5 +16,6 @@ nnoremap <leader>1 f(i1<esc>
 nnoremap j gj
 nnoremap k gk
 
+nnoremap <leader>s :w<esc>
 
 

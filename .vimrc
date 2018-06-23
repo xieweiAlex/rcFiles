@@ -232,7 +232,7 @@ nnoremap k gk
 vnoremap <leader>y :w !pbcopy
 
 
-"enter after find
+"center after find
 nnoremap n nzz
 nnoremap N Nzz
 nmap <silent> * *zz
@@ -266,6 +266,11 @@ vnoremap <leader>yo "*y
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
+
+" ctags
+let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
+
+
 
 " Plugin configuration
 " NERDTree
