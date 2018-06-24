@@ -40,6 +40,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ctrlpvim/ctrlp.vim'
 " Easy motion
 Bundle 'easymotion/vim-easymotion'
+" easy surround 
+Bundle 'tpope/vim-surround'
 
 " Path searching options 
 "Bundle 'vim-apathy'
@@ -48,7 +50,7 @@ Bundle 'easymotion/vim-easymotion'
 " Bundle 'w0rp/ale'
 
 " Markdown real time preview 
-Bundle 'kannokanno/previm'
+"Bundle 'kannokanno/previm'
 " show vim marks 
 Bundle 'kshenoy/vim-signature'
 
@@ -61,13 +63,13 @@ let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
 " Markdown preview with browser 
-let g:previm_open_cmd = 'open -a Safari'
-let g:previm_enable_realtime = 1
+"let g:previm_open_cmd = 'open -a Safari'
+"let g:previm_enable_realtime = 0
 
-augroup PrevimSettings
-	autocmd!
-	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
+"augroup PrevimSettings
+"	autocmd!
+"	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+"augroup END
 
 
 
@@ -213,6 +215,10 @@ nnoremap <leader>: A:<esc>
 " no highlight search 
 nnoremap <leader><space> :nohls<CR>
 
+" toggle and paste system clipboard 
+nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
+
+
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
@@ -269,6 +275,14 @@ let @q = '0g_a jkDa  jk0j'
 nnoremap <leader>n :NERDTreeFind<cr>
 " toggle NERDTree 
 nnoremap <leader>m :NERDTreeToggle<cr>
+" Markdown preview(set interactive bash as the default vim shell) 
+"au FileType markdown setl shell=bash\ -i
+
+" Make instant markdown render slow 
+"let g:instant_markdown_slow = 1
+" connect md files 
+"let g:instant_markdown_open_to_the_world = 1
+
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
