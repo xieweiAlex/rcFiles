@@ -15,6 +15,9 @@ alias ci='git commit'
 alias grc='git rebase --continue'
 alias logp='git log -p'
 
+source ~/.bash_profile
+
+
 #work
 # alias gpullUpDev='git pull --rebase upstream ios-im-sdk-dev'
 # alias gpushOrinDev='git push origin ios-im-sdk-dev'
@@ -33,8 +36,7 @@ alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/
 
 # vi
 alias vi='vim'
-# Activate vi mode with <ESC>
-set -o vi 
+set -o emacs 
 
 # rc
 alias vimrc='vim ~/.vimrc'
@@ -47,12 +49,6 @@ alias kSync='source ~/Develop/rcFiles/synchronize.sh'
 alias aSourceBash='source ~/.bashrc'
 alias ll='ls -al'
 export HISTTIMEFORMAT="%d.%m.%y %T "
-
-# Go
-#export GOROOT=/usr/local/cellar/go
-#export GOPATH=$HOME/Develop/goProject
-#export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
