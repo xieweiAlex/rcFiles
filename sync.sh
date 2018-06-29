@@ -13,7 +13,6 @@ function mySync {
 	cp ~/com.googlecode.iterm2.plist ./
 	cp ~/.gitconfig ./
 	cp ~/.bashrc ./
-	cp ~/.bash_profile ./
 	cp ~/.ideavimrc ./
 	cp ~/.tmux.conf ./
 	cp ~/.NERDTreeBookmarks ./
@@ -31,7 +30,6 @@ function myDispatch {
 	cp .xvimrc ~/
 	cp .gitconfig ~/
 	cp .bashrc ~/
-	cp .bash_profile ~/
 	cp .ideavimrc ~/
 	cp .tmux.conf ~/
 	cp .NERDTreeBookmarks ~/

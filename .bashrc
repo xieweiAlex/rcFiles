@@ -5,6 +5,8 @@ alias st='git status'
 #alias st='svn status'
 #alias diff='svn diff'
 
+source $HOME/.bash_profile 
+
 alias add='git add'
 alias br='git branch'
 alias diff='git diff'
@@ -14,9 +16,6 @@ alias commit='git commit'
 alias ci='git commit'
 alias grc='git rebase --continue'
 alias logp='git log -p'
-
-source ~/.bash_profile
-
 
 #work
 # alias gpullUpDev='git pull --rebase upstream ios-im-sdk-dev'
@@ -35,20 +34,27 @@ alias kWriting='cd ~/Writing'
 alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
 
 # vi
-alias vi='vim'
+alias v='vim'
+alias vi='cat'
+# Activate emacs mode 
 set -o emacs 
 
 # rc
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
-alias trc='vim ~/.tmux.conf'
+alias tmrc='vim ~/.tmux.conf'
 
 # Action
 alias kSync='source ~/Develop/rcFiles/synchronize.sh'
 alias aSourceBash='source ~/.bashrc'
-alias ll='ls -al'
 export HISTTIMEFORMAT="%d.%m.%y %T "
+
+# Go
+#export GOROOT=/usr/local/cellar/go
+#export GOPATH=$HOME/Develop/goProject
+#export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
