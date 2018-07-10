@@ -109,7 +109,6 @@ set spell " Open spell check
 set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
 set relativenumber " Automatic line numbering
-set guitablabel=\[%N\]\ %t\ %M 
 
 " toggle paste mode
 set pastetoggle=<leader>0 " toggle paste mode

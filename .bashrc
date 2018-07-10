@@ -35,7 +35,7 @@ alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/
 
 # vi
 alias v='vim'
-alias vi='cat'
+alias vi='less'
 # Activate emacs mode 
 set -o emacs 
 
