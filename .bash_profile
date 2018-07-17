@@ -29,6 +29,9 @@ alias dEnglish="open ~/Nutstore/Documents/Learning/English"
 alias dInterview="open ~/Nutstore/Documents/Interview"
 alias dDev="open ~/Develop"
 alias dResume="open ~/Nutstore/Documents/Resume"
-alias d="open ~/Nutstore/app_config/Config "
+alias ddd="open ~/Nutstore/app_config/Config "
+
+# shortcuts
+alias agl="git lgg | head -15"
 
 

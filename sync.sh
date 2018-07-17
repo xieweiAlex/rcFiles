@@ -20,6 +20,7 @@ function mySync {
 	cp ~/.zshrc ./
 	cp -R ~/.config/karabiner ./
 	cp -R ~/.vim/spell ./
+	cp ~/.bash_profile ./
 	echo -e "${GREEN}Success!"
 	echo "Synced, congrats"
 }
@@ -37,6 +38,7 @@ function myDispatch {
 	cp .zshrc ~/
 	cp -R karabiner ~/.config/
 	cp -R spell ~/.vim/
+	cp .bash_profile ~/
 	echo -e "${GREEN}Success!${NC}"
 	echo "Dispatched, congrats!"
 }
