@@ -104,11 +104,11 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
 
-
+    
 set spell " Open spell check 
 set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
-set relativenumber " Automatic line numbering
+"set relativenumber " Automatic line numbering
 set guitablabel=\[%N\]\ %t\ %M 
 
 " toggle paste mode
@@ -309,6 +309,8 @@ autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType py nnoremap <buffer> <leader>c I#<esc>
 autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
+
+:au FocusLost * silent! wa
 
 " operatior-pending map -------------------- {{{
 " operator in ()
