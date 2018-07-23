@@ -2,7 +2,7 @@
 
 # file 
 alias fTemp="open ~/Nutstore/Notes/temp.md"
-alias fWord="open ~/Nutstore/Documents/Learning/English/English_learning/words/2018/words-June.md"
+alias fWord="mvim ~/Nutstore/Documents/Learning/English/English_learning/words/2018/words-July.md"
 alias fMword="open -a /usr/local/Cellar/macvim/8.0-143/MacVim.app ~/Nutstore/Documents/Learning/English/English_learning/words/2018/words-April.md"
 alias fPlan="open ~/Nutstore/Notes/Strategy/plan.md"
 alias fQuestion="open ~/Nutstore/Notes/questions.md"
@@ -15,6 +15,7 @@ alias fCheat="open ~/Nutstore/Notes/Cheat-Sheet.md"
 alias fPlan="open ~/Nutstore/Documents/Up+/2017-Annual-Goal/November/weekly_plan.md"
 alias fAlgorithm="open ~/Nutstore/Notes/Algorithm_Plan.md"
 alias fInterview="open ~/Nutstore/Notes/interview.txt"
+alias fProfile="mvim ~/.bash_profile"
 
 # folder
 alias kBlog="open /Users/Alex_Xie/Nutstore/Notes/Blog-Writing"
@@ -36,5 +37,7 @@ alias agl="git lgg | head -15"
 alias tree1="tree -L 1"
 alias tree2="tree -L 2"
 alias tree3="tree -L 3"
+alias sProfile="source ~/.bash_profile"
+
 
 

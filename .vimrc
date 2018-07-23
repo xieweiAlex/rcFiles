@@ -115,10 +115,7 @@ set guitablabel=\[%N\]\ %t\ %M
 set pastetoggle=<leader>0 " toggle paste mode
 
 set cindent    " open cindent
-set noexpandtab " tab to spaces 
-set tabstop=2 
-set softtabstop=2            " 8 is too much for my eyes     
-set ts=2
+:set tabstop=4 shiftwidth=4 expandtab
 set shiftround
 set autoindent " auto indent 
 
@@ -206,8 +203,8 @@ nnoremap <leader>q :q<esc>
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 
-" Double star around current word 
-nnoremap <leader>* lbi**<esc>ea**<esc>
+" Copy to system clipboard and  double star around current word 
+nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
 " Yank current word to OS clipboard
 nnoremap <leader>y lbve"*y
 
@@ -267,6 +264,7 @@ vnoremap <leader>yo "*y
 
 " Macro
 let @q = '0g_a jkDa  jk0j'
+let @e = '$F/lvg_"ay0f.vg_"byDa[]jkh"apla()jkh"bpj'
 
 " ctags
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
