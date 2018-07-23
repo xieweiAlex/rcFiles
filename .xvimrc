@@ -173,8 +173,8 @@ vnoremap <CR> s
 inoremap <c-;> <ESC>A;<ESC>o
 
 " Move by line in normal mode
-<c-e>  move up
-<c-y>  move down
+"<c-e>  move up
+nnoremap <C-y>  move down
 
 
 
