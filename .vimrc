@@ -79,6 +79,9 @@ set nu              " show number of lines
 set go=             " no GUI buttons 
 " set line break
 set linebreak
+" buffer screen updates instead of updating all the time
+set lazyredraw
+
 
 if has("syntax")
   syntax on
