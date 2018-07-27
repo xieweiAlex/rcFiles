@@ -42,6 +42,8 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'easymotion/vim-easymotion'
 " easy surround 
 Bundle 'tpope/vim-surround'
+" hard mode 
+Bundle 'wikitopian/hardmode'
 
 " Path searching options 
 "Bundle 'vim-apathy'
