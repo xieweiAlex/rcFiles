@@ -95,9 +95,9 @@ set showcmd         " show command
 set cmdheight=1     " command line height 
 set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
-set novisualbell    " 不要闪烁(不明白)  
+set novisualbell    " no visual bell 
 set foldenable      " fold enable 
-"set foldmethod=manual   " 手动折叠  
+"set foldmethod=manual   " manual fold 
 set background=dark " black background 
 set hlsearch
 set incsearch
@@ -107,7 +107,7 @@ set history=200
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
+set laststatus=2    " status line: 1 show in launch, 2 always 
 
     
 set spell " Open spell check 
@@ -120,7 +120,7 @@ set guitablabel=\[%N\]\ %t\ %M
 set pastetoggle=<leader>0 " toggle paste mode
 
 set cindent    " open cindent
-:set tabstop=4 shiftwidth=4 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 set shiftround
 set autoindent " auto indent 
 
@@ -159,6 +159,14 @@ autocmd InsertLeave * setlocal cursorline
 
 " enable mouse
 set mouse=a
+
+" Buffer <Tab> to wildcharm
+"set wildchar=<Tab> wildmenu wildmode=full
+set wildcharm=<C-z>
+nnoremap <Leader>b :buffer <C-z><S-Tab>
+
+
+"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                10) Autocompletion
@@ -312,6 +320,7 @@ autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType py nnoremap <buffer> <leader>c I#<esc>
 autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
+autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
 
 :au FocusLost * silent! wa
 
