@@ -44,6 +44,8 @@ Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-surround'
 " hard mode 
 Bundle 'wikitopian/hardmode'
+" auto pairs 
+Bundle 'jiangmiao/auto-pairs'
 
 " Path searching options 
 "Bundle 'vim-apathy'
@@ -218,8 +220,10 @@ nmap <Leader>f <Plug>(easymotion-overwin-f)
 
 " Copy to system clipboard and  double star around current word 
 nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
-" Yank current word to OS clipboard
-nnoremap <leader>y lbve"*y
+" Yank current word to system clipboard
+nnoremap <leader>y viw"*y
+" Yank word to system clipboard 
+vnoremap <leader>y "*y
 
 " Add a colon in the end of line
 nnoremap <leader>: A:<esc>
@@ -239,8 +243,6 @@ nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 nnoremap j gj
 " make absolutely k
 nnoremap k gk
-" copy text to clipboard 
-vnoremap <leader>y :w !pbcopy
 
 
 "center after find
@@ -272,7 +274,7 @@ cnoremap <C-n> <Down>
 "Register
 "let @+=@"
 map <silent> <Leader>c :let @+ = expand("%")<cr>
-vnoremap <leader>yo "*y
+"vnoremap <leader>yo "*y
 
 
 " Macro
