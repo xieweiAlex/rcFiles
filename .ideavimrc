@@ -16,6 +16,9 @@ nnoremap <leader>1 f(i1<esc>
 nnoremap j gj
 nnoremap k gk
 
+nnoremap <leader>y "*yiw 
+nnoremap <leader>p viw"*p
+
 nnoremap <leader>s :w<esc>
 
 

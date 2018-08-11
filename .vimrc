@@ -29,13 +29,11 @@ Bundle 'The-NERD-tree'
 " Obj-Indention
 "Bundle "b4winckler/vim-objc"
 " vim toglle .h .m
-Bundle 'eraserhd/vim-ios.git'
+"Bundle 'eraserhd/vim-ios.git'
 " auto complete
-Bundle 'guns/ultisnips'
+"Bundle 'SirVer/ultisnips'
 " Git
 Bundle 'tpope/vim-fugitive'
-" Fuzzy find
-"set rtp+=/usr/local/opt/fzf
 " Fuzzy find 
 Bundle 'ctrlpvim/ctrlp.vim'
 " Easy motion
@@ -78,7 +76,7 @@ let g:ycm_server_log_level = 'debug'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set lines=40 columns=155    " 设定窗口大小  
+"set lines=40 columns=155    " set window size 
 set nu              " show number of lines 
 set go=             " no GUI buttons 
 " set line break
@@ -95,14 +93,15 @@ endif
 set ruler           " show ruler
 set showcmd         " show command
 set cmdheight=1     " command line height 
-set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
-set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
+set scrolloff=3     " 3 line off 
 set novisualbell    " no visual bell 
 set foldenable      " fold enable 
 "set foldmethod=manual   " manual fold 
 set background=dark " black background 
 set hlsearch
-set incsearch
+
+set incsearch  " To move the cursor to the matched string, while typing the search pattern
+set wrapscan " wraps around to the beginning and ending when do search  
 set history=200
 
 " status line 
@@ -144,6 +143,9 @@ set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 " set clipboard=unnamed        " Yank will go to mac's clipboard
 " ignore case when search
 set ignorecase
+" only be a case sensitive search if you have uppercase characters
+set ignorecase smartcase
+
 
 color desert
 
@@ -274,12 +276,12 @@ cnoremap <C-n> <Down>
 "Register
 "let @+=@"
 map <silent> <Leader>c :let @+ = expand("%")<cr>
-"vnoremap <leader>yo "*y
 
+"---------- Registers ----------------
+" add double white space to inform markdown's line change 
+let @q = '0g_a jkDa  jk0j'  
+let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 
-" Macro
-let @q = '0g_a jkDa  jk0j'
-let @e = '$F/lvg_"ay0f.vg_"byDa[]jkh"apla()jkh"bpj'
 
 " ctags
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'

@@ -17,6 +17,9 @@ alias ci='git commit'
 alias grc='git rebase --continue'
 alias logp='git log -p'
 
+# Config 
+JIRA_URL="https://augusthome.atlassian.net"
+
 #work
 # alias gpullUpDev='git pull --rebase upstream ios-im-sdk-dev'
 # alias gpushOrinDev='git push origin ios-im-sdk-dev'
@@ -60,3 +63,18 @@ export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+export FASTLANE_USER="adrian@august.com"
+export FASTLANE_PASSWORD="Kv8o2]7Bn9k>HLw@oq}c"
+export MATCH_PASSWORD="TLspXqLfQUTeok]zYPzmmm4q?yHsnbWqfGtU&ANN.8"
+
+
+
+
+
+
+
+
+
