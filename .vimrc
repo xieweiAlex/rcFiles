@@ -17,9 +17,10 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Bundle 'VundleVim/Vundle.vim'
+
 "plugin 'SirVer/ultisnips'  
-"Plugin 'othree/vim-autocomplpop'
-"
+
+" auto complete  
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'msanders/cocoa.vim'
 Bundle 'The-NERD-tree'
@@ -32,6 +33,7 @@ Bundle 'The-NERD-tree'
 "Bundle 'eraserhd/vim-ios.git'
 " auto complete
 "Bundle 'SirVer/ultisnips'
+"Bundle 'eraserhd/vim-ios.git'
 " Git
 Bundle 'tpope/vim-fugitive'
 " Fuzzy find 
@@ -44,6 +46,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'wikitopian/hardmode'
 " auto pairs 
 Bundle 'jiangmiao/auto-pairs'
+" vim status bar  
+Bundle 'vim-airline/vim-airline'
 
 " Path searching options 
 "Bundle 'vim-apathy'
@@ -105,10 +109,10 @@ set wrapscan " wraps around to the beginning and ending when do search
 set history=200
 
 " status line 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set laststatus=2    " status line: 1 show in launch, 2 always 
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"set laststatus=2    " status line: 1 show in launch, 2 always 
 
     
 set spell " Open spell check 
@@ -234,6 +238,8 @@ nnoremap <leader><space> :nohls<CR>
 
 " toggle and paste system clipboard 
 nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
+" input Python comments before <leader>9 
+nnoremap <leader>8 i"""<CR>"""<esc>k
 
 
 " quotation selection sentence
@@ -285,6 +291,8 @@ let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 
 " ctags
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
+" airline show buffers  
+let g:airline#extensions#tabline#enabled = 1
 
 
 
@@ -344,7 +352,7 @@ onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 " }}}
 
 "status-line
-set statusline=%f\ -\ FileType:\ %y
+"set statusline=%f\ -\ FileType:\ %y
 
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
