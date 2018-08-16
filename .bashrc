@@ -70,6 +70,7 @@ export FASTLANE_USER="adrian@august.com"
 export FASTLANE_PASSWORD="Kv8o2]7Bn9k>HLw@oq}c"
 export MATCH_PASSWORD="TLspXqLfQUTeok]zYPzmmm4q?yHsnbWqfGtU&ANN.8"
 
+eval "$(rbenv init -)"
 
 
 
