@@ -239,8 +239,7 @@ nnoremap <leader><space> :nohls<CR>
 " toggle and paste system clipboard 
 nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
 " input Python comments before <leader>9 
-nnoremap <leader>8 i"""<CR>"""<esc>k
-
+nmap <leader>8 i"""<CR>"""<esc>k<leader>9
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
