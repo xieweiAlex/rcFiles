@@ -72,10 +72,9 @@ export MATCH_PASSWORD="TLspXqLfQUTeok]zYPzmmm4q?yHsnbWqfGtU&ANN.8"
 
 eval "$(rbenv init -)"
 
-
-
-
-
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 
 
