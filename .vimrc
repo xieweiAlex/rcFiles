@@ -22,9 +22,8 @@ Bundle 'VundleVim/Vundle.vim'
 
 " auto complete  
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'msanders/cocoa.vim'
+"Bundle 'msanders/cocoa.vim'
 Bundle 'The-NERD-tree'
-"Bundle 'kien/ctrlp.vim'
 "Obj-Syntax
 "Bundle 'vim-syntastic/syntastic'
 " Obj-Indention
@@ -34,7 +33,8 @@ Bundle 'The-NERD-tree'
 " auto complete
 "Bundle 'SirVer/ultisnips'
 "Bundle 'eraserhd/vim-ios.git'
-" Git
+"
+" Git blame 
 Bundle 'tpope/vim-fugitive'
 " Fuzzy find 
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -53,10 +53,8 @@ Bundle 'vim-airline/vim-airline'
 "Bundle 'vim-apathy'
 
 " Asynchronous Lint Engine
-" Bundle 'w0rp/ale'
+Bundle 'w0rp/ale'
 
-" Markdown real time preview 
-"Bundle 'kannokanno/previm'
 " show vim marks 
 Bundle 'kshenoy/vim-signature'
 
@@ -67,16 +65,6 @@ filetype plugin indent on    " required
 "Mis
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
-
-" Markdown preview with browser 
-"let g:previm_open_cmd = 'open -a Safari'
-"let g:previm_enable_realtime = 0
-
-"augroup PrevimSettings
-"	autocmd!
-"	autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-"augroup END
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,13 +96,6 @@ set incsearch  " To move the cursor to the matched string, while typing the sear
 set wrapscan " wraps around to the beginning and ending when do search  
 set history=200
 
-" status line 
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"set laststatus=2    " status line: 1 show in launch, 2 always 
-
-    
 set spell " Open spell check 
 set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
