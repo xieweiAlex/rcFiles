@@ -35,6 +35,7 @@ alias kdd="open ~/Nutstore/app_config/Config "
 # shortcuts
 alias agl="git lgg | head -15"
 alias aPull="git fetch origin develop:develop"
+alias aTempCommit="git commit -m \"temp commit\""
 
 alias tree1="tree -L 1"
 alias tree2="tree -L 2"
