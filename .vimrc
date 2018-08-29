@@ -48,6 +48,8 @@ Bundle 'wikitopian/hardmode'
 Bundle 'jiangmiao/auto-pairs'
 " vim status bar  
 Bundle 'vim-airline/vim-airline'
+" Vim markdown syntax highlight
+Bundle 'gabrielelana/vim-markdown'
 
 " Path searching options 
 "Bundle 'vim-apathy'
@@ -287,11 +289,14 @@ let g:airline#extensions#tabline#enabled = 1
 " Plugin configuration
 " NERDTree
 "call nerdtree#postSourceActions()
-"
+
+" ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
 nnoremap <leader>n :NERDTreeFind<cr>
 " toggle NERDTree 
 nnoremap <leader>m :NERDTreeToggle<cr>
+
+"--------------------------- Markdown -------------------------
 " Markdown preview(set interactive bash as the default vim shell) 
 "au FileType markdown setl shell=bash\ -i
 
@@ -299,6 +304,10 @@ nnoremap <leader>m :NERDTreeToggle<cr>
 "let g:instant_markdown_slow = 1
 " connect md files 
 "let g:instant_markdown_open_to_the_world = 1
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" enable conceal for italic, bold, inline-code and link text
+let g:markdown_enable_conceal = 1 
+
 
 
 " CtrlP
