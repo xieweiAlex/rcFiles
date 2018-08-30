@@ -49,7 +49,7 @@ Bundle 'jiangmiao/auto-pairs'
 " vim status bar  
 Bundle 'vim-airline/vim-airline'
 " Vim markdown syntax highlight
-Bundle 'gabrielelana/vim-markdown'
+" Bundle 'gabrielelana/vim-markdown'
 
 " Path searching options 
 "Bundle 'vim-apathy'
