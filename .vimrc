@@ -197,9 +197,9 @@ let maplocalleader = "\\"
 " delete a row
 nnoremap <leader>d dd
 " vertical split vimrc
-nnoremap <leader>eev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " horizontal split vimrc
-nnoremap <leader>ev :sp $MYVIMRC<cr>
+"nnoremap <leader>ev :sp $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " quotation a word 
@@ -230,7 +230,9 @@ nnoremap <leader><space> :nohls<CR>
 " toggle and paste system clipboard 
 nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
 " input Python comments before <leader>9 
-nmap <leader>8 i"""<CR>"""<esc>k<leader>9
+nmap <leader>8 i"""<CR>"""<esc>O<esc><leader>9
+" toggle spell check 
+nmap <leader>0 :set nospell! <CR>
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
@@ -265,9 +267,18 @@ inoremap <c-d> <esc>ddi
 inoremap <c-u> <esc>viwU
 inoremap jk <esc>
 "inoremap <esc> <nop>
-" command line mode c-p/c-n map
+
+" command line mode mapping
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
 cnoremap <C-p> <Up> 
 cnoremap <C-n> <Down>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
+
+
 
 "Register
 "let @+=@"
