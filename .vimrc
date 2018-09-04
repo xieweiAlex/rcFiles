@@ -285,10 +285,12 @@ cnoremap <M-f> <S-Right>
 map <silent> <Leader>c :let @+ = expand("%")<cr>
 
 "---------- Registers ----------------
-" add double white space to inform markdown's line change 
+" add double space to inform markdown's line change 
 let @q = '0g_a jkDa  jk0j'  
+" search line doesn't have ** keyword 
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
-
+" add current line to a register accumulatively
+let @e = 'V"Ayj'
 
 " ctags
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
