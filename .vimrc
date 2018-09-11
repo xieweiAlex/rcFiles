@@ -59,6 +59,9 @@ Bundle 'w0rp/ale'
 
 " show vim marks 
 Bundle 'kshenoy/vim-signature'
+" fuzzy find 
+Bundle 'mileszs/ack.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -302,6 +305,10 @@ let g:airline#extensions#tabline#enabled = 1
 " Plugin configuration
 " NERDTree
 "call nerdtree#postSourceActions()
+
+" fuzzy find for Vim
+set rtp+=/usr/local/opt/fzf
+
 
 " ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
