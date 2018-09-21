@@ -214,6 +214,9 @@ nnoremap <leader>s :w<esc>
 " save and quit
 nnoremap <leader>q :q<esc>
 
+" copy the *word to system clipboard
+nnoremap <leader>a mpf*wve"*y`pdmp
+
 " Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
@@ -292,8 +295,13 @@ map <silent> <Leader>c :let @+ = expand("%")<cr>
 let @q = '0g_a jkDa  jk0j'  
 " search line doesn't have ** keyword 
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
-" add current line to a register accumulatively
+" add current line to a register a accumulatively
 let @e = 'V"Ayj'
+" search <<<<< ===== >>> for resolve conflicts 
+let @s = '/[<>=]\{5\}'
+" copy the *word to system clipboard
+let @a = 'mpf*wve"*y`pdmp'
+
 
 " ctags
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
