@@ -61,7 +61,11 @@ Bundle 'w0rp/ale'
 Bundle 'kshenoy/vim-signature'
 " fuzzy find 
 Bundle 'mileszs/ack.vim'
+" Fold markdown 
+"Bundle 'nelstrom/vim-markdown-folding'
 
+" index of vim search 
+Bundle 'henrik/vim-indexed-search'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,7 +97,9 @@ set cmdheight=1     " command line height
 set scrolloff=3     " 3 line off 
 set novisualbell    " no visual bell 
 set foldenable      " fold enable 
-"set foldmethod=manual   " manual fold 
+set foldmethod=manual   " manual fold 
+"set foldmethod=syntax
+
 set background=dark " black background 
 set hlsearch
 
@@ -389,7 +395,7 @@ augroup END
 
 "funtion
 "toggle foldcolumn
-"nnoremap <leader>f :call FoldColumnToggle()<cr>
+"nnoremap <leader>kf :call FoldColumnToggle()<cr>
 
 function! FoldColumnToggle()
 	if &foldcolumn	
@@ -412,8 +418,6 @@ function! QuickfixToggle()
         let g:quickfix_is_open = 1
     endif
 endfunction
-
-
 
 
 
