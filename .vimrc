@@ -63,6 +63,8 @@ Bundle 'kshenoy/vim-signature'
 Bundle 'mileszs/ack.vim'
 " Fold markdown 
 "Bundle 'nelstrom/vim-markdown-folding'
+" syntax plugin for plain text nodes 
+Bundle 'junegunn/vim-journal'
 
 " index of vim search 
 Bundle 'henrik/vim-indexed-search'
@@ -219,6 +221,8 @@ nnoremap <leader>i ==
 nnoremap <leader>s :w<esc>
 " save and quit
 nnoremap <leader>q :q<esc>
+" toggle buffer
+nnoremap <leader>o <C-6>
 
 " copy the *word to system clipboard
 nnoremap <leader>a mpf*wve"*y`pdmp
