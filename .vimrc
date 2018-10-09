@@ -224,7 +224,7 @@ nnoremap <leader>s :w<esc>
 " save and quit
 nnoremap <leader>q :q<esc>
 " toggle buffer
-nnoremap <leader>o <C-6>
+nnoremap <leader>o 
 
 " copy the *word to system clipboard
 nnoremap <leader>a mpf*wve"*y`pdmp

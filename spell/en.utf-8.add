@@ -437,3 +437,5 @@ AWS
 Mongodb
 nosql
 Feedly
+statsd
+statsD
