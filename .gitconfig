@@ -12,6 +12,8 @@
 	lg = log --graph --oneline
 	last = 'log -3'
 	rb = rebase
+    rba = rebase --abort
+    rbc = rebase --continue
 	gp = pull --rebase github develop
 	gps = push origin develop
 	grc = rebase --continue
