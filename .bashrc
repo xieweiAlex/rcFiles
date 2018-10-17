@@ -2,9 +2,6 @@
 # git 
 alias st='git status'
 
-#alias st='svn status'
-#alias diff='svn diff'
-
 source $HOME/.bash_profile 
 
 alias add='git add'
@@ -20,17 +17,9 @@ alias logp='git log -p'
 # Config 
 JIRA_URL="https://augusthome.atlassian.net"
 
-#work
-# alias gpullUpDev='git pull --rebase upstream ios-im-sdk-dev'
-# alias gpushOrinDev='git push origin ios-im-sdk-dev'
-
-alias gpullUp='git pull --rebase upstream ios-im-sdk'
-alias gpushOrin='git push origin ios-im-sdk'
-
 # directory
 alias kPython='cd ~/Develop/Algorithm/Python'
 alias kJava='cd ~/Develop/learnJava'
-alias kMaster='cd ~/Develop/im-master/client-team'
 alias kWork='cd ~/Develop/august-ios'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
@@ -54,12 +43,6 @@ alias tmrc='vim ~/.tmux.conf'
 alias kSync='source ~/Develop/rcFiles/synchronize.sh'
 alias aSourceBash='source ~/.bashrc'
 export HISTTIMEFORMAT="%d.%m.%y %T "
-
-# Go
-#export GOROOT=/usr/local/cellar/go
-#export GOPATH=$HOME/Develop/goProject
-#export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
 
 ## Tools enhancement 
 alias cat='bat'
