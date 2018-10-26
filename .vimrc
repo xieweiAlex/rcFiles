@@ -227,7 +227,7 @@ nnoremap <leader>q :q<esc>
 nnoremap <leader>o 
 
 " copy the *word to system clipboard
-nnoremap <leader>a mpf*wve"*y`pdmp
+nnoremap <leader>@ mpf*wve"*y`pdmp
 
 " Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
@@ -257,6 +257,10 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
 " open previous file in buffer in a split(current no use) 
 nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
+
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+
 " make absolutely j
 nnoremap j gj
 " make absolutely k
