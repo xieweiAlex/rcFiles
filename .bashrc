@@ -25,6 +25,7 @@ alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
 alias kDevops='cd ~/Develop/Devops'
+alias kTerra='cd ~/Develop/Devops/Terraform-learning'
 
 
 # vi

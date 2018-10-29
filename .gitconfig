@@ -14,6 +14,9 @@
 	rb = rebase
     rba = rebase --abort
     rbc = rebase --continue
+    cp = cherry-pick 
+    cpa = cherry-pick --abort 
+    cpc = cherry-pick --continue 
 	gp = pull --rebase github develop
 	gps = push origin develop
 	grc = rebase --continue
@@ -37,4 +40,6 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [push]
+	default = current
+[pull]
 	default = current
