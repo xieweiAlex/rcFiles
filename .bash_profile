@@ -35,6 +35,7 @@ alias kdd="open ~/Nutstore/app_config/Config "
 # shortcuts
 alias agl="git lgg | head -15"
 alias aPull="git fetch origin develop:develop"
+alias aPullCurr="git pull --rebase origin develop"
 alias aTempCommit="git commit -m \"temp commit\""
 alias gRe="git reset"
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"

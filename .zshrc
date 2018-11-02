@@ -96,3 +96,4 @@ source $HOME/.bashrc
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export HOMEBREW_GITHUB_API_TOKEN=3e13dc7a16cdd9ac91e36d5f9cfaa509c6e1887a
