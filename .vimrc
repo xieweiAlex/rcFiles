@@ -70,6 +70,8 @@ Bundle 'junegunn/vim-journal'
 Bundle 'henrik/vim-indexed-search'
 " vim plugin to interact with tmux
 Bundle 'benmills/vimux'
+" comment 
+Bundle 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
