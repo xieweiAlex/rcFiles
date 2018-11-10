@@ -21,19 +21,20 @@ Bundle 'VundleVim/Vundle.vim'
 "plugin 'SirVer/ultisnips'  
 
 " auto complete  
-Bundle 'Valloric/YouCompleteMe'
-"Bundle 'msanders/cocoa.vim'
+"Bundle 'Valloric/YouCompleteMe'
+
+" Dark powered asynchronous completion framework
+if has('nvim')
+  Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Bundle 'Shougo/deoplete.nvim'
+  Bundle 'roxma/nvim-yarp'
+  Bundle 'roxma/vim-hug-neovim-rpc'
+endif
+
+" Nerd tree
 Bundle 'The-NERD-tree'
-"Obj-Syntax
-"Bundle 'vim-syntastic/syntastic'
-" Obj-Indention
-"Bundle "b4winckler/vim-objc"
-" vim toglle .h .m
-"Bundle 'eraserhd/vim-ios.git'
-" auto complete
-"Bundle 'SirVer/ultisnips'
-"Bundle 'eraserhd/vim-ios.git'
-"
+
 " Git blame 
 Bundle 'tpope/vim-fugitive'
 " Fuzzy find 
@@ -55,7 +56,7 @@ Bundle 'vim-airline/vim-airline'
 "Bundle 'vim-apathy'
 
 " Asynchronous Lint Engine
-Bundle 'w0rp/ale'
+" Bundle 'w0rp/ale'
 
 " show vim marks 
 Bundle 'kshenoy/vim-signature'
@@ -72,14 +73,21 @@ Bundle 'henrik/vim-indexed-search'
 Bundle 'benmills/vimux'
 " comment 
 Bundle 'tpope/vim-commentary'
+" visually displaying indent levels in code
+Bundle 'nathanaelkane/vim-indent-guides'
+" The fancy start screen for Vim.
+Bundle 'mhinz/vim-startify'
+
+" #CTags needed  Vim plugin that displays tags in a window, ordered by scope
+" Bundle 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 "Mis
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
+"let g:ycm_server_keep_logfiles = 1
+"let g:ycm_server_log_level = 'debug'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -142,9 +150,6 @@ set exrc                       " Allow tuning with local .vimrc files
 set secure               " and do it securely
 
 set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
-" set clipboard=unnamed        " Yank will go to mac's clipboard
-" ignore case when search
-set ignorecase
 " only be a case sensitive search if you have uppercase characters
 set ignorecase smartcase
 
@@ -336,12 +341,16 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 
-" Plugin configuration
+" -----------Plugin configuration -------------------
 " NERDTree
 "call nerdtree#postSourceActions()
 
 " fuzzy find for Vim
 set rtp+=/usr/local/opt/fzf
+" indent guide 
+let g:indent_guides_enable_on_vim_startup = 1
+" deoplete.nvim auto completion
+let g:deoplete#enable_at_startup = 1
 
 
 " ----------------------------- NerdTree ------------------
