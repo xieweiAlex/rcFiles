@@ -21,16 +21,16 @@ Bundle 'VundleVim/Vundle.vim'
 "plugin 'SirVer/ultisnips'  
 
 " auto complete  
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 
 " Dark powered asynchronous completion framework
-if has('nvim')
-  Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Bundle 'Shougo/deoplete.nvim'
-  Bundle 'roxma/nvim-yarp'
-  Bundle 'roxma/vim-hug-neovim-rpc'
-endif
+" if has('nvim')
+"   Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Bundle 'Shougo/deoplete.nvim'
+"   Bundle 'roxma/nvim-yarp'
+"   Bundle 'roxma/vim-hug-neovim-rpc'
+" endif
 
 " Nerd tree
 Bundle 'The-NERD-tree'
@@ -85,9 +85,6 @@ Bundle 'mhinz/vim-startify'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"Mis
-"let g:ycm_server_keep_logfiles = 1
-"let g:ycm_server_log_level = 'debug'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -350,8 +347,11 @@ set rtp+=/usr/local/opt/fzf
 " indent guide 
 let g:indent_guides_enable_on_vim_startup = 1
 " deoplete.nvim auto completion
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
+" YouCompleteMe
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 " ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
