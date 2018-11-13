@@ -327,8 +327,11 @@ let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 let @e = 'V"Ayj'
 " search <<<<< ===== >>> for resolve conflicts 
 let @s = '/[<>=]\{5\}'
-" copy the *word to system clipboard
+" copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'
+let @b = '/a'
+let @c = ':g/a/d'
+let @d = 'nf{V%d'
 
 
 " ctags
