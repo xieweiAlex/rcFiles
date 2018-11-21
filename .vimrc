@@ -392,7 +392,7 @@ iabbrev py_note #!/usr/bin/env python3    # -*- coding: utf-8 -*-
 iabbrev py_split print('------------------------------------------------------------')
 
 
-"autocmd
+" ------------------------------- Autocmd -----------------------------------
 autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
 autocmd FileType java nnoremap <buffer> <localleader>c I// <esc>
 autocmd FileType py nnoremap <buffer> <leader>c I#<esc>
@@ -400,7 +400,10 @@ autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
 autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
 
+" auto write when text change in normal/insert mode 
+autocmd TextChanged,TextChangedI <buffer> silent write
 :au FocusLost * silent! wa
+
 
 " operatior-pending map -------------------- {{{
 " operator in ()
