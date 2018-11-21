@@ -77,9 +77,14 @@ Bundle 'tpope/vim-commentary'
 Bundle 'nathanaelkane/vim-indent-guides'
 " The fancy start screen for Vim.
 Bundle 'mhinz/vim-startify'
+" Syntax highlighting for VIM
+Bundle 'slim-template/vim-slim'
 
 " #CTags needed  Vim plugin that displays tags in a window, ordered by scope
 " Bundle 'majutsushi/tagbar'
+
+" Enhance Vim experience in Terminal  
+ Bundle 'wincent/terminus'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,7 +126,6 @@ set history=200
 set spell " Open spell check 
 set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
-"set relativenumber " Automatic line numbering
 set guitablabel=\[%N\]\ %t\ %M 
 
 " toggle paste mode
@@ -151,6 +155,7 @@ set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 set ignorecase smartcase
 
 
+" --------------------------  Appearance --------------------
 color desert
 
 " highlight line and column
@@ -312,7 +317,8 @@ cnoremap <C-n> <Down>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
-
+" Search visual selected word
+vnoremap <leader>a "ay@b  
 
 "Register
 "let @+=@"
@@ -330,7 +336,9 @@ let @s = '/[<>=]\{5\}'
 " copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'
 let @b = '/a'
+" Global delete all matched search  
 let @c = ':g/a/d'
+" Delete '{' wrapped text  
 let @d = 'nf{V%d'
 
 
