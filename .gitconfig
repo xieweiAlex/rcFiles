@@ -24,18 +24,12 @@
 [user]
 	name = Alex Xie
 	email = xieweialex@gmail.com
-[alia]
-	gps = push origin develop
-	grc = rebase --continue
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
 [core]
 	excludesfile = /Users/Alex_Xie/.gitignore
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+[diff "localizablestrings"]
+    ; textconv = "iconv -f utf-16 -t utf-8"
+    textconv = "iconv -f utf-16"
+    binary = false
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
