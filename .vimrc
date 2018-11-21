@@ -155,7 +155,7 @@ set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 set ignorecase smartcase
 
 
-" --------------------------  Appearance --------------------
+" --------------------------  Appearance ---------------------------
 color desert
 
 " highlight line and column
@@ -320,11 +320,7 @@ cnoremap <M-f> <S-Right>
 " Search visual selected word
 vnoremap <leader>a "ay@b  
 
-"Register
-"let @+=@"
-map <silent> <Leader>c :let @+ = expand("%")<cr>
-
-"---------- Registers ----------------
+"---------------- Registers ------------------------
 " add double space to inform markdown's line change 
 let @q = '0g_a jkDa  jk0j'  
 " search line doesn't have ** keyword 
@@ -347,9 +343,8 @@ let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
 " airline show buffers  
 let g:airline#extensions#tabline#enabled = 1
 
+"--------------------------  Plugin configuration ---------------------------
 
-
-" -----------Plugin configuration -------------------
 " NERDTree
 "call nerdtree#postSourceActions()
 
