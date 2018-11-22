@@ -85,6 +85,9 @@ Bundle 'slim-template/vim-slim'
 
 " Enhance Vim experience in Terminal  
  Bundle 'wincent/terminus'
+" Automatically save changes to disk in Vim
+ Bundle '907th/vim-auto-save'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -359,6 +362,12 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
+" Vim auto save 
+let g:auto_save = 1  " enable AutoSave on Vim startup
+" save on every change in normal mode and every time you leave insert 
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
+
 " ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
 nnoremap <leader>n :NERDTreeFind<cr>
@@ -401,7 +410,7 @@ autocmd FileType java :iabbrev <buffer> iff if ()<left>
 autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
 
 " auto write when text change in normal/insert mode 
-autocmd TextChanged,TextChangedI <buffer> silent write
+" autocmd TextChanged,TextChangedI <buffer> silent write
 :au FocusLost * silent! wa
 
 
