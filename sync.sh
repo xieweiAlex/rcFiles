@@ -6,49 +6,51 @@ NC='\033[0m' # No Color
 
 
 function mySync {
-	echo "start to sync"
-	cp ~/.vimrc ./
-	cp ~/.xvimrc ./
-	cp ~/Nutstore/app_config/my_btt_profile.json ./
-	cp ~/com.googlecode.iterm2.plist ./
-	cp ~/.gitconfig ./
-	cp ~/.bashrc ./
-	cp ~/.ideavimrc ./
-	cp ~/.tmux.conf ./
-	cp ~/.NERDTreeBookmarks ./
-	cp ~/.gvimrc ./
-	cp ~/.zshrc ./
-	cp -R ~/.config/karabiner ./
-	cp -R ~/.vim/spell ./
-	cp ~/.bash_profile ./
-	echo -e "${GREEN}Success!"
-	echo "Synced, congrats"
+    echo "start to sync"
+    cp ~/.vimrc ./
+    cp ~/.xvimrc ./
+    cp ~/Nutstore/app_config/my_btt_profile.json ./
+    cp ~/com.googlecode.iterm2.plist ./
+    cp ~/.gitconfig ./
+    cp ~/.bashrc ./
+    cp ~/.ideavimrc ./
+    cp ~/.tmux.conf ./
+    cp ~/.NERDTreeBookmarks ./
+    cp ~/.gvimrc ./
+    cp ~/.zshrc ./
+    cp -R ~/.config/karabiner ./
+    cp -R ~/.vim/spell ./
+    cp ~/.bash_profile ./
+    cp ~/.cvimrc ./
+    echo -e "${GREEN}Success!"
+    echo "Synced, congrats"
 }
 
 function myDispatch {
-	echo "start to dispatch"
-	cp .vimrc ~/
-	cp .xvimrc ~/
-	cp .gitconfig ~/
-	cp .bashrc ~/
-	cp .ideavimrc ~/
-	cp .tmux.conf ~/
-	cp .NERDTreeBookmarks ~/
-	cp .gvimrc ~/
-	cp .zshrc ~/
-	cp -R karabiner ~/.config/
-	cp -R spell ~/.vim/
-	cp .bash_profile ~/
-	echo -e "${GREEN}Success!${NC}"
-	echo "Dispatched, congrats!"
+    echo "start to dispatch"
+    cp .vimrc ~/
+    cp .xvimrc ~/
+    cp .gitconfig ~/
+    cp .bashrc ~/
+    cp .ideavimrc ~/
+    cp .tmux.conf ~/
+    cp .NERDTreeBookmarks ~/
+    cp .gvimrc ~/
+    cp .zshrc ~/
+    cp -R karabiner ~/.config/
+    cp -R spell ~/.vim/
+    cp .bash_profile ~/
+    cp .cvimrc ~/
+    echo -e "${GREEN}Success!${NC}"
+    echo "Dispatched, congrats!"
 }
 
 function sourcePatch {
-	echo "start to source files"
-	source ~/.vimrc 
-	source ~/.bashrc 
-	source ~/.zshrc 
-  tmux source-file ~/.tmux.conf	
+    echo "start to source files"
+    source ~/.vimrc 
+    source ~/.bashrc 
+    source ~/.zshrc 
+    tmux source-file ~/.tmux.conf	
 }
 
 action=$1

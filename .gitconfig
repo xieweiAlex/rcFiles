@@ -5,6 +5,7 @@
 	ui = true
 [alias]
 	st = status
+	sl = stash list 
 	co = checkout
 	br = branch
 	ci = commit
