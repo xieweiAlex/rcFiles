@@ -9,7 +9,7 @@ set typelinkhints
 set defaultnewtabpage
 
 let scrollduration = 5
-let scrollstep = 210 
+let scrollstep = 140 
 
 let searchlimit = 40
 let searchalias g = "google"
@@ -25,6 +25,15 @@ map <C-l> nextTab
 map <C-h> previousTab
 map <C-f> scrollFullPageDown
 map <C-b> scrollFullPageUp
+
+map D :duplicate&<CR>
+map ad :duplicate&<CR>
+
+
+map <C-n> nextTab
+map <C-p> previousTab
+
+
 map F createActiveTabbedHint
 map f createHint
 map p openPasteTab
@@ -33,8 +42,10 @@ map P openPaste
 " map S :open google<Space>
 " map s :tabnew google<Space>
 map i goToInput
-" map u lastClosedTab
 map <C-z> toggleCvim
+
+" nnoremap n nzz 
+" nnoremap N Nzz 
 
 let configpath = '~/.cvimrc'
 set localconfig
