@@ -393,7 +393,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-
 "abrev
 iabbrev @@ xieweialex@gmail.com
 iabbrev ccopy Copyright 2016 Alex xie, all rights reserved.
@@ -429,8 +428,6 @@ onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 
 " }}}
 
-"status-line
-"set statusline=%f\ -\ FileType:\ %y
 
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim

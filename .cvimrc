@@ -13,7 +13,7 @@ let scrollstep = 140
 
 let searchlimit = 40
 let searchalias g = "google"
-let mapleader = "\\"
+let mapleader = ","
 let barposition = "bottom"
 let typelinkhintsdelay = "0"
 let hintcharacters = "fdsawerjkiop"
@@ -29,20 +29,17 @@ map <C-b> scrollFullPageUp
 map D :duplicate&<CR>
 map ad :duplicate&<CR>
 
-
 map <C-n> nextTab
 map <C-p> previousTab
 
-
-map F createActiveTabbedHint
-map f createHint
-map p openPasteTab
-map P openPaste
-
 " map S :open google<Space>
 " map s :tabnew google<Space>
-map i goToInput
+" map i goToInput
 map <C-z> toggleCvim
+
+" ? no idea what's is 
+imap <C-o> editWithVim
+
 
 " nnoremap n nzz 
 " nnoremap N Nzz 

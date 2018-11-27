@@ -31,10 +31,21 @@
     ; textconv = "iconv -f utf-16 -t utf-8"
     textconv = "iconv -f utf-16"
     binary = false
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[diff]
+    tool = icdiff
+    cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+[difftool]
+    prompt = false
+[difftool "icdiff"]
+    cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+
+; [mergetool "sourcetree"]
+; 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+; 	trustExitCode = true
 [push]
 	default = current
 [pull]
 	default = current
+[icdiff]
+	; options = --highlight --line-numbers
+    options =  --line-numbers
