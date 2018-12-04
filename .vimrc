@@ -1,4 +1,5 @@
 
+" test something 
 set nocompatible  "not compatible with Vi
 filetype off " required by Vundle? 
 

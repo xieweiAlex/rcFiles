@@ -46,7 +46,7 @@ function myDispatch {
 }
 
 function showLocalChange {
-    git diff 
+    git diff | bat 
 }
 
 function sourcePatch {
@@ -56,6 +56,12 @@ function sourcePatch {
     source ~/.zshrc 
     tmux source-file ~/.tmux.conf	
 }
+
+if [[ $(git status -s) != '' ]]; then
+    echo -e "${RED}local isn't clean, exit${NC}"
+    exit
+fi
+
 
 action=$1
 echo "."
@@ -70,8 +76,8 @@ fi
 
 echo ".."
 if [[ $action == 'sync' ]]; then
-	mySync
-    if [ -z "$(git status --porcelain)" ]; then
+    mySync
+    if [[ $(git status -s) != '' ]]; then
         echo "Something change in local, you know what?"
         showLocalChange
     else
