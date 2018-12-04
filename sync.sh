@@ -22,7 +22,7 @@ function mySync {
     cp -R ~/.vim/spell ./
     cp ~/.bash_profile ./
     cp ~/.cvimrc ./
-    echo -e "${GREEN}Success!"
+    echo -e "${GREEN}Success! ${NC}"
     echo "Synced, congrats"
 }
 
@@ -45,6 +45,10 @@ function myDispatch {
     echo "Dispatched, congrats!"
 }
 
+function showLocalChange {
+    git diff 
+}
+
 function sourcePatch {
     echo "start to source files"
     source ~/.vimrc 
@@ -62,9 +66,18 @@ if [[ "$#" -ne 1 ]]; then
 	echo ""
 fi
 
+
+
 echo ".."
 if [[ $action == 'sync' ]]; then
 	mySync
+    if [ -z "$(git status --porcelain)" ]; then
+        echo "Something change in local, you know what?"
+        showLocalChange
+    else
+        echo "Nothing change in local, You're all set!!"
+    fi
+
 elif [[ $action == 'disp' || $action == 'dispatch' ]]; then
 	myDispatch
 	echo "..."
