@@ -1,5 +1,4 @@
 
-" test something 
 set nocompatible  "not compatible with Vi
 filetype off " required by Vundle? 
 
@@ -224,13 +223,13 @@ let g:SuperTabLongestEnhanced = 1
 " ---------------------------------- map ----------------------------------
 
 "map leader
-" let mapleader = ","
-let mapleader = ";"
+let mapleader = ","
+" let mapleader = ";"
 " let maplocalleader = "\\"
 
 " Leader Mapping from the Gods (I doubt ?)
-noremap . ;
-noremap <space> .
+" noremap . ;
+" noremap <space> .
 
 "Action
 " delete a row

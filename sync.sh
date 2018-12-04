@@ -46,7 +46,7 @@ function myDispatch {
 }
 
 function showLocalChange {
-    git diff | bat 
+    git diff 
 }
 
 function sourcePatch {
@@ -57,10 +57,10 @@ function sourcePatch {
     tmux source-file ~/.tmux.conf	
 }
 
-if [[ $(git status -s) != '' ]]; then
-    echo -e "${RED}local isn't clean, exit${NC}"
-    exit
-fi
+# if [[ $(git status -s) != '' ]]; then
+     # echo -e "${RED}local isn't clean, exit${NC}"
+#     exit
+# fi
 
 
 action=$1
