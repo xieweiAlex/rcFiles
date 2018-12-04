@@ -43,8 +43,8 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'easymotion/vim-easymotion'
 " easy surround 
 Bundle 'tpope/vim-surround'
-" hard mode 
-Bundle 'wikitopian/hardmode'
+" hard time 
+Bundle 'takac/vim-hardtime'
 " auto pairs 
 Bundle 'jiangmiao/auto-pairs'
 " vim status bar  
@@ -366,6 +366,12 @@ let g:ycm_server_log_level = 'debug'
 let g:auto_save = 1  " enable AutoSave on Vim startup
 " save on every change in normal mode and every time you leave insert 
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
+" Vim hard time 
+let g:hardtime_timeout = 2000
+let g:hardtime_showmsg = 1
+let g:hardtime_default_on = 1
+let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 
 " ----------------------------- NerdTree ------------------

@@ -64,6 +64,7 @@ source ~/.bashrc
 plugins=(
   git
   jira
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
