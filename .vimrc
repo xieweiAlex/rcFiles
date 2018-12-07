@@ -345,6 +345,10 @@ let @c = ':g/a/d'
 " Delete '{' wrapped text  
 let @d = 'nf{V%d'
 
+" The below two is for localize 'August-iOS' static text
+let @j = 'NSLocalizedString'
+let @k = 'f@h"apa(jkf)xf";a, nil)jk'
+
 
 " ctags
 let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
