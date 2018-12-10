@@ -16,9 +16,20 @@ nnoremap <leader>1 f(i1<esc>
 nnoremap j gj
 nnoremap k gk
 
+" copy current word to system clipboard 
 nnoremap <leader>y "*yiw 
+" replace current word from system clipboard
 nnoremap <leader>p viw"*p
-
+" Save 
 nnoremap <leader>s :w<esc>
+
+" activate AceJump
+nnoremap <leader>f :action AceAction<CR>
+
+" Press `F` to activate Target Mode
+" nnoremap <leader>F :action AceTargetAction<CR>
+
+" activate Line Mode
+nnoremap <leader>g :action AceLineAction<CR>
 
 
