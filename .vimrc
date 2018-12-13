@@ -298,6 +298,10 @@ nnoremap N Nzz
 nmap <silent> * *zz
 nmap <silent> # #zz
 
+" Previous tab 
+nnoremap J gT
+" Next tab 
+nnoremap K gt
 
 " Move split buffer
 nnoremap <C-h> <C-w>h
