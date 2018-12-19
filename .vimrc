@@ -299,9 +299,12 @@ nmap <silent> * *zz
 nmap <silent> # #zz
 
 " Previous tab 
-nnoremap J gT
+nnoremap <leader>J gT
 " Next tab 
-nnoremap K gt
+nnoremap <leader>K gt
+" Move tab left and right 
+nnoremap <leader>< :tabm -1<CR>
+nnoremap <leader>> :tabm +1<CR>
 
 " Move split buffer
 nnoremap <C-h> <C-w>h
