@@ -87,7 +87,8 @@ Bundle 'slim-template/vim-slim'
  Bundle 'wincent/terminus'
 " Automatically save changes to disk in Vim
  Bundle '907th/vim-auto-save'
-
+" Text outlining and task management for Vim based on Emacs' Org-Mode
+" Bundle 'jceb/vim-orgmode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -344,6 +345,8 @@ let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 let @e = 'V"Ayj'
 " search <<<<< ===== >>> for resolve conflicts 
 let @s = '/[<>=]\{5\}'
+let @i = '/.*\s-'
+
 " copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'
 let @b = '/a'
