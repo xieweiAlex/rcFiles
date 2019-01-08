@@ -238,7 +238,7 @@ nnoremap <leader>d dd
 " vertical split vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " horizontal split vimrc
-"nnoremap <leader>ev :sp $MYVIMRC<cr>
+nnoremap <leader>eev :sp $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " quotation a word 
@@ -285,12 +285,13 @@ vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
 nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
+" Ack search in .git directory
+nnoremap <Leader>a :Gcd <bar> Ack!<Space>
 
 " make absolutely j
-nnoremap j gj
+" nnoremap j gj
 " make absolutely k
-nnoremap k gk
+" nnoremap k gk
 
 
 "center after find
@@ -342,10 +343,15 @@ let @q = '0g_a jkDa  jk0j'
 " search line doesn't have ** keyword 
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 " add current line to a register a accumulatively
-let @e = 'V"Ayj'
+let @r = 'V"Ayj'
 " search <<<<< ===== >>> for resolve conflicts 
 let @s = '/[<>=]\{5\}'
 let @i = '/.*\s-'
+
+" Search word ended in "-"
+let @e = "/.*\\s-"
+" Show ** words 
+let @r = "/\\*\\*.*\\*\\*"
 
 " copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'
@@ -391,6 +397,10 @@ let g:hardtime_timeout = 2000
 let g:hardtime_showmsg = 1
 let g:hardtime_default_on = 1
 let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 
 " ----------------------------- NerdTree ------------------
