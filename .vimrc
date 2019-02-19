@@ -363,7 +363,7 @@ let @d = 'nf{V%d'
 
 " The below two is for localize 'August-iOS' static text
 let @j = 'NSLocalizedString'
-let @k = 'f@h"apa(jkf)xf";a, nil)jk'
+let @k = 'f@h"jpa(jkf)xf";a, nil)jk'
 
 
 " ctags
