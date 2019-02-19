@@ -84,11 +84,14 @@ Bundle 'slim-template/vim-slim'
 " Bundle 'majutsushi/tagbar'
 
 " Enhance Vim experience in Terminal  
- Bundle 'wincent/terminus'
+Bundle 'wincent/terminus'
 " Automatically save changes to disk in Vim
- Bundle '907th/vim-auto-save'
+Bundle '907th/vim-auto-save'
 " Text outlining and task management for Vim based on Emacs' Org-Mode
 " Bundle 'jceb/vim-orgmode'
+" Markdown support 
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -395,7 +398,7 @@ let g:auto_save_events = ["InsertLeave", "TextChanged"]
 " Vim hard time 
 let g:hardtime_timeout = 2000
 let g:hardtime_showmsg = 1
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 if executable('ag')
