@@ -401,6 +401,12 @@ let g:hardtime_showmsg = 1
 let g:hardtime_default_on = 0
 let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
+" Vim markdown 
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_new_list_item_indent = 0
+                 
+
+
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
