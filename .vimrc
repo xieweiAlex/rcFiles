@@ -374,6 +374,14 @@ let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
 " airline show buffers  
 let g:airline#extensions#tabline#enabled = 1
 
+
+"--------------------------  Window manipulation ---------------------------
+" Use arrow keys to resize windows
+noremap <up>    <C-W>+
+noremap <down>  <C-W>-
+noremap <left>  3<C-W><
+noremap <right> 3<C-W>>
+
 "--------------------------  Plugin configuration ---------------------------
 
 " NERDTree
