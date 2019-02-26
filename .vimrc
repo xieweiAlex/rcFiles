@@ -136,7 +136,7 @@ set showmatch "{}()[]
 set guitablabel=\[%N\]\ %t\ %M 
 
 " toggle paste mode
-set pastetoggle=<leader>0 " toggle paste mode
+set pastetoggle=<leader>p 
 
 set cindent    " open cindent
 set tabstop=4 shiftwidth=4 expandtab

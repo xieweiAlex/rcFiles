@@ -30,11 +30,10 @@
 	email = xieweialex@gmail.com
 [core]
 	excludesfile = /Users/Alex_Xie/.gitignore
-[diff "localizablestrings"]
-    textconv = "iconv -f utf-16 -t utf-8"
-    ; textconv = "iconv -f utf-16"
-    binary = false
-[diff]
+; [diff "localizablestrings"]
+;     textconv = "iconv -t utf-8"
+;     binary = false
+; [diff]
     tool = icdiff
     cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [difftool]
