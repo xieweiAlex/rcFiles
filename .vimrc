@@ -224,7 +224,7 @@ let g:SuperTabLongestEnhanced = 1
 
 
 
-" ---------------------------------- map ----------------------------------
+" ---------------------------------- n,v,c map ----------------------------------
 
 "map leader
 let mapleader = ","
@@ -339,6 +339,14 @@ cnoremap <M-f> <S-Right>
 
 " Search visual selected word
 vnoremap <leader>a "ay@b  
+
+"---------------- Mis ------------------------
+" Save undo even after file close 
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
 
 "---------------- Registers ------------------------
 " add double space to inform markdown's line change 
