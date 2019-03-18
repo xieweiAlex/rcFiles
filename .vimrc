@@ -85,13 +85,17 @@ Bundle 'slim-template/vim-slim'
 
 " Enhance Vim experience in Terminal  
 Bundle 'wincent/terminus'
-" Automatically save changes to disk in Vim
+
 Bundle '907th/vim-auto-save'
 " Text outlining and task management for Vim based on Emacs' Org-Mode
 " Bundle 'jceb/vim-orgmode'
 " Markdown support 
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+
+" Automatically save changes to disk in Vim
+Bundle '907th/vim-auto-save'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -256,7 +260,7 @@ nnoremap <leader>q :q<esc>
 nnoremap <leader>o 
 
 " copy the *word to system clipboard
-nnoremap <leader>@ mpf*wve"*y`pdmp
+nnoremap <leader>@ f*wvt*"+y
 
 " Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
@@ -355,14 +359,12 @@ let @q = '0g_a jkDa  jk0j'
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 " add current line to a register a accumulatively
 let @r = 'V"Ayj'
-" search <<<<< ===== >>> for resolve conflicts 
+" search <<<<< ===== >>>>> for resolve conflicts 
 let @s = '/[<>=]\{5\}'
-let @i = '/.*\s-'
 
 " Search word ended in "-"
-let @e = "/.*\\s-"
-" Show ** words 
-let @r = "/\\*\\*.*\\*\\*"
+let @e = "/.*\\s-\\{1,3\\}\\W\\{0,10\\}$"
+let @r = "/\\*\\*.\\{-\} "
 
 " copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'
@@ -371,6 +373,9 @@ let @b = '/a'
 let @c = ':g/a/d'
 " Delete '{' wrapped text  
 let @d = 'nf{V%d'
+
+" Delete '-' in the word file from word-review file 
+let @u = ',a"a"hf-x,q'
 
 " The below two is for localize 'August-iOS' static text
 let @j = 'NSLocalizedString'
@@ -412,10 +417,10 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 " Vim hard time 
-let g:hardtime_timeout = 2000
+let g:hardtime_timeout = 3000
 let g:hardtime_showmsg = 1
 let g:hardtime_default_on = 0
-let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_normal_keys = ["h", "j", "k", "l"]
 
 " Vim markdown 
 let g:vim_markdown_folding_disabled = 1
@@ -458,6 +463,8 @@ iabbrev @@ xieweialex@gmail.com
 iabbrev ccopy Copyright 2016 Alex xie, all rights reserved.
 iabbrev py_note #!/usr/bin/env python3    # -*- coding: utf-8 -*-
 iabbrev py_split print('------------------------------------------------------------')
+" --------------------- English auto-complete --------
+" in progress 
 
 
 " ------------------------------- Autocmd -----------------------------------
