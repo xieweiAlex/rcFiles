@@ -63,7 +63,6 @@ source ~/.bashrc
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  jira
   z
 )
 
@@ -95,7 +94,12 @@ source $HOME/.bashrc
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export HOMEBREW_GITHUB_API_TOKEN=3e13dc7a16cdd9ac91e36d5f9cfaa509c6e1887a
+export HOMEBREW_GITHUB_API_TOKEN=022ac194ccc524c12fb4f4ff54fac940d408ef83
+
+
+
