@@ -48,3 +48,4 @@ alias kdfc="git diff --cached"
 
 
 
+export PATH="/usr/local/opt/ruby/bin:$PATH"
