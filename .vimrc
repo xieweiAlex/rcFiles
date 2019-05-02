@@ -359,8 +359,9 @@ let @q = '0g_a jkDa  jk0j'
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 " add current line to a register a accumulatively
 let @r = 'V"Ayj'
-" search <<<<< ===== >>>>> for resolve conflicts 
-let @s = '/[<>=]\{5\}'
+" search <<<<< ===== >>> for resolve conflicts 
+let @s = '/[<>=]\{7\}'
+let @i = '/.*\s-'
 
 " Search word ended in "-"
 let @e = "/.*\\s-\\{1,3\\}\\W\\{0,10\\}$"

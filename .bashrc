@@ -20,7 +20,7 @@ JIRA_URL="https://augusthome.atlassian.net"
 # directory
 alias kPython='cd ~/Develop/Algorithm/Python'
 alias kJava='cd ~/Develop/learnJava'
-alias kWork='cd ~/Develop/august-ios'
+alias kWork='cd ~/Develop/august-repos/august-ios'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
