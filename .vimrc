@@ -85,17 +85,13 @@ Bundle 'slim-template/vim-slim'
 
 " Enhance Vim experience in Terminal  
 Bundle 'wincent/terminus'
-
+" Automatically save changes to disk in Vim
 Bundle '907th/vim-auto-save'
 " Text outlining and task management for Vim based on Emacs' Org-Mode
 " Bundle 'jceb/vim-orgmode'
 " Markdown support 
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
-
-" Automatically save changes to disk in Vim
-Bundle '907th/vim-auto-save'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -260,7 +256,7 @@ nnoremap <leader>q :q<esc>
 nnoremap <leader>o 
 
 " copy the *word to system clipboard
-nnoremap <leader>@ f*wvt*"+y
+nnoremap <leader>@ mpf*wve"*y`pdmp
 
 " Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
@@ -322,14 +318,25 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 
-"map
+" ---------- inert mode mapping  ------------------
 noremap - dd p
 noremap + ddkP
-vnoremap \ U
-inoremap <c-d> <esc>ddi
-inoremap <c-u> <esc>viwU
+
 inoremap jk <esc>
-"inoremap <esc> <nop>
+" Mimic Emacs Line Editing in Insert Mode Only
+inoremap <C-A> <Home>
+inoremap <C-B> <Left>
+inoremap <C-E> <End>
+inoremap <C-F> <Right>
+" â is <Alt-B>
+inoremap â <C-Left>
+" æ is <Alt-F>
+inoremap æ <C-Right>
+inoremap <C-K> <Esc>lDa
+inoremap <C-U> <Esc>d0xi
+inoremap <C-Y> <Esc>Pa
+inoremap <C-X><C-S> <Esc>:w<CR>a
+
 
 " command line mode mapping
 cnoremap <C-a> <Home>
