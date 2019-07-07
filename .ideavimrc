@@ -13,9 +13,6 @@ nnoremap <leader>; A;<esc>
 nnoremap <leader>{ f)a { <ENTER> }<esc>
 nnoremap <leader>1 f(i1<esc>
 
-" shortcut for swift string variable 
-nnoremap <leader>/ i\(
-
 nnoremap j gj
 nnoremap k gk
 

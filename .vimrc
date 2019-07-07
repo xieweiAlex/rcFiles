@@ -87,11 +87,18 @@ Bundle 'slim-template/vim-slim'
 Bundle 'wincent/terminus'
 " Automatically save changes to disk in Vim
 Bundle '907th/vim-auto-save'
+
 " Text outlining and task management for Vim based on Emacs' Org-Mode
 " Bundle 'jceb/vim-orgmode'
 " Markdown support 
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+
+" Syntax for vim 
+Bundle 'vim-syntastic/syntastic'
+
+" Swift syntax and indention
+Bundle 'keith/swift.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -139,7 +146,7 @@ set guitablabel=\[%N\]\ %t\ %M
 set pastetoggle=<leader>p 
 
 set cindent    " open cindent
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 set shiftround
 set autoindent " auto indent 
 
@@ -176,6 +183,10 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd InsertEnter * setlocal nocursorline
 autocmd InsertLeave * setlocal cursorline
+ 
+autocmd BufNewFile,BufRead *.swift set filetype=swift
+autocmd BufNewFile,BufRead *.sw set filetype=swift
+
 
 " enable mouse
 set mouse=a
@@ -254,6 +265,9 @@ nnoremap <leader>s :w<esc>
 nnoremap <leader>q :q<esc>
 " toggle buffer
 nnoremap <leader>o 
+" \() in swift   
+" nnoremap <leader>/ i(<esc>i\<esc>f(a
+nnoremap <leader>/ i()<esc>F(<esc>i\<esc>f(a
 
 " copy the *word to system clipboard
 nnoremap <leader>@ mpf*wve"*y`pdmp
@@ -365,14 +379,16 @@ let @q = '0g_a jkDa  jk0j'
 " search line doesn't have ** keyword 
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
 " add current line to a register a accumulatively
-let @r = 'V"Ayj'
-" search <<<<< ===== >>> for resolve conflicts 
-let @s = '/[<>=]\{7\}'
-let @i = '/.*\s-'
+" search <<<<< ===== >>>>> for resolve conflicts 
+let @s = '/[<>=]\{5\}'
 
 " Search word ended in "-"
 let @e = "/.*\\s-\\{1,3\\}\\W\\{0,10\\}$"
+" Search emphasized word wrapped with `**`
 let @r = "/\\*\\*.\\{-\} "
+
+" reverse delete the '-' in words file from words-reivew  
+let @t = '0vt*"ay?.md0g_0vg_"bymcbrbgg/af-x0,of-x0'
 
 " copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'

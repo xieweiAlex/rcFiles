@@ -20,7 +20,7 @@ JIRA_URL="https://augusthome.atlassian.net"
 # directory
 alias kPython='cd ~/Develop/Algorithm/Python'
 alias kJava='cd ~/Develop/learnJava'
-alias kWork='cd ~/Develop/august-repos/august-ios'
+alias kWork='cd ~/Develop/august-ios'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/2018'
@@ -55,11 +55,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-
-export FASTLANE_USER="adrian@august.com"
-export FASTLANE_PASSWORD="Kv8o2]7Bn9k>HLw@oq}c"
-export MATCH_PASSWORD="TLspXqLfQUTeok]zYPzmmm4q?yHsnbWqfGtU&ANN.8"
 
 eval "$(rbenv init -)"
 
