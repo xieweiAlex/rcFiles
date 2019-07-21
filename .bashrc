@@ -27,7 +27,6 @@ alias kEnglish='cd ~/Nutstore/Documents/Learning/English/English_Learning/words/
 alias kDevops='cd ~/Develop/Devops'
 alias kTerra='cd ~/Develop/Devops/Terraform-learning'
 
-
 # vi
 alias v='vim'
 alias vi='less'
@@ -55,11 +54,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 eval "$(rbenv init -)"
 
 alias python='python3'
-export PYTHONPATH="/usr/local/Cellar/python/3.6.5/bin/python3:$PYTHONPATH"
+# export PYTHONPATH="/usr/local/Cellar/python/3.6.5/bin/python3:$PYTHONPATH"
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8

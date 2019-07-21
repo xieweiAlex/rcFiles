@@ -99,6 +99,11 @@ Bundle 'vim-syntastic/syntastic'
 
 " Swift syntax and indention
 Bundle 'keith/swift.vim'
+" COC 
+Bundle 'neoclide/coc.nvim', {'branch': 'release'}
+" TagBar 
+Bundle 'majutsushi/tagbar'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -330,6 +335,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" tag bar trigger
+nmap <leader>p :TagbarToggle<CR>
 
 
 " ---------- inert mode mapping  ------------------
