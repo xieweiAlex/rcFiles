@@ -1,115 +1,85 @@
 
 set nocompatible  "not compatible with Vi
-filetype off " required by Vundle? 
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Bundle 'VundleVim/Vundle.vim'
-
-"plugin 'SirVer/ultisnips'  
+" --------------------- Vim Plug Manager ---------
+call plug#begin('~/.vim/plugged')
 
 " auto complete  
-Bundle 'Valloric/YouCompleteMe'
-
-" Dark powered asynchronous completion framework
-" if has('nvim')
-"   Bundle 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Bundle 'Shougo/deoplete.nvim'
-"   Bundle 'roxma/nvim-yarp'
-"   Bundle 'roxma/vim-hug-neovim-rpc'
-" endif
+Plug 'Valloric/YouCompleteMe'
 
 " Nerd tree
-Bundle 'The-NERD-tree'
+Plug 'scrooloose/nerdtree'
 
 " Git blame 
-Bundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " Fuzzy find 
-Bundle 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " Easy motion
-Bundle 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 " easy surround 
-Bundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " hard time 
-Bundle 'takac/vim-hardtime'
+Plug 'takac/vim-hardtime'
 " auto pairs 
-Bundle 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 " vim status bar  
-Bundle 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 " Vim markdown syntax highlight
-" Bundle 'gabrielelana/vim-markdown'
+" Plug 'gabrielelana/vim-markdown'
 
 " Path searching options 
-"Bundle 'vim-apathy'
+"Plug 'vim-apathy'
 
 " Asynchronous Lint Engine
 " Bundle 'w0rp/ale'
 
 " show vim marks 
-Bundle 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 " fuzzy find 
-Bundle 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 " Fold markdown 
-"Bundle 'nelstrom/vim-markdown-folding'
+"Plug 'nelstrom/vim-markdown-folding'
 " syntax plugin for plain text nodes 
-Bundle 'junegunn/vim-journal'
+Plug 'junegunn/vim-journal'
 
 " index of vim search 
-Bundle 'henrik/vim-indexed-search'
+Plug 'henrik/vim-indexed-search'
 " vim plugin to interact with tmux
-Bundle 'benmills/vimux'
+Plug 'benmills/vimux'
 " comment 
-Bundle 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 " visually displaying indent levels in code
-Bundle 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 " The fancy start screen for Vim.
-Bundle 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 " Syntax highlighting for VIM
-Bundle 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim'
 
 " #CTags needed  Vim plugin that displays tags in a window, ordered by scope
-" Bundle 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 
 " Enhance Vim experience in Terminal  
-Bundle 'wincent/terminus'
+Plug 'wincent/terminus'
 " Automatically save changes to disk in Vim
-Bundle '907th/vim-auto-save'
+Plug '907th/vim-auto-save'
 
 " Text outlining and task management for Vim based on Emacs' Org-Mode
-" Bundle 'jceb/vim-orgmode'
+" Plug 'jceb/vim-orgmode'
 " Markdown support 
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " Syntax for vim 
-Bundle 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " Swift syntax and indention
-Bundle 'keith/swift.vim'
+Plug 'keith/swift.vim'
 " COC 
-Bundle 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " TagBar 
-Bundle 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set lines=40 columns=155    " set window size 
