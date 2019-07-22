@@ -1,6 +1,4 @@
 
-set nocompatible  "not compatible with Vi
-
 " --------------------- Vim Plug Manager ---------
 call plug#begin('~/.vim/plugged')
 
@@ -85,6 +83,21 @@ Plug 'majutsushi/tagbar'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible  "not compatible with Vi
+set hidden 
+set nobackup
+set nowritebackup
+" Better display for messages
+set cmdheight=2
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
+
+
 "set lines=40 columns=155    " set window size 
 set nu              " show number of lines 
 set go=             " no GUI buttons 
@@ -101,7 +114,6 @@ endif
 
 set ruler           " show ruler
 set showcmd         " show command
-set cmdheight=1     " command line height 
 set scrolloff=3     " 3 line off 
 set novisualbell    " no visual bell 
 set foldenable      " fold enable 
@@ -315,10 +327,14 @@ nnoremap <C-l> <C-w>l
 " tag bar trigger
 nmap <leader>p :TagbarToggle<CR>
 
-
-" ---------- inert mode mapping  ------------------
 noremap - dd p
 noremap + ddkP
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+
+" ---------- inert mode mapping  ------------------
 
 inoremap jk <esc>
 " Mimic Emacs Line Editing in Insert Mode Only
@@ -334,6 +350,28 @@ inoremap <C-K> <Esc>lDa
 inoremap <C-U> <Esc>d0xi
 inoremap <C-Y> <Esc>Pa
 inoremap <C-X><C-S> <Esc>:w<CR>a
+
+" for coc plugin
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 
 " command line mode mapping
