@@ -79,6 +79,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " TagBar 
 Plug 'majutsushi/tagbar'
 
+" tags for objc
+" Plug 'xolox/vim-easytags'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -161,6 +164,9 @@ autocmd InsertLeave * setlocal cursorline
  
 autocmd BufNewFile,BufRead *.swift set filetype=swift
 autocmd BufNewFile,BufRead *.sw set filetype=swift
+
+" global ctags for objc files 
+autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
 
 
 " enable mouse
