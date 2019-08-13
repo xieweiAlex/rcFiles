@@ -137,7 +137,7 @@ set showmatch "{}()[]
 set guitablabel=\[%N\]\ %t\ %M 
 
 " toggle paste mode
-set pastetoggle=<leader>p 
+set pastetoggle=<leader>P 
 
 set cindent    " open cindent
 set tabstop=2 shiftwidth=2 expandtab
@@ -528,6 +528,7 @@ autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
 " auto write when text change in normal/insert mode 
 " autocmd TextChanged,TextChangedI <buffer> silent write
 :au FocusLost * silent! wa
+
 
 
 " operatior-pending map -------------------- {{{
