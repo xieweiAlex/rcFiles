@@ -33,3 +33,4 @@ nnoremap <leader>f :action AceAction<CR>
 nnoremap <leader>g :action AceLineAction<CR>
 
 
+set ideajoin

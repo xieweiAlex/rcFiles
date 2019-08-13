@@ -14,7 +14,7 @@ alias ci='git commit'
 alias grc='git rebase --continue'
 alias logp='git log -p'
 
-# Config 
+# Config Jira  
 JIRA_URL="https://augusthome.atlassian.net"
 
 # directory
@@ -49,15 +49,12 @@ alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top='htop'
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(rbenv init -)"
 
 alias python='python3'
-# export PYTHONPATH="/usr/local/Cellar/python/3.6.5/bin/python3:$PYTHONPATH"
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8

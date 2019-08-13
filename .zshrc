@@ -10,8 +10,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="gallois"
 
-source ~/.bashrc
-
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -63,7 +61,7 @@ source ~/.bashrc
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  jira
+  jira 
   z
 )
 
