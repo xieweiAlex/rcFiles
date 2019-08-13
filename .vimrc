@@ -83,10 +83,14 @@ Plug 'majutsushi/tagbar'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nocompatible  "not compatible with Vi
+
+" make swap, backup, undodir in ~/.vim not working directory
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 set hidden 
-set nobackup
 set nowritebackup
 " Better display for messages
 set cmdheight=2
