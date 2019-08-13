@@ -2,9 +2,6 @@
 " --------------------- Vim Plug Manager ---------
 call plug#begin('~/.vim/plugged')
 
-" auto complete  
-Plug 'Valloric/YouCompleteMe'
-
 " Nerd tree
 Plug 'scrooloose/nerdtree'
 
