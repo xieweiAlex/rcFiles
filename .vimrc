@@ -91,7 +91,7 @@ set undodir=~/.vim/undo//
 set hidden 
 set nowritebackup
 " Better display for messages
-set cmdheight=2
+set cmdheight=1
 " You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
 " don't give |ins-completion-menu| messages.
@@ -317,9 +317,9 @@ nmap <Leader>f <Plug>(easymotion-overwin-f)
 " Copy to system clipboard and  double star around current word 
 nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
 " Yank current word to system clipboard
-nnoremap <leader>y viw"*y
+nnoremap <leader>y viw"+y
 " Yank word to system clipboard 
-vnoremap <leader>y "*y
+vnoremap <leader>yy "+y
 
 " Add a colon in the end of line
 nnoremap <leader>: A:<esc>
@@ -419,6 +419,10 @@ set undoreload=10000        " number of lines to save for undo
 
 
 "---------------- Registers ------------------------
+" 
+" let @1 = "f*i\jkl@1"
+let @1 = "f*i\jkl@1"
+
 " add double space to inform markdown's line change 
 let @q = '0g_a jkDa  jk0j'  
 " search line doesn't have ** keyword 
@@ -431,6 +435,9 @@ let @s = '/[<>=]\{5\}'
 let @e = "/.*\\s-\\{1,3\\}\\W\\{0,10\\}$"
 " Search emphasized word wrapped with `**`
 let @r = "/\\*\\*.\\{-\} "
+
+" Reverse uncheck the "-" mark from word-review.md
+" let @f = "0mavt-"ayggOjk"ap0:1,2s/\*/\\*/gvg$h"ayVd'a,a"a"f-x,of-x0 q"
 
 " reverse delete the '-' in words file from words-reivew  
 let @t = '0vt*"ay?.md0g_0vg_"bymcbrbgg/af-x0,of-x0'

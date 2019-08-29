@@ -28,8 +28,8 @@ alias kDevops='cd ~/Develop/Devops'
 alias kTerra='cd ~/Develop/Devops/Terraform-learning'
 
 # vi
-alias v='vim'
-alias vi='less'
+ alias v='vim'
+# alias vi='less'
 # Activate emacs mode 
 set -o emacs 
 
