@@ -41,6 +41,9 @@ function myDispatch {
     cp -R spell ~/.vim/
     cp .bash_profile ~/
     cp .cvimrc ~/
+    cp my_btt_profile.json ~/
+    cp com.googlecode.iterm2.plist ~/
+
     echo -e "${GREEN}Success!${NC}"
     echo "Dispatched, congrats!"
 }
