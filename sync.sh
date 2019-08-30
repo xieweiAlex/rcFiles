@@ -9,7 +9,7 @@ function mySync {
     echo "start to sync"
     cp ~/.vimrc ./
     cp ~/.xvimrc ./
-    cp ~/Nutstore/app_config/my_btt_profile.json ./
+    cp ~/my_btt_profile.json ./
     cp ~/com.googlecode.iterm2.plist ./
     cp ~/.gitconfig ./
     cp ~/.bashrc ./
