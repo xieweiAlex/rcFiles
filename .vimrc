@@ -85,8 +85,9 @@ call plug#end()
 
 " make swap, backup, undodir in ~/.vim not working directory
 set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
+set directory=~/.vim/swap//
+set noswapfile
 
 set hidden 
 set nowritebackup
