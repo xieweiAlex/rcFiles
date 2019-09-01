@@ -356,6 +356,15 @@ nnoremap N Nzz
 nmap <silent> * *zz
 nmap <silent> # #zz
 
+noremap - dd p
+noremap + ddkP
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+
+" ------------------ Tab, Buffer, Window Management ---------------
+
 " Previous tab 
 nnoremap <leader>J gT
 " Next tab 
@@ -372,12 +381,6 @@ nnoremap <C-l> <C-w>l
 
 " tag bar trigger
 nmap <leader>p :TagbarToggle<CR>
-
-noremap - dd p
-noremap + ddkP
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
 
 
 " ---------- inert mode mapping  ------------------
@@ -505,9 +508,9 @@ let g:vim_markdown_new_list_item_indent = 0
                  
 
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
+" if executable('ag')
+"   let g:ackprg = 'ag --vimgrep'
+" endif
 
 
 " ----------------------------- NerdTree ------------------
