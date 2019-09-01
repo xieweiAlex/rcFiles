@@ -19,8 +19,6 @@ Plug 'takac/vim-hardtime'
 Plug 'jiangmiao/auto-pairs'
 " vim status bar  
 Plug 'vim-airline/vim-airline'
-" Vim markdown syntax highlight
-" Plug 'gabrielelana/vim-markdown'
 
 " Path searching options 
 "Plug 'vim-apathy'
@@ -32,8 +30,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'kshenoy/vim-signature'
 " fuzzy find 
 Plug 'mileszs/ack.vim'
-" Fold markdown 
-"Plug 'nelstrom/vim-markdown-folding'
 " syntax plugin for plain text nodes 
 Plug 'junegunn/vim-journal'
 
@@ -58,10 +54,9 @@ Plug 'wincent/terminus'
 " Automatically save changes to disk in Vim
 Plug '907th/vim-auto-save'
 
-" Text outlining and task management for Vim based on Emacs' Org-Mode
-" Plug 'jceb/vim-orgmode'
-" Markdown support 
+" Text filtering and alignment  
 Plug 'godlygeek/tabular'
+" Markdown support 
 Plug 'plasticboy/vim-markdown'
 
 " Syntax for vim 
@@ -427,7 +422,7 @@ set undoreload=10000        " number of lines to save for undo
 " let @1 = "f*i\jkl@1"
 let @1 = "f*i\jkl@1"
 
-" add double space to inform markdown's line change 
+" add double space to inform markdown file's line break 
 let @q = '0g_a jkDa  jk0j'  
 " search line doesn't have ** keyword 
 let @w = '/^\w\(\(.*\*\*.*\)\@!.\)*$'
@@ -502,9 +497,6 @@ let g:hardtime_showmsg = 1
 let g:hardtime_default_on = 0
 let g:list_of_normal_keys = ["h", "j", "k", "l"]
 
-" Vim markdown 
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_new_list_item_indent = 0
                  
 
 
@@ -520,17 +512,10 @@ nnoremap <leader>n :NERDTreeFind<cr>
 nnoremap <leader>m :NERDTreeToggle<cr>
 
 "--------------------------- Markdown -------------------------
-" Markdown preview(set interactive bash as the default vim shell) 
-"au FileType markdown setl shell=bash\ -i
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_new_list_item_indent = 0
 
-" Make instant markdown render slow 
-"let g:instant_markdown_slow = 1
-" connect md files 
-"let g:instant_markdown_open_to_the_world = 1
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-" enable conceal for italic, bold, inline-code and link text
-let g:markdown_enable_conceal = 1 
-
 
 
 " CtrlP
