@@ -69,8 +69,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " TagBar 
 Plug 'majutsushi/tagbar'
 
+Plug 'JamshedVesuna/vim-markdown-preview'
+
 " tags for objc
 " Plug 'xolox/vim-easytags'
+
 
 call plug#end()
 
@@ -482,9 +485,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 " deoplete.nvim auto completion
 " let g:deoplete#enable_at_startup = 1
 
-" YouCompleteMe
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
 
 " Vim auto save 
 let g:auto_save = 1  " enable AutoSave on Vim startup
@@ -514,6 +514,13 @@ nnoremap <leader>m :NERDTreeToggle<cr>
 "--------------------------- Markdown -------------------------
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_new_list_item_indent = 0
+
+" grip for readme with vim markdown 
+let vim_markdown_preview_github=1 
+let vim_markdown_preview_toggle=1
+" markdown preview hotkey 
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Google Chrome'
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
