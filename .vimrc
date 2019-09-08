@@ -68,8 +68,10 @@ Plug 'keith/swift.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " TagBar 
 Plug 'majutsushi/tagbar'
-
+" Markdown preview
 Plug 'JamshedVesuna/vim-markdown-preview'
+" buffer list select and switch
+Plug 'jeetsukumaran/vim-buffergator'
 
 " tags for objc
 " Plug 'xolox/vim-easytags'
@@ -143,8 +145,11 @@ endfunction
 
 set nocompatible  "not compatible with Vi
 
+" enable mouse
+set mouse=a
+
 "set lines=40 columns=155    " set window size 
-set nu              " show number of lines 
+set number              " show number of lines 
 set go=             " no GUI buttons 
 " set line break
 set linebreak
@@ -223,15 +228,6 @@ autocmd BufNewFile,BufRead *.sw set filetype=swift
 
 " global ctags for objc files 
 autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
-
-
-" enable mouse
-set mouse=a
-
-" Buffer <Tab> to wildcharm
-"set wildchar=<Tab> wildmenu wildmode=full
-set wildcharm=<C-z>
-nnoremap <Leader>b :buffer <C-z><S-Tab>
 
 " relative number 
 set number relativenumber
@@ -341,11 +337,6 @@ nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 cnoreabbrev Ack Ack!
 " Ack search in .git directory
 nnoremap <Leader>a :Gcd <bar> Ack!<Space>
-
-" make absolutely j
-" nnoremap j gj
-" make absolutely k
-" nnoremap k gk
 
 
 "center after find
