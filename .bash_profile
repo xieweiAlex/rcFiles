@@ -30,4 +30,3 @@ alias tree3="tree -L 3"
 alias sProfile="source ~/.bash_profile"
 alias kdfc="git diff --cached"
 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
