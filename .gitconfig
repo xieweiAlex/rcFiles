@@ -29,7 +29,7 @@
 	name = Alex Xie
 	email = xieweialex@gmail.com
 [core]
-	excludesfile = /Users/Alex_Xie/.gitignore
+	excludesfile = /Users/a0x0063/.global_ignore
 ; [diff "localizablestrings"]
 ;     textconv = "iconv -t utf-8"
 ;     binary = false

@@ -14,8 +14,8 @@ alias kDev="open ~/Develop"
 
 # shortcuts
 alias agl="git lgg | head -15"
-alias aPull="git fetch origin develop:develop"
-alias aPullCurr="git pull --rebase origin develop"
+alias aPull="git fetch origin dev:dev"
+alias aPullCurr="git pull --rebase origin dev"
 alias aTempCommit="git commit -m \"WIP: temp commit\""
 alias aRe="git reset"
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
