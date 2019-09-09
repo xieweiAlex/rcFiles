@@ -3,6 +3,7 @@
 alias st='git status'
 
 source $HOME/.bash_profile 
+export PATH=/usr/local/Cellar/ruby/2.6.3/bin:$PATH
 
 alias add='git add'
 alias br='git branch'

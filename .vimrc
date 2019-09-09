@@ -45,6 +45,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mhinz/vim-startify'
 " Syntax highlighting for VIM
 Plug 'slim-template/vim-slim'
+" vim for ruby 
+Plug 'vim-ruby/vim-ruby'
 
 " #CTags needed  Vim plugin that displays tags in a window, ordered by scope
 " Plug 'majutsushi/tagbar'
@@ -223,8 +225,10 @@ autocmd WinLeave * setlocal nocursorline
 autocmd InsertEnter * setlocal nocursorline
 autocmd InsertLeave * setlocal cursorline
  
+" File type recognize 
 autocmd BufNewFile,BufRead *.swift set filetype=swift
 autocmd BufNewFile,BufRead *.sw set filetype=swift
+autocmd BufNewFile,BufRead Fastfile set filetype=ruby
 
 " global ctags for objc files 
 autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
@@ -499,6 +503,18 @@ let g:list_of_normal_keys = ["h", "j", "k", "l"]
 "   let g:ackprg = 'ag --vimgrep'
 " endif
 
+" ruby for tag bar (not sure it works?)
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }
+
 
 " ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
@@ -541,6 +557,7 @@ autocmd FileType py nnoremap <buffer> <leader>c I#<esc>
 autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
 autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType ruby compiler ruby
 
 " auto write when text change in normal/insert mode 
 " autocmd TextChanged,TextChangedI <buffer> silent write
