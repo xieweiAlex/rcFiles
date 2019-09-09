@@ -15,6 +15,8 @@ alias ci='git commit'
 alias grc='git rebase --continue'
 alias logp='git log -p'
 
+alias rm='trash'
+
 # Config Jira  
 JIRA_URL="https://augusthome.atlassian.net"
 
