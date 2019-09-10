@@ -347,6 +347,11 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Gcd <bar> Ack!<Space>
 
 
+" previous buffer in stack  
+:nnoremap <leader>k :bprevious<CR>
+" next buffer in stack 
+:nnoremap <leader>j :bnext<CR>
+
 "center after find
 nnoremap n nzz
 nnoremap N Nzz
@@ -365,10 +370,10 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " ------------------ Tab, Buffer, Window Management ---------------
 
-" Previous tab 
-nnoremap <S-l> gT
+" left tab 
+nnoremap <leader>h gT
 " Next tab 
-nnoremap <S-h> gt
+nnoremap <leader>l gt
 " Move tab left and right 
 nnoremap <leader>< :tabm -1<CR>
 nnoremap <leader>> :tabm +1<CR>
