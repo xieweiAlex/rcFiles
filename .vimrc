@@ -353,6 +353,9 @@ nnoremap N Nzz
 nmap <silent> * *zz
 nmap <silent> # #zz
 
+nnoremap Q @q
+vnoremap Q :norm @q<CR>
+
 noremap - dd p
 noremap + ddkP
 
@@ -363,9 +366,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " ------------------ Tab, Buffer, Window Management ---------------
 
 " Previous tab 
-nnoremap <leader>J gT
+nnoremap <S-l> gT
 " Next tab 
-nnoremap <leader>K gt
+nnoremap <S-h> gt
 " Move tab left and right 
 nnoremap <leader>< :tabm -1<CR>
 nnoremap <leader>> :tabm +1<CR>
