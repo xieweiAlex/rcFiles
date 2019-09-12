@@ -144,9 +144,6 @@ function! s:show_documentation()
 endfunction
 
 " ----------  General -------------
-
-set nocompatible  "not compatible with Vi
-
 " enable mouse
 set mouse=a
 
