@@ -2,6 +2,9 @@
 " --------------------- Vim Plug Manager ---------
 call plug#begin('~/.vim/plugged')
 
+" Vim wiki 
+Plug 'vimwiki/vimwiki'
+
 " Nerd tree
 Plug 'scrooloose/nerdtree'
 
