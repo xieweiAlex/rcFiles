@@ -482,6 +482,9 @@ noremap <right> 3<C-W>>
 
 "--------------------------  Plugin configuration ---------------------------
 
+let g:vimwiki_list = [{'path': '~/Box/Notes/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
 " NERDTree
 "call nerdtree#postSourceActions()
 
