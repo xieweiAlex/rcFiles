@@ -14,5 +14,3 @@ YELLOW="\[\033[33;1m\]"
 WHITE="\[\033[37;1m\]"
 SELECT="if [ \$? = 0 ]; then echo \"${YELLOW}\"; else echo \"${RED}\"; fi"
 
-
-  

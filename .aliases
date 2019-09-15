@@ -43,7 +43,7 @@ alias tree3="tree -L 3"
 alias sProfile="source ~/.bash_profile"
 alias sBash='source ~/.bashrc'
 
-# file & folder
+# folder
 alias kEnglish="cd ~/Box/English/English_learning"
 alias kNote="cd ~/Box/Notes"
 alias kDownload="open ~/Downloads"
@@ -52,6 +52,10 @@ alias kDev="open ~/Develop"
 alias kWork='cd ~/Develop/Walmart'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
+alias kf='open -a Finder'
+
+
+# File 
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
@@ -62,3 +66,8 @@ alias tmrc='vim ~/.tmux.conf'
 
 ## Shortcut for custom command 
 alias kSync='source ~/Develop/rcFiles/sync.sh sync'
+alias kApply-gitignore="git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached"
+alias kGitk='gitk 2>/dev/null'
+alias kGithub="open -a google\ chrome 'http://github.com/xieweialex'"
+
+
