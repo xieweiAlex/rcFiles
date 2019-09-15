@@ -22,6 +22,7 @@ function mySync {
     cp -R ~/.vim/spell ./
     cp ~/.bash_profile ./
     cp ~/.cvimrc ./
+    cp ~/.aliases ./
     echo -e "${GREEN}Success! ${NC}"
     echo "Synced, congrats"
 }
@@ -41,6 +42,7 @@ function myDispatch {
     cp -R spell ~/.vim/
     cp .bash_profile ~/
     cp .cvimrc ~/
+    cp .aliases ~/
     cp my_btt_profile.json ~/
     cp com.googlecode.iterm2.plist ~/
 

@@ -327,7 +327,7 @@ nnoremap <leader><space> :nohls<CR>
 nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
 
 " for quick edit English words file 
-nnoremap <leader>E :e ~/Box/English/English_learning/words/2019/words-Sep.md<CR>
+nnoremap <leader>e :e ~/Box/English/English_learning/words/2019/words-Sep.md<CR>
 
 " input Python comments before <leader>9 
 nmap <leader>8 i"""<CR>"""<esc>O<esc><leader>9

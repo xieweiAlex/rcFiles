@@ -1,0 +1,65 @@
+
+# Easy navigation come as default 
+# alias ..="cd .."
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+# alias cd="cd ~"
+
+# Git shortcuts
+alias agl="git lgg | head -15"
+alias aPull="git fetch origin dev:dev"
+alias aPullCurr="git pull --rebase origin dev"
+# TODO: update to take an input 
+alias aTempCommit="git commit -m \"WIP: temp commit\""
+alias aRe="git reset"
+alias st='git status'
+alias add='git add'
+alias br='git branch'
+alias diff='git diff'
+alias dfc='git diff --cached'
+alias stash='git stash'
+alias grc='git rebase --continue'
+alias logp='git log -p'
+
+
+alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
+alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
+
+# Terminal tool enhancement
+alias man="tldr"
+alias tldr="man"
+alias rm="trash"
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias top='htop'
+
+# Terminal command shortcut 
+alias v='vim'
+alias python='python3'
+alias tree1="tree -L 1"
+alias tree2="tree -L 2"
+alias tree3="tree -L 3"
+
+# Source dot file 
+alias sProfile="source ~/.bash_profile"
+alias sBash='source ~/.bashrc'
+
+# file & folder
+alias kEnglish="cd ~/Box/English/English_learning"
+alias kNote="cd ~/Box/Notes"
+alias kDownload="open ~/Downloads"
+alias kDoc="open ~/Documents"
+alias kDev="open ~/Develop"
+alias kWork='cd ~/Develop/Walmart'
+alias kRcFiles='cd ~/Develop/rcFiles'
+alias kWriting='cd ~/Writing'
+alias vimrc='vim ~/.vimrc'
+alias bashrc='vim ~/.bashrc'
+alias zshrc='vim ~/.zshrc'
+alias tmrc='vim ~/.tmux.conf'
+
+# alias kResume="open ~/Nutstore/Documents/Resume"
+# alias kdd="open ~/Nutstore/app_config/Config"
+
+## Shortcut for custom command 
+alias kSync='source ~/Develop/rcFiles/sync.sh sync'
