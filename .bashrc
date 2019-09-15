@@ -1,28 +1,15 @@
 
-# git 
-
-source $HOME/.bash_profile 
+# source $HOME/.bash_profile 
 export PATH=/usr/local/Cellar/ruby/2.6.3/bin:$PATH
-
-
 
 # Config Jira  
 JIRA_URL="https://augusthome.atlassian.net"
 
-
 # Activate emacs mode 
 set -o emacs 
 
-# rc
-
 # Action
 export HISTTIMEFORMAT="%d.%m.%y %T "
-
-## Tools enhancement 
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
