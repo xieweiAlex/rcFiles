@@ -21,7 +21,6 @@ alias stash='git stash'
 alias grc='git rebase --continue'
 alias logp='git log -p'
 
-
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
 
