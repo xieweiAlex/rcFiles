@@ -275,13 +275,11 @@ let g:SuperTabLongestEnhanced = 1
 " ---------------------------------- n,v,c map ----------------------------------
 
 "map leader
-let mapleader = ","
-" let mapleader = ";"
-" let maplocalleader = "\\"
+" let mapleader = ","
+let mapleader = ";"
+noremap . ;
+noremap <Space> .
 
-" Leader Mapping from the Gods (I doubt ?)
-" noremap . ;
-" noremap <space> .
 
 "Action
 " delete a row
