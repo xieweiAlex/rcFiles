@@ -18,8 +18,8 @@ declare -a files=(
 )
 
 declare -a folders=(
-".config"
-".vim"
+".config/karabiner"
+".vim/spell"
 )
 
 function mySync {
