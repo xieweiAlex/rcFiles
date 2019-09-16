@@ -1,48 +1,82 @@
 #!/bin/bash
 
+declare -a files=(
+".vimrc" 
+".xvimrc" 
+"my_btt_profile.json"
+"com.googlecode.iterm2.plist"
+".gitconfig"
+".bashrc"
+".ideavimrc"
+".tmux.conf"
+".NERDTreeBookmarks"
+".gvimrc"
+".zshrc"
+".bash_profile"
+".cvimrc"
+".aliases"
+)
+
+declare -a folders=(
+".config"
+".vim"
+)
+
 function mySync {
-    echo "start to sync"
-    cp ~/.vimrc ./
-    cp ~/.xvimrc ./
-    cp ~/my_btt_profile.json ./
-    cp ~/com.googlecode.iterm2.plist ./
-    cp ~/.gitconfig ./
-    cp ~/.bashrc ./
-    cp ~/.ideavimrc ./
-    cp ~/.tmux.conf ./
-    cp ~/.NERDTreeBookmarks ./
-    cp ~/.gvimrc ./
-    cp ~/.zshrc ./
-    cp -R ~/.config/karabiner ./
-    cp -R ~/.vim/spell ./
-    cp ~/.bash_profile ./
-    cp ~/.cvimrc ./
-    cp ~/.aliases ./
-    echo -e "${GREEN}Success! ${NC}"
-    echo "Synced, congrats"
+  
+  for file in "${files[@]}" 
+  do 
+    echo "syncing file: $file"
+    cp "$HOME/$file" ./
+  done 
+
+  for folder in "${folders[@]}" 
+  do 
+    echo "syncing folder: $folder"
+    cp -R "$HOME/$folder" ./
+  done 
+
+  echo -e "${GREEN}Success! ${NC}"
+  echo "Synced, congrats"
 }
 
 function myDispatch {
-    echo "start to dispatch"
-    cp .vimrc ~/
-    cp .xvimrc ~/
-    cp .gitconfig ~/
-    cp .bashrc ~/
-    cp .ideavimrc ~/
-    cp .tmux.conf ~/
-    cp .NERDTreeBookmarks ~/
-    cp .gvimrc ~/
-    cp .zshrc ~/
-    cp -R karabiner ~/.config/
-    cp -R spell ~/.vim/
-    cp .bash_profile ~/
-    cp .cvimrc ~/
-    cp .aliases ~/
-    cp my_btt_profile.json ~/
-    cp com.googlecode.iterm2.plist ~/
+  
+  for file in "${files[@]}" 
+  do 
+    echo "Dispatching file: $file"
+    cp "$file" ~/
+  done 
 
-    echo -e "${GREEN}Success!${NC}"
-    echo "Dispatched, congrats!"
+  for folder in "${folders[@]}" 
+  do 
+    echo "Dispatching folder: $folder"
+    cp -R "$folder" ~/
+  done 
+
+  echo -e "${GREEN}Success!${NC}"
+  echo "Dispatched, congrats!"
+
+    # echo "start to dispatch"
+    # cp .vimrc ~/
+    # cp .xvimrc ~/
+    # cp .gitconfig ~/
+    # cp .bashrc ~/
+    # cp .ideavimrc ~/
+    # cp .tmux.conf ~/
+    # cp .NERDTreeBookmarks ~/
+    # cp .gvimrc ~/
+    # cp .zshrc ~/
+    # cp -R karabiner ~/.config/
+    # cp -R spell ~/.vim/
+    # cp .bash_profile ~/
+    # cp .cvimrc ~/
+    # cp .aliases ~/
+    # cp my_btt_profile.json ~/
+    # cp com.googlecode.iterm2.plist ~/
+
+    # echo -e "${GREEN}Success!${NC}"
+    # echo "Dispatched, congrats!"
 }
 
 function showLocalChange {
@@ -87,7 +121,7 @@ if [[ $action == 'sync' ]]; then
 elif [[ $action == 'disp' || $action == 'dispatch' ]]; then
 	myDispatch
 	echo "..."
-	sourcePatch
+	# sourcePatch
 else 
   echo -e "${RED}Failed!${NC}"				
 	echo "this is invalid para: $action"		
