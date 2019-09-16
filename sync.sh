@@ -20,6 +20,7 @@ declare -a files=(
 declare -a folders=(
 ".config/karabiner"
 ".vim/spell"
+".vim/startup"
 )
 
 function mySync {
@@ -57,26 +58,6 @@ function myDispatch {
   echo -e "${GREEN}Success!${NC}"
   echo "Dispatched, congrats!"
 
-    # echo "start to dispatch"
-    # cp .vimrc ~/
-    # cp .xvimrc ~/
-    # cp .gitconfig ~/
-    # cp .bashrc ~/
-    # cp .ideavimrc ~/
-    # cp .tmux.conf ~/
-    # cp .NERDTreeBookmarks ~/
-    # cp .gvimrc ~/
-    # cp .zshrc ~/
-    # cp -R karabiner ~/.config/
-    # cp -R spell ~/.vim/
-    # cp .bash_profile ~/
-    # cp .cvimrc ~/
-    # cp .aliases ~/
-    # cp my_btt_profile.json ~/
-    # cp com.googlecode.iterm2.plist ~/
-
-    # echo -e "${GREEN}Success!${NC}"
-    # echo "Dispatched, congrats!"
 }
 
 function showLocalChange {
@@ -85,10 +66,10 @@ function showLocalChange {
 
 function sourcePatch {
     echo "start to source files"
-    source ~/.vimrc 
     source ~/.bashrc 
     source ~/.zshrc 
     tmux source-file ~/.tmux.conf	
+    source ~/.vimrc 
 }
 
 # if [[ $(git status -s) != '' ]]; then
@@ -121,7 +102,7 @@ if [[ $action == 'sync' ]]; then
 elif [[ $action == 'disp' || $action == 'dispatch' ]]; then
 	myDispatch
 	echo "..."
-	# sourcePatch
+	sourcePatch
 else 
   echo -e "${RED}Failed!${NC}"				
 	echo "this is invalid para: $action"		
