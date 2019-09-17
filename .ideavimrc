@@ -1,5 +1,8 @@
 
-let mapleader = ","
+let mapleader = ";"
+noremap . ;
+noremap <Space> .
+
 inoremap jk <esc>
 
 syntax on
