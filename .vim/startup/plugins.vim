@@ -5,7 +5,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " Vim wiki 
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " Nerd tree
 Plug 'scrooloose/nerdtree'

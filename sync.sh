@@ -34,7 +34,12 @@ function mySync {
   for folder in "${folders[@]}" 
   do 
     echo "syncing folder: $folder"
-    cp -R "$HOME/$folder" ./
+    if [[ $folder == .vim*  ]]; then 
+      cp -R "$HOME/$folder" .vim/
+    else 
+      cp -R "$HOME/$folder" .config/
+    fi
+
   done 
 
   echo -e "${GREEN}Success! ${NC}"

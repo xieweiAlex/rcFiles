@@ -62,7 +62,7 @@ endfunction
 "--------------------------  Plugin configuration ---------------------------
 
 let g:vimwiki_list = [{'path': '~/Box/Notes/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+                      \ 'syntax': 'default', 'ext': '.md'}]
 
 " NERDTree
 "call nerdtree#postSourceActions()
