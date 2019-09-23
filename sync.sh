@@ -42,7 +42,7 @@ function mySync {
 
   done 
 
-  echo -e "${GREEN}Success! ${NC}"
+  echo -e "${YELLOW}Success! ${NC}"
   echo "Synced, congrats"
 }
 
@@ -54,15 +54,17 @@ function myDispatch {
     cp "$file" ~/
   done 
 
-  for folder in "${folders[@]}" 
-  do 
-    echo "Dispatching folder: $folder"
-    cp -R "$folder" ~/
-  done 
+  # for folder in "${folders[@]}" 
+  # do 
+  #   echo "Dispatching folder: $folder"
+  #   cp -R "$folder" ~/
+  # done 
+  cp -R "./spell" ~/.vim/
+  cp -R "./startup" ~/.vim/
+  cp -R "./karabiner" ~/.config
 
-  echo -e "${GREEN}Success!${NC}"
+  echo -e "${YELLOW}Success!${NC}"
   echo "Dispatched, congrats!"
-
 }
 
 function showLocalChange {
