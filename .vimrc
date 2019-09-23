@@ -1,10 +1,5 @@
 
 source ~/.vim/startup/plugins.vim 
-source ~/.vim/startup/mappings.vim
-source ~/.vim/startup/registers.vim
-source ~/.vim/startup/auto_cmd.vim 
-source ~/.vim/startup/functions.vim
-source ~/.vim/startup/plugins_config.vim
 
 " ----------  General -------------
 " enable mouse
@@ -105,4 +100,9 @@ onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 " }}}
 
 
+source ~/.vim/startup/mappings.vim
+source ~/.vim/startup/registers.vim
+source ~/.vim/startup/auto_cmd.vim 
+source ~/.vim/startup/functions.vim
+source ~/.vim/startup/plugins_config.vim
 
