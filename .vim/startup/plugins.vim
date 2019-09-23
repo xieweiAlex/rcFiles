@@ -1,5 +1,5 @@
 
-filetype off
+" filetype off
 
 " --------------------- Vim Plug Manager ---------
 call plug#begin('~/.vim/plugged')
@@ -84,5 +84,5 @@ Plug 'jeetsukumaran/vim-buffergator'
 " Plug 'xolox/vim-easytags'
 
 call plug#end()
-filetype plugin indent on
+" filetype plugin indent on
 

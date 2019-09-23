@@ -7,6 +7,8 @@ noremap <Space> .
 
 
 "Action
+" show git blame 
+nnoremap <Leader>gb :Gblame<CR>
 " delete a row
 nnoremap <leader>d dd
 " vertical split vimrc
