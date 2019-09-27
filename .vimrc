@@ -84,13 +84,10 @@ set undoreload=10000        " number of lines to save for undo
 
 
 "abrev
-iabbrev @@ xieweialex@gmail.com
+iabbrev @@ email
 iabbrev ccopy Copyright 2016 Alex xie, all rights reserved.
 iabbrev py_note #!/usr/bin/env python3    # -*- coding: utf-8 -*-
 iabbrev py_split print('------------------------------------------------------------')
-" --------------------- English auto-complete --------
-" in progress 
-
 
 
 " operatior-pending map -------------------- {{{

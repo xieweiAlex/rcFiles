@@ -71,9 +71,9 @@ nnoremap <Leader>a :Gcd <bar> Ack!<Space>
 
 
 " previous buffer in stack  
-:nnoremap <leader>k :bprevious<CR>
+:nnoremap <leader>j :bprevious<CR>
 " next buffer in stack 
-:nnoremap <leader>j :bnext<CR>
+:nnoremap <leader>k :bnext<CR>
 
 "center after find
 nnoremap n nzz
