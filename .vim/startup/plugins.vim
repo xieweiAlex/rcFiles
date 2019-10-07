@@ -4,6 +4,9 @@
 " --------------------- Vim Plug Manager ---------
 call plug#begin('~/.vim/plugged')
 
+" Display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
+
 " Vim wiki 
 " Plug 'vimwiki/vimwiki'
 
@@ -45,7 +48,7 @@ Plug 'benmills/vimux'
 " comment 
 Plug 'tpope/vim-commentary'
 " visually displaying indent levels in code
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
 " Syntax highlighting for VIM

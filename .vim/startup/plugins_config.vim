@@ -119,6 +119,8 @@ let g:vim_markdown_new_list_item_indent = 0
 " grip for readme with vim markdown 
 let vim_markdown_preview_github=1 
 let vim_markdown_preview_toggle=1
+" remove temp HTML file after opening
+let vim_markdown_preview_temp_file=1
 " markdown preview hotkey 
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
