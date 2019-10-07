@@ -18,7 +18,7 @@ declare -a files=(
 )
 
 declare -a folders=(
-".config/karabiner"
+".config"
 ".vim/spell"
 ".vim/startup"
 )
@@ -37,7 +37,7 @@ function mySync {
     if [[ $folder == .vim*  ]]; then 
       cp -R "$HOME/$folder" .vim/
     else 
-      cp -R "$HOME/$folder" .config/
+      cp -R "$HOME/$folder" ./
     fi
 
   done 
@@ -54,14 +54,16 @@ function myDispatch {
     cp "$file" ~/
   done 
 
-  # for folder in "${folders[@]}" 
-  # do 
-  #   echo "Dispatching folder: $folder"
-  #   cp -R "$folder" ~/
-  # done 
-  cp -R "./spell" ~/.vim/
-  cp -R "./startup" ~/.vim/
-  cp -R "./karabiner" ~/.config
+  for folder in "${folders[@]}" 
+  do 
+    echo "Dispatching folder: $folder"
+
+    if [[ $folder == .vim*  ]]; then 
+      cp -R "$folder" "$HOME/.vim/"
+    else 
+      cp -R "$folder" "$HOME/"
+    fi
+  done 
 
   echo -e "${YELLOW}Success!${NC}"
   echo "Dispatched, congrats!"
@@ -93,8 +95,6 @@ if [[ "$#" -ne 1 ]]; then
     action="sync"	
 	echo ""
 fi
-
-
 
 echo ".."
 if [[ $action == 'sync' ]]; then
