@@ -3,6 +3,7 @@
 declare -a files=(
 ".vimrc" 
 ".xvimrc" 
+".viminfo" 
 "my_btt_profile.json"
 "com.googlecode.iterm2.plist"
 ".gitconfig"
