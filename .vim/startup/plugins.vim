@@ -4,12 +4,6 @@
 " --------------------- Vim Plug Manager ---------
 call plug#begin('~/.vim/plugged')
 
-" Display the indention levels with thin vertical lines
-Plug 'Yggdroot/indentLine'
-
-" Vim wiki 
-" Plug 'vimwiki/vimwiki'
-
 " Nerd tree
 Plug 'scrooloose/nerdtree'
 
@@ -82,6 +76,9 @@ Plug 'majutsushi/tagbar'
 Plug 'JamshedVesuna/vim-markdown-preview'
 " buffer list select and switch
 Plug 'jeetsukumaran/vim-buffergator'
+
+" Display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
 
 " tags for objc
 " Plug 'xolox/vim-easytags'

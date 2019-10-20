@@ -27,7 +27,7 @@
     brdif = cherry -v develop
 [user]
 	name = Alex Xie
-	email = alex.xie@walmartlabs.com
+	email = xieweialex@gmail.com
 [core]
 	excludesfile = /Users/a0x0063/.global_ignore
 ; [diff "localizablestrings"]
