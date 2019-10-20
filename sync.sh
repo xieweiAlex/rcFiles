@@ -3,7 +3,6 @@
 declare -a files=(
 ".vimrc" 
 ".xvimrc" 
-".viminfo" 
 "my_btt_profile.json"
 "com.googlecode.iterm2.plist"
 ".gitconfig"
@@ -71,7 +70,7 @@ function myDispatch {
 }
 
 function showLocalChange {
-    git diff 
+  git diff 
 }
 
 function sourcePatch {
