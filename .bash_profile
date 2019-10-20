@@ -2,15 +2,10 @@
 
 # Load files
 for file in ~/.{bash_prompt,exports,aliases}; do
-  echo "file: $file" 
+  echo -e "Sourcing file: ${GREEN} $file ${NC}" 
   [ -r "$file" ] && source "$file"
 done
 unset file
 
-RESET="\[\017\]"
-NC="\[\033[0m\]"
-RED="\[\033[31;1m\]"
-YELLOW="\[\033[33;1m\]"
-WHITE="\[\033[37;1m\]"
-SELECT="if [ \$? = 0 ]; then echo \"${YELLOW}\"; else echo \"${RED}\"; fi"
+echo -e "I ${RED}love${NC} Stack Overflow"
 

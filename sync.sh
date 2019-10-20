@@ -43,7 +43,7 @@ function mySync {
   done 
 
   echo -e "${YELLOW}Success! ${NC}"
-  echo "Synced, congrats"
+  echo -e "${GREEN}Synced, congrats ${NC}"
 }
 
 function myDispatch {
@@ -66,7 +66,7 @@ function myDispatch {
   done 
 
   echo -e "${YELLOW}Success!${NC}"
-  echo "Dispatched, congrats!"
+  echo -e "${GREEN}Dispatched, congrats!${NC}"
 }
 
 function showLocalChange {

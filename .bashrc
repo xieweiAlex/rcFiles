@@ -1,6 +1,11 @@
 
-# source $HOME/.bash_profile 
-export PATH=/usr/local/Cellar/ruby/2.6.3/bin:$PATH
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export BLUE='\033[0;34 m'
+export YELLOW='\033[1;33m'
+export NC='\033[0m' # No Color
+
+# export PATH=/usr/local/Cellar/ruby/2.6.3/bin:$PATH
 
 # Config Jira  
 JIRA_URL="https://augusthome.atlassian.net"
