@@ -76,10 +76,11 @@ function showLocalChange {
 
 function sourcePatch {
     echo "start to source files"
-    source ~/.bashrc 
-    source ~/.zshrc 
+    
+    echo "source ~/.zshrc"
+    source $HOME/.zshrc 
+    echo "tmux source-file ~/.tmux.conf"
     tmux source-file ~/.tmux.conf	
-    source ~/.vimrc 
 }
 
 # if [[ $(git status -s) != '' ]]; then
@@ -116,8 +117,6 @@ else
 	echo "this is invalid para: $action"		
 	echo "should be \"sync\" or \"disp\""
 fi
-
-
 
 
 
