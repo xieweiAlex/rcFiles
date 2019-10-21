@@ -9,3 +9,5 @@ unset file
 
 echo -e "I ${RED}love${NC} Stack Overflow"
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

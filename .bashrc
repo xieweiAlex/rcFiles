@@ -5,10 +5,8 @@ export BLUE='\033[0;34 m'
 export YELLOW='\033[1;33m'
 export NC='\033[0m' # No Color
 
-# export PATH=/usr/local/Cellar/ruby/2.6.3/bin:$PATH
-
 # Config Jira  
-JIRA_URL="https://augusthome.atlassian.net"
+# JIRA_URL="https://augusthome.atlassian.net"
 
 # Activate emacs mode 
 set -o emacs 
@@ -31,3 +29,6 @@ export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode - cyan
 
 
 source ~/.bash_profile
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
