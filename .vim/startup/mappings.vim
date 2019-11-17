@@ -92,6 +92,11 @@ noremap + ddkP
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
+" Search string with regex of special character '*' 
+command! -nargs=1 S let @/ = escape('<args>', '*')
+nnoremap <Leader>S :execute(":S " . input('Regex-off: /'))<CR>
+
+
 
 " ---------- inert mode mapping  ------------------
 

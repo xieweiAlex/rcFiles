@@ -1,5 +1,4 @@
 
-"funtion
 "toggle foldcolumn
 "nnoremap <leader>kf :call FoldColumnToggle()<cr>
 
@@ -16,11 +15,19 @@ endfunction
 "let g:quickfix_is_open = 0
 
 function! QuickfixToggle()
-	if g:quickfix_is_open
-        cclose
-        let g:quickfix_is_open = 0
-    else
-        copen
-        let g:quickfix_is_open = 1
-    endif
+  if g:quickfix_is_open
+    cclose
+    let g:quickfix_is_open = 0
+  else
+    copen
+    let g:quickfix_is_open = 1
+  endif
 endfunction
+
+function! Meow()
+  echo "Meow!!.."
+  echom "Hulu hulu hulu "
+endfunction
+
+" nnoremap <leader>kf :call Meow()<cr>
+

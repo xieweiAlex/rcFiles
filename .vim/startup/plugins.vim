@@ -78,7 +78,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'jeetsukumaran/vim-buffergator'
 
 " Display the indention levels with thin vertical lines
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " tags for objc
 " Plug 'xolox/vim-easytags'
