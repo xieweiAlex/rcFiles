@@ -4,12 +4,16 @@ source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/registers.vim
 source ~/.vim/startup/auto_cmd.vim 
 source ~/.vim/startup/plugins_config.vim
+source ~/.vim/startup/functions.vim
 
 " source ~/.vim/startup/functions.vim
 
 " ----------  General -------------
 " enable mouse
 set mouse=a
+
+" set path+=**
+" set wildmenu  
 
 "set lines=40 columns=155    " set window size 
 set number              " show number of lines 
