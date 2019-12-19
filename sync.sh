@@ -21,6 +21,7 @@ declare -a folders=(
 ".config"
 ".vim/spell"
 ".vim/startup"
+".vim/after/ftplugin/"
 )
 
 function mySync {

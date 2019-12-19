@@ -43,7 +43,6 @@ set incsearch  " To move the cursor to the matched string, while typing the sear
 set wrapscan " wraps around to the beginning and ending when do search  
 set history=200
 
-set spell " Open spell check 
 set spelllang=en_us         " Language will likely be English
 set showmatch "{}()[]
 set guitablabel=\[%N\]\ %t\ %M 

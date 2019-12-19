@@ -47,4 +47,5 @@ augroup END
 " }}}
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" autocmd FileType markdown setlocal spell
 
