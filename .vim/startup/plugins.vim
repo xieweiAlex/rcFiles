@@ -83,6 +83,10 @@ Plug 'jeetsukumaran/vim-buffergator'
 " tags for objc
 " Plug 'xolox/vim-easytags'
 
+" An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'Yggdroot/LeaderF-marks'
+
 call plug#end()
 " filetype plugin indent on
 

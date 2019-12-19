@@ -12,6 +12,7 @@ source ~/.vim/startup/functions.vim
 " enable mouse
 set mouse=a
 
+" For buffers search
 " set path+=**
 " set wildmenu  
 
@@ -61,7 +62,8 @@ au FileType objc set softtabstop=4 tabstop=4 shiftwidth=4
 " Automatically change currently directory
 set autochdir
 
-set magic               " accept special characters on search terms
+" Accept special characters on search terms
+set magic
 set exrc                " Allow tuning with local .vimrc files
 set secure              " and do it securely
 

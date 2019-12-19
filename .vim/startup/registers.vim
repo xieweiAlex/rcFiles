@@ -15,10 +15,8 @@ let @s = '/[<>=]\{5\}'
 " Search word ended in "-"
 let @e = "/.*\\s-\\{1,3\\}\\W\\{0,10\\}$"
 " Search emphasized word wrapped with `**`
-let @r = "/\\*\\*.\\{-\} "
 
-" reverse delete the '-' in words file from words-reivew  
-let @t = '0vt*"ay?.md0g_0vg_"bymcbrbgg/af-x0;of-x0'
+let @r = "/\\*\\{2\\}[^*]*\\*\\{2\\}"
 
 " copy the **word to system clipboard
 let @a = 'mpf*wve"*y`pdmp'
@@ -30,4 +28,6 @@ let @d = 'nf{V%d'
 
 " Delete '-' in the word file from word-review file 
 let @u = ',a"a"hf-x,q'
+
+
 

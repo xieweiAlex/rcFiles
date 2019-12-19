@@ -31,3 +31,10 @@ endfunction
 
 " nnoremap <leader>kf :call Meow()<cr>
 
+" function UnscopedDisplayName(name)
+"   echom "Hello!  My name is:"
+"   echom a:name
+" endfunction
+" call UnscopedDisplayName("Your Name")
+
+

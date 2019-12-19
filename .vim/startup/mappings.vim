@@ -1,6 +1,5 @@
 
 "map leader
-" let mapleader = ","
 let mapleader = ";"
 noremap . ;
 noremap <Space> .
@@ -36,7 +35,7 @@ nnoremap <leader>@ mpf*wve"*y`pdmp
 
 " Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+" nmap <Leader>f <Plug>(easymotion-overwin-f)
 
 " Copy to system clipboard and  double star around current word 
 nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
