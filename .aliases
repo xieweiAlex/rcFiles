@@ -27,16 +27,14 @@ alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedDa
 # Terminal tool enhancement
 alias man="tldr"
 alias tldr="man"
-alias rm="trash"
-alias trash="rm"
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias top='htop'
 
 # Terminal command shortcut 
-alias v='vim'
+# alias v='vim'
+alias v='nvim'
 alias vv='mvim'
-alias python='python3'
 alias tree1="tree -L 1"
 alias tree2="tree -L 2"
 alias tree3="tree -L 3"
