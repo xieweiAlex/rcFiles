@@ -35,7 +35,7 @@ nnoremap <leader>@ mpf*wve"*y`pdmp
 
 " Easy Motion Move to word
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-" nmap <Leader>f <Plug>(easymotion-overwin-f)
+nmap <Leader><leader>f <Plug>(easymotion-bd-f)
 
 " Copy to system clipboard and  double star around current word 
 nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
@@ -59,6 +59,10 @@ nnoremap <leader>e :e ~/Box/English/English_learning/words/2019/words-Sep.md<CR>
 nmap <leader>8 i"""<CR>"""<esc>O<esc><leader>9
 " toggle spell check 
 nmap <leader>0 :set nospell! <CR>
+
+" toggle sign column
+nnoremap <Leader>2 :call ToggleSignColumn()<CR>
+
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>

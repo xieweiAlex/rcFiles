@@ -6,15 +6,13 @@ source ~/.vim/startup/auto_cmd.vim
 source ~/.vim/startup/plugins_config.vim
 source ~/.vim/startup/functions.vim
 
-" source ~/.vim/startup/functions.vim
-
 " ----------  General -------------
 " enable mouse
 set mouse=a
 
 " For buffers search
-" set path+=**
-" set wildmenu  
+set path+=**
+set wildmenu  
 
 "set lines=40 columns=155    " set window size 
 set number              " show number of lines 
@@ -35,6 +33,9 @@ set novisualbell    " no visual bell
 set foldenable      " fold enable 
 set foldmethod=manual   " manual fold 
 "set foldmethod=syntax
+
+" show sign column 
+set signcolumn=auto
 
 set background=dark " black background 
 set hlsearch
@@ -96,18 +97,17 @@ iabbrev py_note #!/usr/bin/env python3    # -*- coding: utf-8 -*-
 iabbrev py_split print('------------------------------------------------------------')
 
 
-" operatior-pending map -------------------- {{{
-" operator in ()
-onoremap p i(
-" xxx delete until return 
-"onoremap b /return<cr>
-" inside next parentheses
-onoremap in( :<c-u>normal! f(vi(<cr> 
-" inside last parentheses
-onoremap an( :<c-u>normal! f(va(<cr>
-" inside next curl parenthesis ps: xxx failed  555555
-onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
-
+"" operatior-pending map -------------------- {{{
+"" operator in ()
+"onoremap p i(
+"" xxx delete until return 
+""onoremap b /return<cr>
+"" inside next parentheses
+"onoremap in( :<c-u>normal! f(vi(<cr> 
+"" inside last parentheses
+"onoremap an( :<c-u>normal! f(va(<cr>
+"" inside next curl parenthesis ps: xxx failed  555555
+"onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 " }}}
 
 

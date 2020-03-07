@@ -29,6 +29,18 @@ function! Meow()
   echom "Hulu hulu hulu "
 endfunction
 
+" Toggle signcolumn. Works only on vim>=8.0 or NeoVim
+function! ToggleSignColumn()
+  if !exists("b:signcolumn_on") || b:signcolumn_on
+    set signcolumn=no
+    let b:signcolumn_on=0
+  else
+    set signcolumn=auto
+    let b:signcolumn_on=1
+  endif
+endfunction
+
+
 " nnoremap <leader>kf :call Meow()<cr>
 
 " function UnscopedDisplayName(name)
