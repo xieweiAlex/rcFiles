@@ -28,7 +28,7 @@ Plug 'vim-airline/vim-airline'
 " Asynchronous Lint Engine
 " Bundle 'w0rp/ale'
 
-" show vim marks 
+" show vim marks   
 Plug 'kshenoy/vim-signature'
 " fuzzy find 
 Plug 'mileszs/ack.vim'
@@ -41,10 +41,14 @@ Plug 'henrik/vim-indexed-search'
 Plug 'benmills/vimux'
 " comment 
 Plug 'tpope/vim-commentary'
-" visually displaying indent levels in code
-" Plug 'nathanaelkane/vim-indent-guides'
+
+ " visually displaying indent levels in code
+ " Plug 'nathanaelkane/vim-indent-guides'
+ 
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
+
+
 " Syntax highlighting for VIM
 Plug 'slim-template/vim-slim'
 " vim for ruby 
@@ -68,14 +72,17 @@ Plug 'vim-syntastic/syntastic'
 
 " Swift syntax and indention
 Plug 'keith/swift.vim'
+
 " COC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " TagBar 
 Plug 'majutsushi/tagbar'
 " Markdown preview
 Plug 'JamshedVesuna/vim-markdown-preview'
 " buffer list select and switch
 Plug 'jeetsukumaran/vim-buffergator'
+
 
 " Display the indention levels with thin vertical lines
 " Plug 'Yggdroot/indentLine'
@@ -86,6 +93,8 @@ Plug 'jeetsukumaran/vim-buffergator'
 " An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
+
+Plug 'psliwka/vim-smoothie'
 
 call plug#end()
 " filetype plugin indent on
