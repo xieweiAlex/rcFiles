@@ -74,6 +74,8 @@ set ignorecase smartcase
 
 " --------------------------  Appearance ---------------------------
 color desert
+set termguicolors
+let g:gruvbox_termcolors=16
 
 " highlight line and column
 set cursorline

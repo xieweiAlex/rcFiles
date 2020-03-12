@@ -94,7 +94,14 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
 
+" Scroll smoothly 
 Plug 'psliwka/vim-smoothie'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+
+" Theme 
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 " filetype plugin indent on

@@ -39,8 +39,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" nmap <silent> [c <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -94,6 +94,27 @@ noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
 noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+
+" ------------- vim-gitgutter    
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+
+let g:gitgutter_override_sign_column_highlight = 1
+" highlight SignColumn guibg=bg
+" highlight SignColumn ctermbg=bg
+
+" Update sign column every quarter second
+set updatetime=250
+let g:gitgutter_preview_win_floating = 1
+let g:gitgutter_use_location_list = 1
+
+" Jump between hunks
+nmap <Leader>]h <Plug>(GitGutterNextHunk)  " git next
+nmap <Leader>[h <Plug>(GitGutterPrevHunk)  " git previous
+
 
 "--------------------------  Plugin configuration ---------------------------
 

@@ -29,3 +29,4 @@ export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode - cyan
 
 
 source ~/.bash_profile
+source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
