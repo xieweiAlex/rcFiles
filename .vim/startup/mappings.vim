@@ -5,7 +5,17 @@ noremap . ;
 noremap <Space> .
 
 
-"Action
+
+" ---------- Normal mode mapping  ------------------
+" " ------ Window management --------
+" " Toggle two recent windows 
+" nnoremap <Leader>wr :wincmd r<cr>
+" " Maximize width for current window 
+" nnoremap <Leader>wo :wincmd |<cr>
+" " Equalize all windows  
+" nnoremap <Leader>w= :wincmd =<CR>
+
+" ----- Git related 
 " show git blame 
 nnoremap <Leader>gb :Gblame<CR>
 " delete a row
