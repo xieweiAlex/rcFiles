@@ -13,11 +13,12 @@
 	lg = log --graph --oneline
 	last = 'log -3'
 	rb = rebase
-    rba = rebase --abort
-    rbc = rebase --continue
-    cp = cherry-pick 
-    cpa = cherry-pick --abort 
-    cpc = cherry-pick --continue 
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbs = rebase --skip
+  cp = cherry-pick 
+  cpa = cherry-pick --abort 
+  cpc = cherry-pick --continue 
 	gp = pull --rebase github develop
 	gps = push origin develop
 	grc = rebase --continue
@@ -27,7 +28,7 @@
     brdif = cherry -v develop
 [user]
 	name = Alex Xie
-	email = xieweialex@gmail.com
+	email = alex.xie@walmartlabs.com
 [core]
 	excludesfile = /Users/a0x0063/.global_ignore
 ; [diff "localizablestrings"]

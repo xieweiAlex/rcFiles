@@ -23,7 +23,6 @@ alias co="git co"
 alias add="git add"
 alias remoteV="git remote -v"
 
-
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
 
@@ -41,6 +40,9 @@ alias vv='mvim'
 alias tree1="tree -L 1"
 alias tree2="tree -L 2"
 alias tree3="tree -L 3"
+
+# iOS dev 
+alias pod="bundle exec pod"
 
 # Source dot file 
 alias sProfile="source ~/.bash_profile"
