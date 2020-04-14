@@ -103,6 +103,9 @@ Plug 'airblade/vim-gitgutter'
 " Theme 
 Plug 'morhetz/gruvbox'
 
+" handy bracket mapping 
+Plug 'tpope/vim-unimpaired'
+
 call plug#end()
 " filetype plugin indent on
 
