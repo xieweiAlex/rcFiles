@@ -101,7 +101,14 @@ Plug 'psliwka/vim-smoothie'
 Plug 'airblade/vim-gitgutter'
 
 " Theme 
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+
+" defaults everybody agrees on 
+Plug 'tpope/vim-sensible'
+
+" True color support 
+Plug 'lifepillar/vim-solarized8'
+
 
 " handy bracket mapping 
 Plug 'tpope/vim-unimpaired'

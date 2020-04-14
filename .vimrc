@@ -37,7 +37,6 @@ set foldmethod=manual   " manual fold
 " show sign column 
 set signcolumn=auto
 
-set background=dark " black background 
 set hlsearch
 
 set incsearch  " To move the cursor to the matched string, while typing the search pattern
@@ -73,9 +72,13 @@ set ignorecase smartcase
 
 
 " --------------------------  Appearance ---------------------------
-color desert
+
 set termguicolors
-let g:gruvbox_termcolors=16
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark
+colorscheme solarized8
 
 " highlight line and column
 set cursorline
@@ -90,7 +93,6 @@ set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
-
 
 "abrev
 iabbrev @@ email

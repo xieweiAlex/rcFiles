@@ -1,5 +1,6 @@
 
 alias p3="Python3"
+alias python="Python3"
 
 # Git shortcuts
 alias agl="git lgg | head -15"
