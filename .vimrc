@@ -81,11 +81,11 @@ set background=dark
 colorscheme solarized8
 
 " highlight line and column
-set cursorline
-set cursorcolumn
+" set cursorline
+" set cursorcolumn
 
 " high light color (not use)
-highlight CursorLine term=bold cterm=bold guibg=Grey40
+" highlight CursorLine term=bold cterm=bold guibg=Grey40
 
 "---------------- Mis ------------------------
 " Save undo even after file close 
