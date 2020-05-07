@@ -54,9 +54,6 @@ Plug 'slim-template/vim-slim'
 " vim for ruby 
 Plug 'vim-ruby/vim-ruby'
 
-" #CTags needed  Vim plugin that displays tags in a window, ordered by scope
-" Plug 'majutsushi/tagbar'
-
 " Enhance Vim experience in Terminal  
 Plug 'wincent/terminus'
 " Automatically save changes to disk in Vim
@@ -87,9 +84,6 @@ Plug 'jeetsukumaran/vim-buffergator'
 " Display the indention levels with thin vertical lines
 " Plug 'Yggdroot/indentLine'
 
-" tags for objc
-" Plug 'xolox/vim-easytags'
-
 " An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
@@ -109,9 +103,11 @@ Plug 'tpope/vim-sensible'
 " True color support 
 Plug 'lifepillar/vim-solarized8'
 
-
 " handy bracket mapping 
 Plug 'tpope/vim-unimpaired'
+
+" grammer check 
+" Plug 'rhysd/vim-grammarous'
 
 call plug#end()
 " filetype plugin indent on

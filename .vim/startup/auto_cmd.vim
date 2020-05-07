@@ -10,7 +10,7 @@ autocmd BufNewFile,BufRead *.sw set filetype=swift
 autocmd BufNewFile,BufRead Fastfile set filetype=ruby
 
 " global ctags for objc files 
-autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
+" autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
 
 " relative number 
 set number relativenumber
