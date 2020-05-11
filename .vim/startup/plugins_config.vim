@@ -168,6 +168,27 @@ nnoremap <leader>n :NERDTreeFind<cr>
 " toggle NERDTree 
 nnoremap <leader>m :NERDTreeToggle<cr>
 
+let g:NERDTreeGitStatusWithFlags = 1
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+
+" let g:NERDTreeIgnore = ['^node_modules$']
+
+" Highlight currently open buffer in NERDTree
+
+
 "--------------------------- Markdown -------------------------
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_new_list_item_indent = 0

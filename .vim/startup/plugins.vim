@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 
 " Nerd tree
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Git blame 
 Plug 'tpope/vim-fugitive'
@@ -105,6 +107,9 @@ Plug 'lifepillar/vim-solarized8'
 
 " handy bracket mapping 
 Plug 'tpope/vim-unimpaired'
+
+" provides additional text objects
+Plug 'wellle/targets.vim'
 
 " grammer check 
 " Plug 'rhysd/vim-grammarous'

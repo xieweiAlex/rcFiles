@@ -1,6 +1,7 @@
 
 source ~/.vim/startup/plugins.vim 
 source ~/.vim/startup/mappings.vim
+
 source ~/.vim/startup/registers.vim
 source ~/.vim/startup/auto_cmd.vim 
 source ~/.vim/startup/plugins_config.vim
@@ -113,8 +114,6 @@ iabbrev py_split print('--------------------------------------------------------
 "" inside next curl parenthesis ps: xxx failed  555555
 "onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 " }}}
-
-set tags=tags;
 
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
