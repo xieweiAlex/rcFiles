@@ -13,6 +13,7 @@ set mouse=a
 
 " For buffers search
 set path+=**
+" menu for options while find
 set wildmenu  
 
 "set lines=40 columns=155    " set window size 

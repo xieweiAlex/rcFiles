@@ -28,27 +28,18 @@
     brdif = cherry -v develop
 [user]
 	name = Alex Xie
-	email = alex.xie@walmartlabs.com
+	email = alex.xie2016+dotfile@gmail.com
 [core]
 	excludesfile = /Users/a0x0063/.global_ignore
-; [diff "localizablestrings"]
-;     textconv = "iconv -t utf-8"
-;     binary = false
-; [diff]
-    tool = icdiff
-    cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+  tool = icdiff
+  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [difftool]
     prompt = false
 [difftool "icdiff"]
     cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
-
-; [mergetool "sourcetree"]
-; 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-; 	trustExitCode = true
 [push]
 	default = current
 [pull]
 	default = current
 [icdiff]
-	; options = --highlight --line-numbers
-    options =  --line-numbers
+  options =  --line-numbers

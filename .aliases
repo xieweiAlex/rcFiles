@@ -24,8 +24,12 @@ alias co="git co"
 alias add="git add"
 alias remoteV="git remote -v"
 
+# iOS related 
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
+
+# Tmux 
+alias t="tmux"
 
 # Terminal tool enhancement
 alias man="tldr"

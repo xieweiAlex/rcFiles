@@ -101,6 +101,7 @@ fi
 echo ".."
 if [[ $action == 'sync' ]]; then
     mySync
+    ./infoSync.sh
     if [[ $(git status -s) != '' ]]; then
         echo "Something change in local, you know what?"
         showLocalChange
@@ -110,6 +111,7 @@ if [[ $action == 'sync' ]]; then
 
 elif [[ $action == 'disp' || $action == 'dispatch' ]]; then
 	myDispatch
+  ./infoSync.sh
 	echo "..."
 	sourcePatch
 else 
