@@ -29,15 +29,15 @@ export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode - cyan
 
 source ~/.bash_profile
 
-# function mv() {
-#   if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
-#     command mv "$@"
-#     return
-#   fi
+function mv() {
+  if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
+    command mv "$@"
+    return
+  fi
 
-#   read -ei "$1" newfilename
-#   command mv -v -- "$1" "$newfilename"
-# }
+  read -ei "$1" newfilename
+  command mv -v -- "$1" "$newfilename"
+}
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
