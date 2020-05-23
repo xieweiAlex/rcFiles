@@ -28,7 +28,8 @@ alias remoteV="git remote -v"
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
 
-# Tmux 
+# Common use tools shortcut 
+alias f="fastlane"
 alias t="tmux"
 
 # Terminal tool enhancement
