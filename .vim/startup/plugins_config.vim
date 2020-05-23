@@ -120,9 +120,6 @@ nmap <Leader>[h <Plug>(GitGutterPrevHunk)  " git previous
 let g:vimwiki_list = [{'path': '~/Box/Notes/',
                       \ 'syntax': 'default', 'ext': '.md'}]
 
-" NERDTree
-"call nerdtree#postSourceActions()
-
 " fuzzy find for Vim
 set rtp+=/usr/local/opt/fzf
 " indent guide 
@@ -183,11 +180,10 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-
-" let g:NERDTreeIgnore = ['^node_modules$']
-
-" Highlight currently open buffer in NERDTree
-
+let NERDTreeQuitOnOpen = 0
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 
 "--------------------------- Markdown -------------------------
 let g:vim_markdown_folding_disabled = 1

@@ -116,6 +116,13 @@ iabbrev py_split print('--------------------------------------------------------
 "onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 " }}}
 
+let g:tagbar_type_yaml = {
+    \ 'ctagstype' : 'yaml',
+    \ 'kinds' : [
+        \ 'h:Name_start'
+    \ ]
+\ }
+
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
     \ 'kinds' : [
@@ -124,4 +131,3 @@ let g:tagbar_type_markdown = {
         \ 'k:Heading_L3'
     \ ]
 \ }
-

@@ -113,6 +113,9 @@ Plug 'wellle/targets.vim'
 
 " grammer check 
 " Plug 'rhysd/vim-grammarous'
+" A Deoplete source for TabNine.
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+
 
 call plug#end()
 " filetype plugin indent on

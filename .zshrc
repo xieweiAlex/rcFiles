@@ -96,3 +96,4 @@ source $HOME/.bashrc
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/opt/gettext/bin:$PATH"

@@ -52,7 +52,7 @@ nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
 " Yank current word to system clipboard
 nnoremap <leader>y viw"+y
 " Yank word to system clipboard 
-vnoremap <leader>yy "+y
+vnoremap <leader>y "+y
 
 " Add a colon in the end of line
 nnoremap <leader>: A:<esc>
