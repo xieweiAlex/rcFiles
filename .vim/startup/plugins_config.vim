@@ -180,10 +180,9 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-let NERDTreeQuitOnOpen = 0
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 
 "--------------------------- Markdown -------------------------
 let g:vim_markdown_folding_disabled = 1
