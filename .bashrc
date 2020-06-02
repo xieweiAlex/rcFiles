@@ -39,6 +39,12 @@ function mv() {
   command mv -v -- "$1" "$newfilename"
 }
 
+# fzf directory & cd into
+fd() {
+   local file
+   local dir
+   file=$(fzf --height 40% +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$HOME/.rvm/bin:"$PATH
