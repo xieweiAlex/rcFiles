@@ -28,9 +28,14 @@ alias remoteV="git remote -v"
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
 
+# file suffix 
+alias -s md=mvim
+alias -s json=mvim
+
 # Common use tools shortcut 
 alias f="fastlane"
 alias t="tmux"
+alias lint="swiftlint"
 
 # Terminal tool enhancement
 alias man="tldr"
@@ -60,7 +65,7 @@ alias kNote="cd ~/Box/Notes"
 alias kDownload="open ~/Downloads"
 alias kDoc="open ~/Documents"
 alias kDev="open ~/Develop"
-alias kWork='cd ~/Develop/Walmart'
+alias kWork='cd ~/Develop/Walmart/SamsClub-iOS'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kf='open -a Finder'
