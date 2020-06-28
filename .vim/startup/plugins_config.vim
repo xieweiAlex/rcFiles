@@ -138,8 +138,6 @@ let g:hardtime_showmsg = 1
 let g:hardtime_default_on = 0
 let g:list_of_normal_keys = ["h", "j", "k", "l"]
 
-                 
-
 
 " if executable('ag')
 "   let g:ackprg = 'ag --vimgrep'
@@ -197,9 +195,8 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                10) Autocompletion
-"                                """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"----------------------- Autocompletion ----------------------
 
 set wildmenu            " Autocompletion rulez
 set wildignore+=*.a,*.o        " Leave out files from completion
@@ -221,8 +218,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" ctags
-" let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
 " airline show buffers  
 let g:airline#extensions#tabline#enabled = 1
 

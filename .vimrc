@@ -102,7 +102,6 @@ iabbrev ccopy Copyright 2016 Alex xie, all rights reserved.
 iabbrev py_note #!/usr/bin/env python3    # -*- coding: utf-8 -*-
 iabbrev py_split print('------------------------------------------------------------')
 
-
 "" operatior-pending map -------------------- {{{
 "" operator in ()
 "onoremap p i(

@@ -40,8 +40,13 @@ function! ToggleSignColumn()
   endif
 endfunction
 
-
-" nnoremap <leader>kf :call Meow()<cr>
+function! MdFormat() 
+  echo "Format markdown file start.."
+  let g:auto_save = 0
+  normal ggVG:normal @q
+  let g:auto_save = 1
+  echo "Format markdown file done."
+endfunction
 
 " function UnscopedDisplayName(name)
 "   echom "Hello!  My name is:"

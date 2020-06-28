@@ -71,6 +71,8 @@ nmap <leader>0 :set nospell! <CR>
 " toggle sign column
 nnoremap <Leader>2 :call ToggleSignColumn()<CR>
 
+" Format markdown file 
+nnoremap <leader>3 :call MdFormat()<CR>
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
