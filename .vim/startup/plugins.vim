@@ -116,6 +116,8 @@ Plug 'wellle/targets.vim'
 " A Deoplete source for TabNine.
 Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
+" Vim Latex
+Plug 'lervag/vimtex'
 
 call plug#end()
 " filetype plugin indent on

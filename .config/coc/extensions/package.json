@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "coc-dictionary": ">=1.2.2",
-    "coc-tag": ">=1.2.4",
-    "coc-word": ">=1.2.2",
-    "coc-emoji": ">=1.2.3"
+    "coc-emoji": ">=1.2.3",
+    "coc-tag": ">=1.2.5",
+    "coc-word": ">=1.2.2"
   }
 }

@@ -4,8 +4,6 @@ let mapleader = ";"
 noremap . ;
 noremap <Space> .
 
-
-
 " ---------- Normal mode mapping  ------------------
 " " ------ Window management --------
 " " Toggle two recent windows 
