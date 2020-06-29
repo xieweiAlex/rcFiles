@@ -1,19 +1,10 @@
 
-"map leader
+" ------------- Map Leaders --------------------
 let mapleader = ";"
 noremap . ;
 noremap <Space> .
 
-" ---------- Normal mode mapping  ------------------
-" " ------ Window management --------
-" " Toggle two recent windows 
-" nnoremap <Leader>wr :wincmd r<cr>
-" " Maximize width for current window 
-" nnoremap <Leader>wo :wincmd |<cr>
-" " Equalize all windows  
-" nnoremap <Leader>w= :wincmd =<CR>
-
-" ----- Git related 
+" ------------- Leader maps ------------------------
 " show git blame 
 nnoremap <Leader>gb :Gblame<CR>
 " delete a row
@@ -45,28 +36,29 @@ nnoremap <leader>@ mpf*wve"*y`pdmp
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 nmap <Leader><leader>f <Plug>(easymotion-bd-f)
 
-" Copy to system clipboard and  double star around current word 
+" Copy to system clipboard and double star around current word 
 nnoremap <leader>* lbve"*yi**<esc>ea**<esc>
+
 " Yank current word to system clipboard
 nnoremap <leader>y viw"+y
-" Yank word to system clipboard 
-vnoremap <leader>y "+y
 
 " Add a colon in the end of line
 nnoremap <leader>: A:<esc>
 " no highlight search 
 nnoremap <leader><space> :nohls<CR>
 
-" toggle and paste system clipboard 
-nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
+" open previous file in buffer in a split(current no use) 
+nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
 
-" for quick edit English words file 
-nnoremap <leader>e :e ~/Box/English/English_learning/words/2019/words-Sep.md<CR>
+cnoreabbrev Ack Ack!
+" Ack search in .git directory
+nnoremap <Leader>a :Gcd <bar> Ack!<Space>
 
-" input Python comments before <leader>9 
-nmap <leader>8 i"""<CR>"""<esc>O<esc><leader>9
-" toggle spell check 
-nmap <leader>0 :set nospell! <CR>
+"Ad
+
+" ------------ Leader numerical -------------     
+" Show marks 
+noremap <leader>1 :LeaderfMarks<CR>
 
 " toggle sign column
 nnoremap <Leader>2 :call ToggleSignColumn()<CR>
@@ -74,15 +66,13 @@ nnoremap <Leader>2 :call ToggleSignColumn()<CR>
 " Format markdown file 
 nnoremap <leader>3 :call MdFormat()<CR>
 
-" quotation selection sentence
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
-" open previous file in buffer in a split(current no use) 
-nnoremap <localleader>n :execute "rightbelow vsplit " . bufname("#")
+" toggle spell check 
+nmap <leader>0 :set nospell! <CR>
 
-cnoreabbrev Ack Ack!
-" Ack search in .git directory
-nnoremap <Leader>a :Gcd <bar> Ack!<Space>
+" toggle and paste system clipboard 
+nnoremap <leader>9 <leader>0"*p<leader>0<esc> 
+" input Python comments before <leader>9 
+nmap <leader>8 i"""<CR>"""<esc>O<esc><leader>9
 
 
 " previous buffer in stack  
@@ -109,10 +99,7 @@ nmap <leader>rn <Plug>(coc-rename)
 command! -nargs=1 S let @/ = escape('<args>', '*')
 nnoremap <Leader>S :execute(":S " . input('Regex-off: /'))<CR>
 
-
-
-" ---------- inert mode mapping  ------------------
-
+" ----------- inert mode mapping  ------------------
 inoremap jk <esc>
 " Mimic Emacs Line Editing in Insert Mode Only
 inoremap <C-A> <Home>
@@ -129,7 +116,7 @@ inoremap <C-Y> <Esc>Pa
 inoremap <C-X><C-S> <Esc>:w<CR>a
 
 
-" command line mode mapping
+" ---------- command line mode mapping ---------------------
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-b> <Left>
@@ -139,15 +126,20 @@ cnoremap <C-n> <Down>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
-" Search visual selected word
+" ----------- visual line mode mapping -----------------
 vnoremap <leader>a "ay@b  
 
+" quotation selection sentence
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+vnoremap <leader>* <esc>`<i**<esc>`> la**<esc>
+" Yank word to system clipboard 
+vnoremap <leader>y "+y
 
 " ------------------ Tab, Buffer, Window Management ---------------
 " Use arrow keys to resize windows
-noremap <up>    <C-W>+
-noremap <down>  <C-W>-
-noremap <left>  3<C-W><
+noremap <up> <C-W>+
+noremap <down> <C-W>-
+noremap <left> 3<C-W><
 noremap <right> 3<C-W>>
 
 " left tab 
@@ -166,4 +158,13 @@ nnoremap <C-l> <C-w>l
 
 " tag bar trigger
 nmap <leader>p :TagbarToggle<CR>
+
+" ---------- Normal mode mapping  ------------------
+" " ------ Window management --------
+" " Toggle two recent windows 
+" nnoremap <Leader>wr :wincmd r<cr>
+" " Maximize width for current window 
+" nnoremap <Leader>wo :wincmd |<cr>
+" " Equalize all windows  
+" nnoremap <Leader>w= :wincmd =<CR>
 

@@ -40,6 +40,14 @@ function! ToggleSignColumn()
   endif
 endfunction
 
+" lbve"*yi**<ESC>ea**<esc>
+function! StarWord()
+  let word = expand("<cword>")
+  echo word
+  normal eb
+  insert aa
+endfunction
+
 function! MdFormat() 
   echo "Format markdown file start.."
   let g:auto_save = 0
