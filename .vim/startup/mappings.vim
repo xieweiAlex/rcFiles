@@ -98,11 +98,14 @@ nmap <silent> # #zz
 nnoremap Q @q
 vnoremap Q :norm @q<CR>
 
-noremap - dd p
-noremap + ddkP
+nnoremap - dd p
+nnoremap + ddkP
+" nnoremap Y yg_
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
+
+
 
 " Search string with regex of special character '*' 
 command! -nargs=1 S let @/ = escape('<args>', '*')

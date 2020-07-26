@@ -7,6 +7,10 @@ source ~/.vim/startup/auto_cmd.vim
 source ~/.vim/startup/plugins_config.vim
 source ~/.vim/startup/functions.vim
 
+" Add man page inside vim 
+runtime ftplugin/man.vim
+let g:ft_man_open_mode = 'tab'
+
 " ----------  General -------------
 " enable mouse
 set mouse=a

@@ -50,7 +50,6 @@ Plug 'tpope/vim-commentary'
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
 
-
 " Syntax highlighting for VIM
 Plug 'slim-template/vim-slim'
 " vim for ruby 
@@ -118,6 +117,10 @@ Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 " Vim Latex
 Plug 'lervag/vimtex'
+
+" Lots of snippets 
+Plug 'honza/vim-snippets'
+
 
 call plug#end()
 " filetype plugin indent on

@@ -15,7 +15,7 @@ let searchlimit = 40
 let searchalias g = "google"
 let mapleader = ","
 let barposition = "bottom"
-let typelinkhintsdelay = "0"
+let typelinkhintsdelay = "200"
 let hintcharacters = "fdsawerjkiop"
 
 map : openCommandBar

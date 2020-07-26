@@ -25,6 +25,8 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+let g:coc_snippet_next = '<tab>'
+
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -187,7 +189,7 @@ let g:vim_markdown_new_list_item_indent = 0
 let vim_markdown_preview_github=1 
 let vim_markdown_preview_toggle=1
 " remove temp HTML file after opening
-let vim_markdown_preview_temp_file=1
+let vim_markdown_preview_temp_file=0
 " markdown preview hotkey 
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
