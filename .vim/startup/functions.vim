@@ -48,11 +48,19 @@ endfunction
 "   insert aa
 " endfunction
 
+" Format markdown file 
+nnoremap <leader>3 :call MdFormat()<CR>
+
 function! MdFormat() 
   echo "Format markdown file start.."
-  let g:auto_save = 0
-  normal ggVG:normal @q
-  let g:auto_save = 1
+  " normal A11
+  " let g:auto_save = 0
+  " normal gg
+  
+  normal ggVG:normal A11
+  " normal :write
+  " let g:auto_save = 1
+  write
   echo "Format markdown file done."
 endfunction
 

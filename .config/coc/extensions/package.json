@@ -2,6 +2,7 @@
   "dependencies": {
     "coc-dictionary": ">=1.2.2",
     "coc-emoji": ">=1.2.3",
+    "coc-snippets": ">=2.1.28",
     "coc-tag": ">=1.2.5",
     "coc-word": ">=1.2.2"
   }

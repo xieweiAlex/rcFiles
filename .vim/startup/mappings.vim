@@ -63,8 +63,17 @@ noremap <leader>1 :LeaderfMarks<CR>
 " toggle sign column
 nnoremap <Leader>2 :call ToggleSignColumn()<CR>
 
-" Format markdown file 
-nnoremap <leader>3 :call MdFormat()<CR>
+" " Format markdown file 
+" nnoremap <leader>3 :call TestFormat()<CR>
+
+" function! TestFormat() 
+"   echo "Format markdown file start.."
+"   let g:auto_save = 0
+"   normal ggVG:normal @q
+"   normal :write
+"   let g:auto_save = 1
+"   echo "Format markdown file done."
+" endfunction
 
 " toggle spell check 
 nmap <leader>0 :set nospell! <CR>
