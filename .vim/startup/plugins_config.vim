@@ -194,7 +194,10 @@ let vim_markdown_preview_temp_file=0
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_browser='Google Chrome'
 
-
+" -------------- UltiSnipeet ---------- 
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "----------------------- Autocompletion ----------------------
 
