@@ -561,7 +561,7 @@ nnoremap <leader>m :NERDTreeToggle<cr>
 
 let g:NERDTreeGitStatusWithFlags = 1
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -621,6 +621,10 @@ let g:ctrlp_working_path_mode = 'ra'
 " airline show buffers  
 let g:airline#extensions#tabline#enabled = 1
 " }}}
+
+
+" ------------ VimTex ---------------- 
+let g:tex_flavor = 'latex'
 
 " source ~/.vim/startup/functions.vim
 " Custom Functions {{{

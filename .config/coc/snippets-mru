@@ -1,11 +1,13 @@
 date
-journal
-day-template
-$
-datetime
-ddate
-tb
 time
+day-template
+ddate
+youtube
+datetime
+modeline
+journal
+$
+tb
 work-template
 snippet
 par
@@ -16,7 +18,6 @@ cbl
 ilc
 link
 lorem
-youtube
 sssec
 test
 ssec
