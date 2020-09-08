@@ -262,7 +262,7 @@ cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
 " ----------- visual line mode mapping -----------------
-vnoremap <leader>a "ay@b  
+vnoremap <leader>a "ay
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>

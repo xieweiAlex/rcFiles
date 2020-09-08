@@ -1,3 +1,4 @@
+tb
 date
 time
 day-template
@@ -7,7 +8,6 @@ datetime
 modeline
 journal
 $
-tb
 work-template
 snippet
 par
