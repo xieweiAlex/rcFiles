@@ -15,6 +15,7 @@ declare -a files=(
 ".bash_profile"
 ".cvimrc"
 ".aliases"
+".tigrc"
 )
 
 declare -a folders=(
