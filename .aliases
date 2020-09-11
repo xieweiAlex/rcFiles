@@ -20,13 +20,14 @@ alias logp='git log -p'
 alias push='git push origin'
 alias forcePush='git push origin -f'
 alias cim="git commit -m "
+alias cia="git commit --amend"
 alias co="git co"
 alias add="git add"
 alias remoteV="git remote -v"
 
-# iOS related 
+# iOS development related 
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
-alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/AppCode2019.2/DerivedData/"
+alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/JetBrains/AppCode2020.2/DerivedData"
 
 # file suffix 
 alias -s md=mvim

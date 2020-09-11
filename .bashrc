@@ -71,5 +71,10 @@ ch() {
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
 }
 
+updateCurrentBranch() {
+  git fetch origin dev:dev
+  git rebase dev
+}
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$HOME/.rvm/bin:"$PATH
