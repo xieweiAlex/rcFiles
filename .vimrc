@@ -124,6 +124,11 @@ Plug 'lervag/vimtex'
 " Lots of snippets 
 Plug 'honza/vim-snippets'
 
+" Nord theme in Vim 
+Plug 'arcticicestudio/nord-vim'
+
+" Distract free mode 
+Plug 'junegunn/goyo.vim'  
 
 call plug#end()
 " filetype plugin indent on
@@ -713,6 +718,8 @@ endfunction
 " call UnscopedDisplayName("Your Name")
 " }}}
 
+
+:command Writemode colorscheme nord | setlocal spell | Goyo 70
 
 " Add man page inside vim 
 runtime ftplugin/man.vim
