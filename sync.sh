@@ -44,6 +44,9 @@ function mySync {
 
   done 
 
+  # TODO: don't copy the node_modules from coc 
+  rm -rf .config/coc/extensions/node_modules
+
   echo -e "${YELLOW}Success! ${NC}"
   echo -e "${GREEN}Synced, congrats ${NC}"
 }
