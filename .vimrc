@@ -84,7 +84,6 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 " buffer list select and switch
 Plug 'jeetsukumaran/vim-buffergator'
 
-
 " Display the indention levels with thin vertical lines
 " Plug 'Yggdroot/indentLine'
 
@@ -129,6 +128,15 @@ Plug 'arcticicestudio/nord-vim'
 
 " Distract free mode 
 Plug 'junegunn/goyo.vim'  
+
+" A solid language pack for Vim.
+Plug 'sheerun/vim-polyglot'
+let g:javascript_plugin_flow = 1
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
+
 
 call plug#end()
 " filetype plugin indent on
