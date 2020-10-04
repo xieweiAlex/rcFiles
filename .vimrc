@@ -341,6 +341,8 @@ let @r = "/\\*\\{2\\}[^*]*\\*\\{2\\}"
 " Delete '-' in the word file from word-review file 
 let @u = ',a"a"hf-x,q'
 
+" Copy current line to the first line of phrase.md(File mark J)
+let @i = "0V\"ay'Jgg\"aP;o"
 
 " ---------- General register customze ------------------
 " Amending visual selected text into register A
