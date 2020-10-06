@@ -28,6 +28,7 @@ alias remoteV="git remote -v"
 # iOS development related 
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias aRemoveAppcodeDerivedData="rm -rf ~/Library/Caches/JetBrains/AppCode2020.2/DerivedData"
+alias pod="bundle exec pod"
 
 # file suffix 
 alias -s md=mvim
@@ -53,8 +54,6 @@ alias tree1="tree -L 1"
 alias tree2="tree -L 2"
 alias tree3="tree -L 3"
 
-# iOS dev 
-alias pod="bundle exec pod"
 
 # Source dot file 
 alias sProfile="source ~/.bash_profile"
@@ -67,6 +66,7 @@ alias kDownload="open ~/Downloads"
 alias kDoc="open ~/Documents"
 alias kDev="open ~/Develop"
 alias kWork='cd ~/Develop/Walmart/SamsClub-iOS'
+alias kWorkModules='cd ~/Develop/Walmart/SamsClub-iOS/Modules'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kf='open -a Finder'

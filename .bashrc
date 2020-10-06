@@ -76,3 +76,10 @@ updateCurrentBranch() {
   git rebase dev
 }
 
+getReleaseBranch() {
+  releaseBranch=$1
+
+  git fetch origin "$releaseBranch":"$releaseBranch"
+  git co "$releaseBranch"
+}
+
