@@ -263,6 +263,20 @@ inoremap <C-U> <Esc>d0xi
 inoremap <C-Y> <Esc>Pa
 inoremap <C-X><C-S> <Esc>:w<CR>a
 
+" ---------- Terminal mode mapping ----------- 
+" terminal in tab
+nnoremap <leader>tt :tab term<CR>
+" terminal in current window
+nnoremap <leader>tc :term++curwin<CR>
+
+" Terminal in horizontal split 
+nnoremap <leader>th :term<CR>
+" terminal in vertical split
+nnoremap <leader>tv :vert term<CR>
+
+tnoremap <Esc> <C-W>N
+
+set macmeta
 
 " ---------- command line mode mapping ---------------------
 cnoremap <C-a> <Home>

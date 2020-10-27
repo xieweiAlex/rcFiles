@@ -9,8 +9,9 @@
 	co = checkout
 	br = branch
 	ci = commit
-	lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lg = log --graph --oneline
+	lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lggg = log --color --graph --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	last = 'log -3'
 	rb = rebase
   rba = rebase --abort
@@ -22,10 +23,8 @@
 	gp = pull --rebase github develop
 	gps = push origin develop
 	grc = rebase --continue
-	lggg = log --graph --oneline -10
-    icd = icdiff 
-    ; branch diff with `develop`
-    brdif = cherry -v develop
+  icd = icdiff 
+  brdif = cherry -v develop
 [user]
 	name = Alex Xie
 	email = alex.xie@walmartlabs.com
