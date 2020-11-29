@@ -1,6 +1,4 @@
 
-" source ~/.vim/startup/plugins.vim 
-
 " Plugins {{{ 
 
 " filetype off
@@ -137,13 +135,22 @@ augroup javascript_folding
     au FileType javascript setlocal foldmethod=syntax
 augroup END
 
+" display a scrollbar in the statusline 
+Plug 'ojroques/vim-scrollstatus'
+
+" Config for 'vim-scrollstatus' {{{
+" integrate with vim-airline
+let g:airline_section_x = '%{ScrollStatus()}'
+" scroll bar size 
+" let g:scrollstatus_size = 12
+
+" }}}
 
 call plug#end()
 " filetype plugin indent on
 
 
 " }}}
-" source ~/.vim/startup/mappings.vim
 
 " Mappings  {{{
 
@@ -276,7 +283,7 @@ nnoremap <leader>tv :vert term<CR>
 
 tnoremap <Esc> <C-W>N
 
-set macmeta
+" set macmeta
 
 " ---------- command line mode mapping ---------------------
 cnoremap <C-a> <Home>
@@ -334,9 +341,7 @@ nmap <leader>p :TagbarToggle<CR>
 " nnoremap <Leader>w= :wincmd =<CR>
 " }}}
 
-" source ~/.vim/startup/registers.vim
 " Registers {{{
-
 " ---------- English words workaround ------------
 " add double space to inform markdown file's line break 
 let @q = '0g_a jkDa  jk0j'  
@@ -369,7 +374,6 @@ let @c = ':g/a/d'
 let @j = "Ygccp"
 " }}}
  
-" source ~/.vim/startup/auto_cmd.vim 
 " Auto Commands {{{
 
 autocmd WinEnter * setlocal cursorline
@@ -423,7 +427,6 @@ autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " autocmd FileType markdown setlocal spell
 " }}}
 
-" source ~/.vim/startup/plugins_config.vim
 " Plugin Configs {{{
 
 " ----------- for COC   ---------
@@ -655,7 +658,6 @@ let g:airline#extensions#tabline#enabled = 1
 " ------------ VimTex ---------------- 
 let g:tex_flavor = 'latex'
 
-" source ~/.vim/startup/functions.vim
 " Custom Functions {{{
 
 "toggle foldcolumn

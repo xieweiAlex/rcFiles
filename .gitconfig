@@ -27,7 +27,7 @@
   brdif = cherry -v develop
 [user]
 	name = Alex Xie
-	email = alex.xie@walmartlabs.com
+	email = alex.xie2016+dotfile@gmail.com
 [core]
 	excludesfile = /Users/a0x0063/.global_ignore
   tool = icdiff
