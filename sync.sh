@@ -44,8 +44,11 @@ function mySync {
 
   done 
 
-  # TODO: don't copy the node_modules from coc 
-  rm -rf .config/coc/extensions/node_modules
+  # TODO: don't copy the node_modules from coc
+  # don't copy Webull config 
+  echo "Removing unwanted files (node_modules, Webull config files)"
+  rm -rf ./.config/coc/extensions/node_modules
+  rm -rf ./.config/Webull\ Desktop/*
 
   echo -e "${YELLOW}Success! ${NC}"
   echo -e "${GREEN}Synced, congrats ${NC}"
