@@ -1,6 +1,6 @@
 
-alias p3="Python3"
-alias python="Python3"
+alias py="Python3"
+alias sw="Swift"
 
 # Git shortcuts
 alias agl="git lgg | head -15"

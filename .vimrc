@@ -136,15 +136,15 @@ augroup javascript_folding
 augroup END
 
 " display a scrollbar in the statusline 
-Plug 'ojroques/vim-scrollstatus'
+" Plug 'ojroques/vim-scrollstatus'
 
-" Config for 'vim-scrollstatus' {{{
-" integrate with vim-airline
-let g:airline_section_x = '%{ScrollStatus()}'
-" scroll bar size 
-" let g:scrollstatus_size = 12
+" " Config for 'vim-scrollstatus' {{{
+" " integrate with vim-airline
+" let g:airline_section_x = '%{ScrollStatus()}'
+" " scroll bar size 
+" " let g:scrollstatus_size = 12
 
-" }}}
+" " }}}
 
 call plug#end()
 " filetype plugin indent on
@@ -780,6 +780,10 @@ set linebreak
 " buffer screen updates instead of updating all the time
 set lazyredraw
 
+" Try to fast vim scroll 
+" set synmaxcol=128
+" syntax sync minlines=256
+
 if has("syntax")
   syntax on
 endif
@@ -815,6 +819,7 @@ set autoindent " auto indent
 
 " Objective-C identation settings
 au FileType objc set softtabstop=4 tabstop=4 shiftwidth=4
+au FileType swift set softtabstop=2 tabstop=2 shiftwidth=2
 
 " Automatically change currently directory
 set autochdir
