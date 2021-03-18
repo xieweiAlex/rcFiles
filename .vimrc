@@ -127,6 +127,9 @@ Plug 'arcticicestudio/nord-vim'
 " Distract free mode 
 Plug 'junegunn/goyo.vim'  
 
+" Vim & Tmux  
+Plug 'christoomey/vim-tmux-navigator'
+
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
 let g:javascript_plugin_flow = 1
@@ -146,11 +149,24 @@ augroup END
 
 " " }}}
 
+" Vim debugger 
+Plug 'puremourning/vimspector'
+
 call plug#end()
 " filetype plugin indent on
 
-
 " }}}
+
+" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
+
+let g:vimspector_enable_mappings = 'HUMAN'
+" packadd! vimspector
+
 
 " Mappings  {{{
 
