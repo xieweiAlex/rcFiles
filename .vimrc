@@ -136,7 +136,11 @@ let g:javascript_plugin_flow = 1
 augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
+    au FileType javascript setlocal foldlevel=1
 augroup END
+
+au FileType python setlocal foldmethod=indent
+au FileType ruby setlocal foldmethod=indent
 
 " display a scrollbar in the statusline 
 " Plug 'ojroques/vim-scrollstatus'
@@ -176,6 +180,10 @@ noremap . ;
 noremap <Space> .
 
 " ------------- Leader maps ------------------------
+"  Normal mode mapping 
+" Search and Replace 
+nnoremap <leader>r *Ncgn 
+
 " show git blame 
 nnoremap <Leader>gb :Gblame<CR>
 " delete a row
@@ -297,7 +305,8 @@ nnoremap <leader>th :term<CR>
 " terminal in vertical split
 nnoremap <leader>tv :vert term<CR>
 
-tnoremap <Esc> <C-W>N
+" tnoremap <Esc> <C-W>N
+tnoremap <Esc> <C-\><C-n>
 
 " set macmeta
 
@@ -440,6 +449,7 @@ autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
 autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby compiler ruby
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 
 " auto write when text change in normal/insert mode 
 " autocmd TextChanged,TextChangedI <buffer> silent write
@@ -613,6 +623,8 @@ let g:tagbar_type_ruby = {
 \ }
 
 
+
+
 " ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
 nnoremap <leader>n :NERDTreeFind<cr>
@@ -773,7 +785,7 @@ endfunction
 " }}}
 
 
-:command Writemode colorscheme nord | setlocal spell | Goyo 70
+" :command Writemode colorscheme nord | setlocal spell | Goyo 70
 
 " Add man page inside vim 
 runtime ftplugin/man.vim
@@ -809,7 +821,7 @@ set showcmd         " show command
 set scrolloff=3     " 3 line off 
 set novisualbell    " no visual bell 
 set foldenable      " fold enable 
-set foldmethod=manual   " manual fold 
+" set foldmethod=manual   " manual fold 
 "set foldmethod=syntax
 
 " show sign column 
@@ -857,7 +869,18 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set background=dark
-colorscheme solarized8
+" colorscheme solarized8
+
+" Spell error type to underline
+hi clear SpellBad
+hi SpellBad cterm=underline
+" Set style for gVim
+hi SpellBad gui=undercurl
+
+colorscheme toast
+augroup toast
+  autocmd colorscheme toast hi clear Constant | hi link Constant Type
+augroup END
 
 " highlight line and column
 " set cursorline
