@@ -1,10 +1,17 @@
-time
 date
+useStrict
+con
+snippet
+time
 WTFPL
 tb
 day-template
 journal
 const
+css
+const
+tb
+time
 day-template
 tb
 date
@@ -18,7 +25,6 @@ time
 modeline
 $
 work-template
-snippet
 box
 refl
 cbl
