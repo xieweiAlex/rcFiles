@@ -27,9 +27,9 @@
   brdif = cherry -v develop
 [user]
 	name = Alex Xie
-	email = alex.xie2016+dotfile@gmail.com
+	email = alex.xie@walmart.com
 [core]
-	excludesfile = /Users/a0x0063/.global_ignore
+	excludesfile = /Users/a0x0063/.gitignore
   tool = icdiff
   cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [difftool]
