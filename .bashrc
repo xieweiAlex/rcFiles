@@ -29,7 +29,7 @@ export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode - cyan
 
 source ~/.bash_profile
 
-function mv() {
+mv() {
   if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
     command mv "$@"
     return
@@ -72,8 +72,10 @@ ch() {
 }
 
 updateCurrentBranch() {
-  git fetch origin dev:dev
-  git rebase dev
+  # git fetch origin dev:dev
+  git fetch origin main:main
+  # git rebase dev 
+  git rebase main
 }
 
 getReleaseBranch() {

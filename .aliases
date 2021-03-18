@@ -2,13 +2,19 @@
 alias py="Python3"
 alias sw="Swift"
 
+# Node shortcuts 
+alias g="./go.sh"
+
 # Git shortcuts
 alias agl="git lgg | head -15"
 alias aPull="git fetch origin dev:dev"
 alias aPullCurr="git pull --rebase origin dev"
+
+# Git shortcust for Node project 
+alias nPull="git fetch origin main:main"
+
 # TODO: update to take an input 
 alias aTempCommit="git commit -m \"WIP: temp commit ${date} \""
-alias aRe="git reset"
 alias st='git status'
 alias add='git add'
 # alias br='git branch'
@@ -24,6 +30,11 @@ alias cia="git commit --amend"
 alias co="git co"
 alias add="git add"
 alias remoteV="git remote -v"
+
+fix="git diff --name-only | uniq | xargs $EDITOR"
+
+alias aReset="git reset"
+alias aReset1="git reset HEAD~1"
 
 # iOS development related 
 alias aRemoveXCodeDerivatedData="rm -rf ~/Library/Developer/Xcode/DerivedData"
@@ -67,6 +78,7 @@ alias kDoc="open ~/Documents"
 alias kDev="open ~/Develop"
 alias kWork='cd ~/Develop/Walmart/SamsClub-iOS'
 alias kWorkModules='cd ~/Develop/Walmart/SamsClub-iOS/Modules'
+alias kBEWork='cd ~/Develop/Walmart/sams-sng-orchestration/test-e2e'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kf='open -a Finder'
