@@ -141,6 +141,7 @@ augroup END
 
 au FileType python setlocal foldmethod=indent
 au FileType ruby setlocal foldmethod=indent
+au FileType markdown setlocal foldmethod=indent
 
 " display a scrollbar in the statusline 
 " Plug 'ojroques/vim-scrollstatus'

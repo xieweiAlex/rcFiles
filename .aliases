@@ -70,7 +70,7 @@ alias tree3="tree -L 3"
 alias sProfile="source ~/.bash_profile"
 alias sBash='source ~/.bashrc'
 
-# folder
+# Folder
 alias kEnglish="cd ~/Box/English/English_learning"
 alias kNote="cd ~/Box/Notes"
 alias kDownload="open ~/Downloads"
@@ -82,7 +82,11 @@ alias kBEWork='cd ~/Develop/Walmart/sams-sng-orchestration/test-e2e'
 alias kRcFiles='cd ~/Develop/rcFiles'
 alias kWriting='cd ~/Writing'
 alias kf='open -a Finder'
-
+## Work 
+alias kNode='cd ~/Develop/Walmart/sams-sng-orchestration'
+alias kExpress='cd ~/Develop/node/building-website-nodejs-express'
+alias kIOS='cd /Develop/Walmart/SamsClub-iOS'
+alias kNodeE2E='cd ~/Develop/Walmart/sams-sng-orchestration/test-e2e/'
 
 # File 
 alias vimrc='vim ~/.vimrc'
@@ -90,8 +94,6 @@ alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 alias tmrc='vim ~/.tmux.conf'
 
-# alias kResume="open ~/Nutstore/Documents/Resume"
-# alias kdd="open ~/Nutstore/app_config/Config"
 
 ## Shortcut for custom command 
 alias kSync='source ~/Develop/rcFiles/sync.sh sync'
