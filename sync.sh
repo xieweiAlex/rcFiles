@@ -107,24 +107,24 @@ fi
 
 echo ".."
 if [[ $action == 'sync' ]]; then
-    mySync
-    ./infoSync.sh
-    if [[ $(git status -s) != '' ]]; then
-        echo "Something change in local, you know what?"
-        showLocalChange
-    else
-        echo "Nothing change in local, You're all set!!"
-    fi
+  mySync
+  ./infoSync.sh
+  if [[ $(git status -s) != '' ]]; then
+    echo "Something change in local, you know what?"
+    showLocalChange
+  else
+    echo "Nothing change in local, You're all set!!"
+  fi
 
 elif [[ $action == 'disp' || $action == 'dispatch' ]]; then
-	myDispatch
+  myDispatch
   ./infoSync.sh
-	echo "..."
-	sourcePatch
+  echo "..."
+  sourcePatch
 else 
   echo -e "${RED}Failed!${NC}"				
-	echo "this is invalid para: $action"		
-	echo "should be \"sync\" or \"disp\""
+  echo "this is invalid para: $action"		
+  echo "should be \"sync\" or \"disp\""
 fi
 
 

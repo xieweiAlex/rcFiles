@@ -99,6 +99,5 @@ alias tmrc='vim ~/.tmux.conf'
 alias kSync='source ~/Develop/rcFiles/sync.sh sync'
 alias kApply-gitignore="git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached"
 alias kGitk='gitk 2>/dev/null'
-alias gh="open -a google\ chrome 'http://github.com/xieweialex'"
 
 
