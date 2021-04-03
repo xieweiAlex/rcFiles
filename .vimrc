@@ -335,6 +335,7 @@ vnoremap <silent> # :<C-U>
   \gVzv:call setreg('"', old_reg, old_regtype)<CR>
 
 vnoremap <leader>a "ay
+vnoremap <leader>A "ad
 
 " quotation selection sentence
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>

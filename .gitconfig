@@ -4,12 +4,12 @@
 	branch = auto
 	ui = true
 [alias]
-	st = status
+	st = status -sb
 	sl = stash list 
 	co = checkout
 	br = branch
 	ci = commit
-	lg = log --graph --oneline
+	lg = log --color --graph --oneline
 	lgg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lggg = log --color --graph --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	last = 'log -3'
@@ -42,3 +42,5 @@
 	default = current
 [icdiff]
   options =  --line-numbers
+[help]
+	autocorrect = 20
