@@ -50,6 +50,7 @@ function mySync {
   echo "Removing unwanted files (node_modules, Webull config files)"
   rm -rf ./.config/coc/extensions/node_modules
   rm -rf ./.config/Webull\ Desktop/*
+  rm -rf .config/iterm2/
 
   echo -e "${YELLOW}Success! ${NC}"
   echo -e "${GREEN}Synced, congrats ${NC}"

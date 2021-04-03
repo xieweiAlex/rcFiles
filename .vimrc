@@ -25,12 +25,6 @@ Plug 'jiangmiao/auto-pairs'
 " vim status bar  
 Plug 'vim-airline/vim-airline'
 
-" Path searching options 
-"Plug 'vim-apathy'
-
-" Asynchronous Lint Engine
-" Bundle 'w0rp/ale'
-
 " show vim marks   
 Plug 'kshenoy/vim-signature'
 " fuzzy find 
@@ -95,9 +89,6 @@ Plug 'psliwka/vim-smoothie'
 " Git
 Plug 'airblade/vim-gitgutter'
 
-" Theme 
-" Plug 'morhetz/gruvbox'
-
 " defaults everybody agrees on 
 Plug 'tpope/vim-sensible'
 
@@ -117,6 +108,9 @@ Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 " Vim Latex
 Plug 'lervag/vimtex'
+" Vim Latex config  {{{
+let g:tex_flavor = 'latex'
+" }}}
 
 " Lots of snippets 
 Plug 'honza/vim-snippets'
@@ -133,35 +127,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
 let g:javascript_plugin_flow = 1
-augroup javascript_folding
-    au!
-    au FileType javascript setlocal foldmethod=syntax
-    au FileType javascript setlocal foldlevel=1
-augroup END
-
-au FileType python setlocal foldmethod=indent
-au FileType ruby setlocal foldmethod=indent
-au FileType markdown setlocal foldmethod=indent
-
-" display a scrollbar in the statusline 
-" Plug 'ojroques/vim-scrollstatus'
-
-" " Config for 'vim-scrollstatus' {{{
-" " integrate with vim-airline
-" let g:airline_section_x = '%{ScrollStatus()}'
-" " scroll bar size 
-" " let g:scrollstatus_size = 12
-
-" " }}}
 
 " Vim debugger 
 Plug 'puremourning/vimspector'
-
-call plug#end()
-" filetype plugin indent on
-
-" }}}
-
+" Vim Debugger Config {{{ 
 " mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
 
 " for normal mode - the word under the cursor
@@ -172,6 +141,12 @@ xmap <Leader>di <Plug>VimspectorBalloonEval
 let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
 
+" --- }}}
+
+call plug#end()
+" filetype plugin indent on
+
+" }}}
 
 " Mappings  {{{
 
@@ -451,17 +426,10 @@ autocmd FileType shell nnoremap <buffer> <leader>c I# <esc>
 autocmd FileType java :iabbrev <buffer> iff if ()<left>
 autocmd FileType md :set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby compiler ruby
-au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 
 " auto write when text change in normal/insert mode 
 " autocmd TextChanged,TextChangedI <buffer> silent write
 :au FocusLost * silent! wa
-" Vimscript file settings ---------------------- {{{
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
-" }}}
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " autocmd FileType markdown setlocal spell
@@ -696,22 +664,8 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 
-
-" ------------ VimTex ---------------- 
-let g:tex_flavor = 'latex'
-
 " Custom Functions {{{
 
-"toggle foldcolumn
-"nnoremap <leader>kf :call FoldColumnToggle()<cr>
-
-function! FoldColumnToggle()
-	if &foldcolumn	
-		setlocal foldcolumn=0
-	else 
-		setlocal foldcolumn=4
-	endif
-endfunction
 
 "toggle quick fix 
 "nnoremap <leader>q :call QuickfixToggle()<cr>
@@ -786,15 +740,44 @@ endfunction
 " call UnscopedDisplayName("Your Name")
 " }}}
 
-
 " :command Writemode colorscheme nord | setlocal spell | Goyo 70
 
 " Add man page inside vim 
 runtime ftplugin/man.vim
 let g:ft_man_open_mode = 'tab'
 
-" ----------  General -------------
-" enable mouse
+" General Settings {{{
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+    au FileType javascript setlocal foldlevel=1
+augroup END
+
+au FileType python setlocal foldmethod=indent
+au FileType ruby setlocal foldmethod=indent
+au FileType markdown setlocal foldmethod=indent
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+
+" Vimscript file settings ---------------------- {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+"toggle foldcolumn
+"nnoremap <leader>kf :call FoldColumnToggle()<cr>
+
+function! FoldColumnToggle()
+	if &foldcolumn	
+		setlocal foldcolumn=0
+	else 
+		setlocal foldcolumn=4
+	endif
+endfunction
+set foldenable      " fold enable 
+set foldmethod=syntax
+
+"enable mouse
 set mouse=a
 
 " For buffers search
@@ -822,20 +805,17 @@ set ruler           " show ruler
 set showcmd         " show command
 set scrolloff=3     " 3 line off 
 set novisualbell    " no visual bell 
-set foldenable      " fold enable 
-" set foldmethod=manual   " manual fold 
-"set foldmethod=syntax
 
 " show sign column 
 set signcolumn=auto
 
-set hlsearch
+set hlsearch  " highlight all search results
 
-set incsearch  " To move the cursor to the matched string, while typing the search pattern
+set incsearch  " show incremental search results as you type
 set wrapscan " wraps around to the beginning and ending when do search  
 set history=200
 
-set spelllang=en_us         " Language will likely be English
+set spelllang=en_us         " set spell language to English
 set showmatch "{}()[]
 set guitablabel=\[%N\]\ %t\ %M 
 
@@ -864,14 +844,13 @@ set whichwrap+=<,>,h,l,[,]      " Wrap navigation in normal and insert!
 set ignorecase smartcase
 
 
-" --------------------------  Appearance ---------------------------
-
+" Collor Scheme  {{{
+" True color in terminal 
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set background=dark
-" colorscheme solarized8
 
 " Spell error type to underline
 hi clear SpellBad
@@ -879,6 +858,7 @@ hi SpellBad cterm=underline
 " Set style for gVim
 hi SpellBad gui=undercurl
 
+" colorscheme solarized8
 colorscheme toast
 augroup toast
   autocmd colorscheme toast hi clear Constant | hi link Constant Type
@@ -890,13 +870,14 @@ augroup END
 
 " high light color (not use)
 " highlight CursorLine term=bold cterm=bold guibg=Grey40
+" }}}
 
 "---------------- Mis ------------------------
 " Save undo even after file close 
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories
-set undolevels=1000         " How many undos
-set undoreload=10000        " number of lines to save for undo
+set undolevels=50         " How many undos
+set undoreload=1000        " number of lines to save for undo
 
 
 "" operatior-pending map -------------------- {{{
@@ -928,3 +909,7 @@ let g:tagbar_type_markdown = {
         \ 'k:Heading_L3'
     \ ]
 \ }
+
+
+" -------------- }}}
+
