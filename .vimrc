@@ -855,8 +855,6 @@ set background=dark
 " Spell error type to underline
 hi clear SpellBad
 hi SpellBad cterm=underline
-" Set style for gVim
-hi SpellBad gui=undercurl
 
 " colorscheme solarized8
 colorscheme toast

@@ -5,6 +5,10 @@ alias sw="Swift"
 # Node shortcuts 
 alias g="./go.sh"
 
+# K8s 
+alias kbc="kubectl"
+alias kc="kubectl"
+
 # Git shortcuts
 alias agl="git lgg | head -15"
 alias aPull="git fetch origin dev:dev"

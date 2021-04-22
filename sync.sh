@@ -27,7 +27,7 @@ declare -a folders=(
 )
 
 function mySync {
-  
+
   for file in "${files[@]}" 
   do 
     echo "syncing file: $file"
@@ -57,7 +57,7 @@ function mySync {
 }
 
 function myDispatch {
-  
+
   for file in "${files[@]}" 
   do 
     echo "Dispatching file: $file"
@@ -84,16 +84,16 @@ function showLocalChange {
 }
 
 function sourcePatch {
-    echo "start to source files"
-    
-    echo "source ~/.zshrc"
-    source $HOME/.zshrc 
-    echo "tmux source-file ~/.tmux.conf"
-    tmux source-file ~/.tmux.conf	
+  echo "start to source files"
+
+  echo "source ~/.zshrc"
+  source $HOME/.zshrc 
+  echo "tmux source-file ~/.tmux.conf"
+  tmux source-file ~/.tmux.conf	
 }
 
 # if [[ $(git status -s) != '' ]]; then
-     # echo -e "${RED}local isn't clean, exit${NC}"
+# echo -e "${RED}local isn't clean, exit${NC}"
 #     exit
 # fi
 
@@ -102,9 +102,9 @@ action=$1
 echo "."
 
 if [[ "$#" -ne 1 ]]; then
-	echo "no parameter inputted, will be default to 'sync'"
-    action="sync"	
-	echo ""
+  echo "no parameter inputted, will be default to 'sync'"
+  action="sync"	
+  echo ""
 fi
 
 echo ".."
