@@ -750,23 +750,25 @@ runtime ftplugin/man.vim
 let g:ft_man_open_mode = 'tab'
 
 " General Settings {{{
+
+" Folding {{{
+
+" endable folding
+set foldenable      
+" Generally folding method by indent 
+set foldmethod=indent
 augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
     au FileType javascript setlocal foldlevel=1
 augroup END
 
-au FileType python setlocal foldmethod=indent
-au FileType ruby setlocal foldmethod=indent
-au FileType markdown setlocal foldmethod=indent
-au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+au FileType vim setlocal foldmethod=marker
 
-" Vimscript file settings ---------------------- {{{
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
-" }}}
+" The smaller foldlevel is, the more brackets closes 
+set foldlevel=10
+autocmd BufReadPost * :if line('$') > 100 | set foldlevel=1 | endif
+
 "toggle foldcolumn
 "nnoremap <leader>kf :call FoldColumnToggle()<cr>
 
@@ -777,8 +779,9 @@ function! FoldColumnToggle()
 		setlocal foldcolumn=4
 	endif
 endfunction
-set foldenable      " fold enable 
-set foldmethod=syntax
+
+
+" }}}
 
 "enable mouse
 set mouse=a
