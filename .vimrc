@@ -321,6 +321,9 @@ vnoremap <leader>y "+y
 " Yank selection to sys clipboard + double star the selection  
 vnoremap <leader>* "+yi**<esc>`>ea**<esc>
 
+" search selected text 
+vnoremap * y:let @/ = @"<CR>
+
 " ------------------ Tab, Buffer, Window Management ---------------
 " Use arrow keys to resize windows
 noremap <up> <C-W>+
