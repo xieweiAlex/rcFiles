@@ -917,3 +917,5 @@ let g:tagbar_type_markdown = {
 
 " -------------- }}}
 
+iabbrev cc /*<CR><CR>/<Up>
+
