@@ -26,8 +26,6 @@
   icd = icdiff 
   brdif = cherry -v develop
 [user]
-	name = Alex Xie
-	email = alex.xie@walmart.com
 [core]
 	excludesfile = /Users/a0x0063/.gitignore
   tool = icdiff
