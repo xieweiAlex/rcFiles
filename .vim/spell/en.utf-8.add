@@ -1057,3 +1057,6 @@ Kubernetes
 Use
 Splunk
 K8s
+rollout
+minikube
+addons
