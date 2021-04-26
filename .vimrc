@@ -22,8 +22,21 @@ Plug 'tpope/vim-surround'
 Plug 'takac/vim-hardtime'
 " auto pairs 
 Plug 'jiangmiao/auto-pairs'
+
 " vim status bar  
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
+" lightline config {{{
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+"}}} 
 
 " show vim marks   
 Plug 'kshenoy/vim-signature'
@@ -663,8 +676,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
-" airline show buffers  
-let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " Custom Functions {{{

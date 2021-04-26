@@ -1,3 +1,7 @@
+date
+img
+link
+refl
 work-journal-template
 [
 codeblock-full
@@ -7,14 +11,12 @@ ilc
 detail
 fnt
 cbl
-refl
 /*
 **
 *
 par
 ssec
 sec
-date
 snippet
 datetime
 useStrict
@@ -40,7 +42,6 @@ modeline
 $
 work-template
 box
-link
 lorem
 sssec
 test
