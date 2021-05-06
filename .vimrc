@@ -12,7 +12,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Git blame 
 Plug 'tpope/vim-fugitive'
-" Fuzzy find 
+" File Search 
 Plug 'ctrlpvim/ctrlp.vim'
 " Easy motion
 Plug 'easymotion/vim-easymotion'
@@ -47,21 +47,18 @@ Plug 'junegunn/vim-journal'
 
 " index of vim search 
 Plug 'henrik/vim-indexed-search'
-" vim plugin to interact with tmux
-Plug 'benmills/vimux'
+
 " comment 
 Plug 'tpope/vim-commentary'
 
- " visually displaying indent levels in code
- " Plug 'nathanaelkane/vim-indent-guides'
+" visually displaying indent levels in code
+" Plug 'nathanaelkane/vim-indent-guides'
  
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
 
-" Syntax highlighting for VIM
-Plug 'slim-template/vim-slim'
 " vim for ruby 
-Plug 'vim-ruby/vim-ruby'
+" Plug 'vim-ruby/vim-ruby'
 
 " Enhance Vim experience in Terminal  
 Plug 'wincent/terminus'
@@ -70,24 +67,30 @@ Plug '907th/vim-auto-save'
 
 " Text filtering and alignment  
 Plug 'godlygeek/tabular'
-" Markdown support 
-Plug 'plasticboy/vim-markdown'
+
+" Syntax highlighting for VIM
+Plug 'slim-template/vim-slim'
 
 " Syntax for vim 
 Plug 'vim-syntastic/syntastic'
 
 " Swift syntax and indention
-Plug 'keith/swift.vim'
+" Plug 'keith/swift.vim'
 
 " COC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " TagBar 
 Plug 'majutsushi/tagbar'
+
+
+" Markdown support 
+Plug 'plasticboy/vim-markdown'
 " Markdown preview
 Plug 'JamshedVesuna/vim-markdown-preview'
+
 " buffer list select and switch
-Plug 'jeetsukumaran/vim-buffergator'
+" Plug 'jeetsukumaran/vim-buffergator'
 
 " Display the indention levels with thin vertical lines
 " Plug 'Yggdroot/indentLine'
@@ -134,6 +137,9 @@ Plug 'arcticicestudio/nord-vim'
 " Distract free mode 
 Plug 'junegunn/goyo.vim'  
 
+
+" vim plugin to interact with tmux
+Plug 'benmills/vimux'
 " Vim & Tmux  
 Plug 'christoomey/vim-tmux-navigator'
 
