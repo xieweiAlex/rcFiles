@@ -17,7 +17,15 @@ declare -a files=(
 )
 
 declare -a folders=(
-".config"
+".config/assets"
+"./.config/assets"
+"./.config/coc"
+"./.config/git"
+"./.config/karabiner"
+"./.config/nvim"
+"./.config/ranger"
+"./.config/wtf"
+"./.config/karabiner.json"
 ".vim/spell"
 ".vim/startup"
 ".vim/after/ftplugin"
@@ -38,17 +46,14 @@ function mySync {
     if [[ $folder == .vim*  ]]; then 
       cp -R "$HOME/$folder" .vim/
     else 
-      cp -R "$HOME/$folder" ./
+      cp -R "$HOME/$folder" .config/
     fi
 
   done 
 
   # TODO: don't copy the node_modules from coc
-  # don't copy Webull config 
   echo "Removing unwanted files (node_modules, Webull config files)"
   rm -rf ./.config/coc/extensions/node_modules
-  rm -rf ./.config/Webull\ Desktop/*
-  rm -rf .config/iterm2/
 
   echo -e "${YELLOW}Success! ${NC}"
   echo -e "${GREEN}Synced, congrats ${NC}"
