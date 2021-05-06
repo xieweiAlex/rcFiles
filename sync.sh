@@ -52,7 +52,7 @@ function mySync {
   done 
 
   # TODO: don't copy the node_modules from coc
-  echo "Removing unwanted files (node_modules, Webull config files)"
+  echo "Removing unwanted files (node_modules)"
   rm -rf ./.config/coc/extensions/node_modules
 
   echo -e "${YELLOW}Success! ${NC}"
@@ -114,6 +114,8 @@ echo ".."
 if [[ $action == 'sync' ]]; then
   mySync
   ./infoSync.sh
+  sed -i '' '/name = /d' .gitconfig
+  sed -i '' '/email = /d' .gitconfig
   if [[ $(git status -s) != '' ]]; then
     echo "Something change in local, you know what?"
     showLocalChange
