@@ -10,18 +10,17 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-" Git blame 
-Plug 'tpope/vim-fugitive'
 " File Search 
 Plug 'ctrlpvim/ctrlp.vim'
+
 " Easy motion
 Plug 'easymotion/vim-easymotion'
+
 " easy surround 
 Plug 'tpope/vim-surround'
+
 " hard time 
 Plug 'takac/vim-hardtime'
-" auto pairs 
-Plug 'jiangmiao/auto-pairs'
 
 " vim status bar  
 Plug 'itchyny/lightline.vim'
@@ -40,6 +39,7 @@ let g:lightline = {
 
 " show vim marks   
 Plug 'kshenoy/vim-signature'
+
 " fuzzy find 
 Plug 'mileszs/ack.vim'
 " syntax plugin for plain text nodes 
@@ -57,11 +57,9 @@ Plug 'tpope/vim-commentary'
 " The fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
 
-" vim for ruby 
-" Plug 'vim-ruby/vim-ruby'
-
 " Enhance Vim experience in Terminal  
 Plug 'wincent/terminus'
+
 " Automatically save changes to disk in Vim
 Plug '907th/vim-auto-save'
 
@@ -70,12 +68,8 @@ Plug 'godlygeek/tabular'
 
 " Syntax highlighting for VIM
 Plug 'slim-template/vim-slim'
-
 " Syntax for vim 
 Plug 'vim-syntastic/syntastic'
-
-" Swift syntax and indention
-" Plug 'keith/swift.vim'
 
 " COC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -83,19 +77,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " TagBar 
 Plug 'majutsushi/tagbar'
 
-
 " Markdown support 
 Plug 'plasticboy/vim-markdown'
 " Markdown preview
 Plug 'JamshedVesuna/vim-markdown-preview'
 
-" buffer list select and switch
-" Plug 'jeetsukumaran/vim-buffergator'
-
 " Display the indention levels with thin vertical lines
 " Plug 'Yggdroot/indentLine'
 
-" An efficient fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
+" fuzzy finder that helps to locate files, buffers, mrus, gtags, etc
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
 
@@ -104,6 +94,8 @@ Plug 'psliwka/vim-smoothie'
 
 " Git
 Plug 'airblade/vim-gitgutter'
+" Git 
+Plug 'tpope/vim-fugitive'
 
 " defaults everybody agrees on 
 Plug 'tpope/vim-sensible'
@@ -113,6 +105,9 @@ Plug 'lifepillar/vim-solarized8'
 
 " handy bracket mapping 
 Plug 'tpope/vim-unimpaired'
+
+" auto pairs 
+Plug 'jiangmiao/auto-pairs'
 
 " provides additional text objects
 Plug 'wellle/targets.vim'
@@ -128,7 +123,7 @@ Plug 'lervag/vimtex'
 let g:tex_flavor = 'latex'
 " }}}
 
-" Lots of snippets 
+" snippets 
 Plug 'honza/vim-snippets'
 
 " Nord theme in Vim 
@@ -148,17 +143,17 @@ Plug 'sheerun/vim-polyglot'
 let g:javascript_plugin_flow = 1
 
 " Vim debugger 
-Plug 'puremourning/vimspector'
-" Vim Debugger Config {{{ 
-" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+" Plug 'puremourning/vimspector'
+" " Vim Debugger Config {{{ 
+" " mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
 
-" for normal mode - the word under the cursor
-nmap <Leader>di <Plug>VimspectorBalloonEval
-" for visual mode, the visually selected text
-xmap <Leader>di <Plug>VimspectorBalloonEval
+" " for normal mode - the word under the cursor
+" nmap <Leader>di <Plug>VimspectorBalloonEval
+" " for visual mode, the visually selected text
+" xmap <Leader>di <Plug>VimspectorBalloonEval
 
-let g:vimspector_enable_mappings = 'HUMAN'
-" packadd! vimspector
+" let g:vimspector_enable_mappings = 'HUMAN'
+" " packadd! vimspector
 
 " --- }}}
 
@@ -262,12 +257,9 @@ vnoremap Q :norm @q<CR>
 
 nnoremap - dd p
 nnoremap + ddkP
-" nnoremap Y yg_
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
-
-
 
 " Search string with regex of special character '*' 
 command! -nargs=1 S let @/ = escape('<args>', '*')
@@ -428,9 +420,9 @@ autocmd BufNewFile,BufRead Fastfile set filetype=ruby
 " relative number 
 set number relativenumber
 augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
 " Ignore CamelCase words when spell checking
@@ -455,7 +447,17 @@ autocmd FileType ruby compiler ruby
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 " autocmd FileType markdown setlocal spell
-" }}}
+
+" shortcuts in manual 
+autocmd FileType help nnoremap <buffer> <CR> <C-]>
+autocmd FileType help nnoremap <buffer> <BS> <C-T>
+autocmd FileType help nnoremap <buffer> o /'\l\{2,\}'<CR>
+autocmd FileType help nnoremap <buffer> O ?'\l\{2,\}'<CR>
+autocmd FileType help nnoremap <buffer> s /\|\zs\S\+\ze\|<CR>
+autocmd FileType help nnoremap <buffer> S ?\|\zs\S\+\ze\|<CR>
+
+
+"}}}
 
 " Plugin Configs {{{
 
@@ -575,9 +577,6 @@ nmap <Leader>[h <Plug>(GitGutterPrevHunk)  " git previous
 
 "--------------------------  Plugin configuration ---------------------------
 
-let g:vimwiki_list = [{'path': '~/Box/Notes/',
-                      \ 'syntax': 'default', 'ext': '.md'}]
-
 " fuzzy find for Vim
 set rtp+=/usr/local/opt/fzf
 " indent guide 
@@ -601,21 +600,6 @@ let g:list_of_normal_keys = ["h", "j", "k", "l"]
 " if executable('ag')
 "   let g:ackprg = 'ag --vimgrep'
 " endif
-
-" ruby for tag bar (not sure it works?)
-let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
-
-
-
 
 " ----------------------------- NerdTree ------------------
 " reveal file in NERDTree panel 
@@ -914,14 +898,6 @@ set undoreload=1000        " number of lines to save for undo
 "onoremap in{ :<c-u>normal! /}<cr><cr> V%jok<cr>
 " }}}
 
-
-let g:tagbar_type_yaml = {
-    \ 'ctagstype' : 'yaml',
-    \ 'kinds' : [
-        \ 'h:Name_start'
-    \ ]
-\ }
-
 let g:tagbar_type_markdown = {
     \ 'ctagstype' : 'markdown',
     \ 'kinds' : [
@@ -935,4 +911,5 @@ let g:tagbar_type_markdown = {
 " -------------- }}}
 
 iabbrev cc /*<CR><CR>/<Up>
+
 
