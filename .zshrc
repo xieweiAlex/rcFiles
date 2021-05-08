@@ -55,8 +55,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.bash_profile
-
+# source $HOME/.bash_profile
 
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
@@ -101,6 +100,13 @@ function fd() {
    local file
    local dir
    file=$(fzf --height 40% +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
+
+# fzf file & nvim open 
+function fv() {
+   local file
+   local dir
+   file=$(fzf --height 40% +m -q "$1") && nvim "$file"
 }
 
 function fh() {
@@ -152,7 +158,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # User configuration
 
