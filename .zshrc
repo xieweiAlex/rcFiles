@@ -55,7 +55,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-# source $HOME/.bash_profile
 
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
@@ -184,3 +183,5 @@ echo "Sourcing alias"
 source $HOME/.aliases
 
 echo -e "I ${RED}love${NC} Stack Overflow"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
