@@ -43,7 +43,7 @@ Plug 'kshenoy/vim-signature'
 " fuzzy find 
 Plug 'mileszs/ack.vim'
 " syntax plugin for plain text nodes 
-Plug 'junegunn/vim-journal'
+" Plug 'junegunn/vim-journal'
 
 " index of vim search 
 Plug 'henrik/vim-indexed-search'
@@ -58,18 +58,18 @@ Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 
 " Enhance Vim experience in Terminal  
-Plug 'wincent/terminus'
+" Plug 'wincent/terminus'
 
 " Automatically save changes to disk in Vim
 Plug '907th/vim-auto-save'
 
 " Text filtering and alignment  
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 
 " Syntax highlighting for VIM
 Plug 'slim-template/vim-slim'
 " Syntax for vim 
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 
 " COC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -636,7 +636,7 @@ let vim_markdown_preview_toggle=1
 " remove temp HTML file after opening
 let vim_markdown_preview_temp_file=0
 " markdown preview hotkey 
-let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_hotkey='<D-i>'
 let vim_markdown_preview_browser='Google Chrome'
 
 " -------------- UltiSnipeet ---------- 
@@ -710,7 +710,7 @@ endfunction
 " endfunction
 
 " Format markdown file 
-nnoremap <leader>3 :call MdFormat()<CR>
+" nnoremap <leader>3 :call MdFormat()<CR>
 
 " function! MdFormat() 
 "   echo "Format markdown file start.."
