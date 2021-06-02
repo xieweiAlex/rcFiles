@@ -1,5 +1,5 @@
 
-" Plugins {{{ 
+" Plugins -------  {{{ 
 
 " filetype off
 " --------------------- Vim Plug Manager ---------
@@ -9,6 +9,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Docker file syntax highlighting 
+Plug 'ekalinin/Dockerfile.vim'
 
 " File Search 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -141,21 +144,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
 let g:javascript_plugin_flow = 1
-
-" Vim debugger 
-" Plug 'puremourning/vimspector'
-" " Vim Debugger Config {{{ 
-" " mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
-
-" " for normal mode - the word under the cursor
-" nmap <Leader>di <Plug>VimspectorBalloonEval
-" " for visual mode, the visually selected text
-" xmap <Leader>di <Plug>VimspectorBalloonEval
-
-" let g:vimspector_enable_mappings = 'HUMAN'
-" " packadd! vimspector
-
-" --- }}}
 
 call plug#end()
 " filetype plugin indent on
@@ -413,6 +401,7 @@ autocmd InsertLeave * setlocal cursorline
 autocmd BufNewFile,BufRead *.swift set filetype=swift
 autocmd BufNewFile,BufRead *.sw set filetype=swift
 autocmd BufNewFile,BufRead Fastfile set filetype=ruby
+autocmd BufNewFile,BufRead *.properties set filetype=java
 
 " global ctags for objc files 
 " autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
