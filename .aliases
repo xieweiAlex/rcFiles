@@ -6,8 +6,9 @@ alias sw="Swift"
 alias g="./go.sh"
 
 # K8s 
-alias kbc="kubectl"
-alias kc="kubectl"
+# alias kbc="kubectl"
+# alias kc="kubectl"
+alias k="kubectl"
 
 # Git shortcuts
 alias agl="git lgg | head -15"
@@ -50,15 +51,13 @@ alias -s md=mvim
 alias -s json=mvim
 
 # Common use tools shortcut 
-alias f="fastlane"
 alias t="tmux"
-alias lint="swiftlint"
 
 # Terminal tool enhancement
 alias man="tldr"
 alias tldr="man"
 alias cat='bat'
-alias ping='prettyping --nolegend'
+# alias ping='prettyping --nolegend'
 alias top='htop'
 
 # Terminal command shortcut 

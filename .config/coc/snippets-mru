@@ -1,8 +1,9 @@
 date
-refl
+useStrict
 link
-img
 work-journal-template
+img
+refl
 [
 codeblock-full
 [*
@@ -19,7 +20,6 @@ ssec
 sec
 snippet
 datetime
-useStrict
 con
 todo
 time
