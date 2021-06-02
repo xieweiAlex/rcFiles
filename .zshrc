@@ -52,6 +52,7 @@ plugins=(
   git
   jira 
   z
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -185,3 +186,9 @@ source $HOME/.aliases
 echo -e "I ${RED}love${NC} Stack Overflow"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# autojump 
+[ -f /usr/local/etc/profile.d/autojump.sh  ] && . /usr/local/etc/profile.d/autojump.sh
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
