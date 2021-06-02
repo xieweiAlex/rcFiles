@@ -1,6 +1,15 @@
 date
 useStrict
 link
+detail
+link
+img
+$
+date
+ul
+div
+p
+refl
 work-journal-template
 img
 refl
@@ -9,7 +18,6 @@ codeblock-full
 [*
 tb
 ilc
-detail
 fnt
 cbl
 /*
@@ -39,7 +47,6 @@ ddate
 const
 time
 modeline
-$
 work-template
 box
 lorem

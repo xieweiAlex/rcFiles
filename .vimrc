@@ -118,7 +118,7 @@ Plug 'wellle/targets.vim'
 " grammer check 
 " Plug 'rhysd/vim-grammarous'
 " A Deoplete source for TabNine.
-Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 
 " Vim Latex
 Plug 'lervag/vimtex'
@@ -267,7 +267,6 @@ inoremap æ <C-Right>
 inoremap <C-K> <Esc>lDa
 inoremap <C-U> <Esc>d0xi
 inoremap <C-Y> <Esc>Pa
-inoremap <C-X><C-S> <Esc>:w<CR>a
 
 " ---------- Terminal mode mapping ----------- 
 " terminal in tab
@@ -402,6 +401,7 @@ autocmd BufNewFile,BufRead *.swift set filetype=swift
 autocmd BufNewFile,BufRead *.sw set filetype=swift
 autocmd BufNewFile,BufRead Fastfile set filetype=ruby
 autocmd BufNewFile,BufRead *.properties set filetype=java
+autocmd BufNewFile,BufRead *.ejs set filetype=html
 
 " global ctags for objc files 
 " autocmd BufNewFile,BufRead *.h,*.m set tags+=~/Documents/global-objc-tags
@@ -699,7 +699,7 @@ endfunction
 " endfunction
 
 " Format markdown file 
-" nnoremap <leader>3 :call MdFormat()<CR>
+nnoremap <leader>3 :call MdFormat()<CR>
 
 " function! MdFormat() 
 "   echo "Format markdown file start.."
@@ -718,11 +718,12 @@ function! MdFormat()
   " echo "Format markdown file start.."
   normal mm
   let g:auto_save = 0
-  
-  let lines = line('$')
-  normal gg110@q
-  normal 'm
+  " let lines = line('$')
+  normal gg
+  normal 100@q
+  normal 'mzz
   let g:auto_save = 1
+  write 
   echo "Format markdown with constant lines done."
 endfunction
 
