@@ -137,7 +137,12 @@ Plug 'junegunn/goyo.vim'
 
 
 " vim plugin to interact with tmux
-Plug 'benmills/vimux'
+Plug 'benmills/vimux' 
+" vimux Config {{{
+" Open 20% pane in Tmux, and run `git st`
+noremap <Leader>rb :call VimuxRunCommand("git status")<CR>
+
+" }}}
 " Vim & Tmux  
 Plug 'christoomey/vim-tmux-navigator'
 
