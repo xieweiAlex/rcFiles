@@ -636,10 +636,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "----------------------- Autocompletion ----------------------
 
 set wildmenu            " Autocompletion rulez
-set wildignore+=*.a,*.o        " Leave out files from completion
+" Leave out files from completion
+set wildignore+=*.a,*.o        
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.tmp
+set wildignore+=**/node_modules/**
 set wildmode=list:longest,full
 set completeopt=menu,longest,preview
 let g:SuperTabDefaultCompletionType = "context"
